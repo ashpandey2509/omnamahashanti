@@ -32,4 +32,8 @@ extension UIColor{
     class func getThemeColor() -> UIColor{
         return UIColor(hexString: "#ffe9433a")
     }
+
+    class func getBookPoojaBorderColor() -> UIColor{
+        return UIColor(hexString: "#ffcccccc")
+    }
 }

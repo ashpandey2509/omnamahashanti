@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Drawer View Controller-->
@@ -34,12 +35,72 @@
                     <view key="view" contentMode="scaleToFill" id="ZjT-O2-aOY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently in Mumbai only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB8-v9-J4Z">
+                                <rect key="frame" x="0.0" y="84" width="600" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="sY1-aW-mNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-zj-UiS">
+                                <rect key="frame" x="2" y="126" width="596" height="145"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-3e-GFC">
+                                        <rect key="frame" x="15" y="18" width="570" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="TMg-sY-hSN"/>
+                                        </constraints>
+                                        <string key="text">Book your Pooja in three easy 
+steps!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZv-UX-8jK">
+                                        <rect key="frame" x="187" y="87" width="227" height="45"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.2627450980392157" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="227" id="IIe-9Y-1Xe"/>
+                                            <constraint firstAttribute="height" constant="45" id="OZo-rn-AHn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="GET STARTED !">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" constant="15" id="BEu-Hy-uYU"/>
+                                    <constraint firstItem="uZv-UX-8jK" firstAttribute="centerX" secondItem="o4b-zj-UiS" secondAttribute="centerX" constant="2.5" id="QYj-Vc-VgJ"/>
+                                    <constraint firstItem="uZv-UX-8jK" firstAttribute="top" secondItem="yr1-3e-GFC" secondAttribute="bottom" constant="11" id="YdI-Lc-EbR"/>
+                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="top" secondItem="o4b-zj-UiS" secondAttribute="top" constant="18" id="dXr-C2-wyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" constant="11" id="g0t-68-CeZ"/>
+                                    <constraint firstAttribute="height" constant="145" id="lfb-B0-I0W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XB8-v9-J4Z" firstAttribute="leading" secondItem="ZjT-O2-aOY" secondAttribute="leadingMargin" constant="-20" id="H9p-te-9JA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o4b-zj-UiS" secondAttribute="trailing" constant="-18" id="HTh-4y-YKw"/>
+                            <constraint firstItem="o4b-zj-UiS" firstAttribute="leading" secondItem="ZjT-O2-aOY" secondAttribute="leadingMargin" constant="-18" id="RQa-GH-pWf"/>
+                            <constraint firstItem="o4b-zj-UiS" firstAttribute="top" secondItem="XB8-v9-J4Z" secondAttribute="bottom" constant="21" id="ZRe-0X-Etu"/>
+                            <constraint firstItem="XB8-v9-J4Z" firstAttribute="top" secondItem="uBk-36-ZiJ" secondAttribute="bottom" constant="20" id="o67-WF-fJg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XB8-v9-J4Z" secondAttribute="trailing" constant="-20" id="p2A-pm-8Fv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kPI-8X-4dy"/>
+                    <connections>
+                        <outlet property="bookPoojaView" destination="o4b-zj-UiS" id="aNp-z1-pqE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ2-Kh-zai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="274"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fpq-V8-865">
