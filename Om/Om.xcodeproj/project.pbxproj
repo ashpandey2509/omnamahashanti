@@ -24,7 +24,11 @@
 		15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C271C80E2C1006A7F88 /* PanditSelectionViewController.swift */; };
 		15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */; };
 		15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15081C391C814CE4006A7F88 /* CKCalendarView.m */; };
-		6C80AEF16FE411337EED0474 /* libPods-Om.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */; };
+		15081C481C821005006A7F88 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C461C821005006A7F88 /* DateCollectionViewCell.swift */; };
+		15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C471C821005006A7F88 /* DateCollectionViewCell.xib */; };
+		15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */; };
+		15081C4D1C8210C2006A7F88 /* PanditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */; };
+		3264929AFB2A07CBFC4DF64F /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F2372B14BA4D28B160C6D /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +74,12 @@
 		15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectionViewController.swift; path = ViewController/DateSelection/DateSelectionViewController.swift; sourceTree = "<group>"; };
 		15081C381C814CE4006A7F88 /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCalendarView.h; path = ThirdParty/Calendar/CKCalendarView.h; sourceTree = "<group>"; };
 		15081C391C814CE4006A7F88 /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCalendarView.m; path = ThirdParty/Calendar/CKCalendarView.m; sourceTree = "<group>"; };
+		15081C461C821005006A7F88 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = CustomViews/Cell/DayCollectionView/DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		15081C471C821005006A7F88 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCollectionViewCell.xib; path = CustomViews/Cell/DayCollectionView/DateCollectionViewCell.xib; sourceTree = "<group>"; };
+		15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanditTableViewCell.swift; path = CustomViews/Cell/Pandit/PanditTableViewCell.swift; sourceTree = "<group>"; };
+		15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PanditTableViewCell.xib; path = CustomViews/Cell/Pandit/PanditTableViewCell.xib; sourceTree = "<group>"; };
+		1C8F2372B14BA4D28B160C6D /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
-		5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Om.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C80AEF16FE411337EED0474 /* libPods-Om.a in Frameworks */,
+				3264929AFB2A07CBFC4DF64F /* Pods_Om.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +271,8 @@
 		15081C171C80D594006A7F88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				15081C451C820FDE006A7F88 /* Pandit */,
+				15081C441C820FD5006A7F88 /* DayCollectionView */,
 				15081C1E1C80E04B006A7F88 /* Pooja */,
 				15081C1D1C80E043006A7F88 /* Drawer */,
 			);
@@ -318,6 +328,24 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		15081C441C820FD5006A7F88 /* DayCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				15081C461C821005006A7F88 /* DateCollectionViewCell.swift */,
+				15081C471C821005006A7F88 /* DateCollectionViewCell.xib */,
+			);
+			name = DayCollectionView;
+			sourceTree = "<group>";
+		};
+		15081C451C820FDE006A7F88 /* Pandit */ = {
+			isa = PBXGroup;
+			children = (
+				15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */,
+				15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */,
+			);
+			name = Pandit;
+			sourceTree = "<group>";
+		};
 		48536E044A8A4367462F49AE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,7 +358,7 @@
 		7246FA8FB015565C4F000DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */,
+				1C8F2372B14BA4D28B160C6D /* Pods_Om.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -442,6 +470,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15081C4D1C8210C2006A7F88 /* PanditTableViewCell.xib in Resources */,
+				15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */,
 				15081BDA1C80B9A1006A7F88 /* LaunchScreen.storyboard in Resources */,
 				15081BD71C80B9A1006A7F88 /* Assets.xcassets in Resources */,
 				15081BD51C80B9A1006A7F88 /* Main.storyboard in Resources */,
@@ -520,6 +550,7 @@
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
+				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
@@ -529,6 +560,7 @@
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
 				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
+				15081C481C821005006A7F88 /* DateCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

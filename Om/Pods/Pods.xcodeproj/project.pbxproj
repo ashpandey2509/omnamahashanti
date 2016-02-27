@@ -7,482 +7,604 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0632929D34AB69B9B60EC0C3135D5E6C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B09282D2E352F5A303038B2E956A3F /* DIDatepicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		19BD91B5A5ED8A4C820CB6BD33633C7C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C1A2A15D21485ED1801B944E7E3F4C /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		19DA838760F0E53F90355BA26E98C9F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
-		1A378C41991F5219E9959E3A250E9A03 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = E65FC96EEF9BCF1DA1561A8332EABB77 /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		278E7CD796E5802067A8D3A005F272D0 /* DIDatepickerDateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 73938C6124A960FDAE0B91062D483F6B /* DIDatepickerDateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D8C79E70B7EEA9C8EB372CD5775A5C1 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3628C702631FC85BA83511D377905A0E /* MMDrawerController-dummy.m */; };
-		38BCE659A20388C2E4C6373EBE728D4A /* DIDatepicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB26227305CFF69BC0D6D364F17B454 /* DIDatepicker-dummy.m */; };
-		46C4CA96DB9AE389F907BAA0D2F397FB /* UIViewController+KNSemiModal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CAE0AAFD6BC9ABDBA9606B5CD2A090E /* UIViewController+KNSemiModal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5216F0D56161D7982D9A50FDDFCF8858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		579A1B0E910EF7BB4A3D44D2880570E9 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A76408007EFDB2102ACAC459EC0D1 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5A4119C859FA55B8DB9E50FA4FAC22AB /* NSDate+Difference.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85B29CED8390734E1CBF124F57A536 /* NSDate+Difference.m */; };
-		5CD819353C30C805E53265229D515F63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		61F0FE865D397FD7F7F0A2BD1C3B6BC6 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 905478F83E73AF1A31D5F990F144EF90 /* UIViewController+KNSemiModal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		62445D56D62979170E9966104FDFBFBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
-		66549CC91863363861D818B68B136EB6 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB80DB9E8B0902186D8573E6BAD5C2E /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		76D495DBB9B5D81BE4391E10299F938B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C3BF2EF3D9A2065F31D1D981FF7808 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7BD01331B20B3645888A7112E8031312 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		7DC7665980519EBBA6927BF5724E59FD /* NSDate+Difference.h in Headers */ = {isa = PBXBuildFile; fileRef = 696D39FC75D8D49CAC343DA7AE4E69DC /* NSDate+Difference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FF7D5E88E1B8ADA2D58865A9BBAE9E1 /* DIDatepicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DF1A291E92B24D60659C3A397011A9DC /* DIDatepicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81A5FD16631043C89C0A821BFDB7FCE1 /* THDateDay.h in Headers */ = {isa = PBXBuildFile; fileRef = F42FF64F2E9DDA9D7699321DD09625A7 /* THDateDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		829702F1DFE0788D691932DCA5BE0801 /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715672DECE9478619A4CF84DA2204473 /* DIDatepickerDateView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		83A2A242D39974BEB7457E6CCA311535 /* THDatePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C868FED7D691C52213EF850DE768A0B /* THDatePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		841830E8CE02C37376F89F5037E3FC64 /* THDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B482A451CB8831F2244F2B046EA0E /* THDatePickerViewController.m */; };
-		88399D17BB75DCFA5821EA9519353657 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		8E25AEDB2885D3922D8A48FF4E45015C /* THCalendarDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCBBE3F275B8B5D8AAD9AF00F426B9D /* THCalendarDatePicker-dummy.m */; };
-		947575549E0193C1A5A2379EA9D95D46 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D26393AD9ED4464E8DB07D303104B4 /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		984DD4BA68A399F50B9D7849E72385F8 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E53FCB3F44AB23AED34D3017D6BCEA0D /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A7F170BE65EFFD69B5986DB55C1920A /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3DA4B0E4B934C90B11BB3CC92E6B7F /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1F7626306C8C8DE3D9A639131DD9DFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
-		B56686555BBED657CA47D45654CDB175 /* Pods-Om-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 548835152C05EF064425B12F2C7D9F8E /* Pods-Om-dummy.m */; };
-		C4DE3D68EF5AE409C29EC17051CF52BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
-		D7A7FCEB7246B55BFD079AF3C71F8CD2 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D26D8C018B61A646FB9527BC50E6F00B /* THDateDay.m */; };
-		EC11B1DEB424959C8A0D23E206DDA41B /* KNSemiModalViewController_hons82-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 092ADB1E9834EAD13A7BDA6B5E4A92A1 /* KNSemiModalViewController_hons82-dummy.m */; };
-		F733730F57E794BCFB4B18DC00E2FF9B /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4791F4B3C87A3012EE0AAC28F49C3E31 /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E58170889F0C1AF71FCE2E770B02B /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03030594DA3C0C961259B8E76D867C1D /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3257CEA96CA23C7FF74C29195B229CFF /* THDateDay.m */; };
+		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5214F98DC9ABF13ED6F3F618768843E /* Error.swift */; };
+		0CC065D950865F2E18D9A9726D253DFD /* UIViewController+KNSemiModal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDC0974422E76A067507141F2336EF5 /* UIViewController+KNSemiModal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F0B700EA7163607B19532BB98B141 /* Timeline.swift */; };
+		16652B1C253CB1144A125DA706F7B364 /* KNSemiModalViewController_hons82.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B300C694B64F46E15417CFACCDFF7EC1 /* KNSemiModalViewController_hons82.framework */; };
+		1851C6BEAD00DD22AA8316538790C729 /* KSToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0806A311471B97A98C67367F6047CD12 /* KSToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A10320FFD8E80B8284DA97624407E2DC /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C8821013D1592CC3FFBDF43E4FFF18 /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25E3D5649790506C66CA10B7388D21BE /* THDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C0300472F2593FDA1FF8FE79B5522 /* THDatePickerViewController.m */; };
+		2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 584E55271F3887218D8AE78050C2E7EE /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66BB1A14DAE2C2CAADE2A1CBE4D46B /* Validation.swift */; };
+		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B5406D19F0C7C595D3335BD8ED8E3C /* NetworkReachabilityManager.swift */; };
+		3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FB1803FD331EE198390E312867719F /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AB6FB360FF2E49BAD2122DA126DE /* ResponseSerialization.swift */; };
+		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7526ACBD5C28C6539348E1EAF50D7FC2 /* Manager.swift */; };
+		48BF0142C52999B56D93A5236E072F32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */; };
+		4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7C557D1A90F7F9BFFE3C11A357B /* MMDrawerController-dummy.m */; };
+		4DD86DA71B7DB19B867B10C5F97B5B6A /* THDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD2AB427C7454D11D67A100EE6FDC7B /* THDatePickerViewController.xib */; };
+		504B6709513E2FD98D0B95C3A3AEC735 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */; };
+		5AD5EB047F01272D0A710EC5B836BA38 /* THDatePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 756072956F75488C3EB001150D1CDCA2 /* THDatePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37ED84A071F7D0CF4A27C3553FD67A6 /* Upload.swift */; };
+		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29182D2F978FBD3B6AA9AE14C6E6C68 /* Download.swift */; };
+		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E43D9D8BF3EA5D2F8B701AD0ABA5A /* Response.swift */; };
+		63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FFCB1921E5A1A4FD4CCA0120F938D8 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		663FCBA606F1862562755A2625670E75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */; };
+		6D54A53BDD4C76F64D7DB37D890563F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		734E6304D8C162FCE59D98A5903BCECE /* KNSemiModalViewController_hons82-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B969D43C2083F4857435C2318B3C5F0 /* KNSemiModalViewController_hons82-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F1791475CC831F6DCE1A5BA8ABC27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028292B1D0E7EFD032E68D36CF25FCF /* ServerTrustPolicy.swift */; };
+		7DEE6F0E34C5586DA5FA73276AAEE78B /* KNSemiModalViewController_hons82-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC5C581780F6C25B4A257394A3180 /* KNSemiModalViewController_hons82-dummy.m */; };
+		7F5F911A1133F3E3EC21B0D60AAE3C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		7FB9C50D9328E827648779AC34F6168A /* THCalendarDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E844D0074F14DBA92335FD00668F319A /* THCalendarDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80D87A84DDC61EB264E5BCF52A033565 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		8163A60362E461710D7B192CA81C9FB3 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1356C8CACB18537F9CE92BD87083DCC1 /* UIViewController+KNSemiModal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		829B789BDB09A5A71B1D2B8140565181 /* KSToastView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB993AC2E701AE0D1DBCB3D924896D /* KSToastView-dummy.m */; };
+		87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 03200B9058237897FE776C140E419CE4 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9521033ABB37F26A713617206713B39 /* Alamofire.swift */; };
+		90E61730FA1ED7C1B478FCFCECF4015E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FE640450B008EE4613622094A1FBFA /* Images.xcassets */; };
+		9133AF7BCAC246F9D25288B938E3CAA1 /* Pods-Om-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B905DEF7FD2FC89B785F2DCF41CAF42 /* Pods-Om-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B17BE4DB8273BE5E3B556E0CE37ED6D0 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95CF672B7FF65E415978E53985E91CE1 /* THDateDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1D52D71801F264430A366007A60C53 /* THDateDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0710E16397A251BDEB54FFE1545A0FE3 /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 704F6659DBBCECE670EE4C331CAE6E7D /* MMDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273225CEE47FDA1D1AA947E9D0C743D7 /* Result.swift */; };
+		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A0BCE6596E888AAAC83B1863871765 /* Alamofire-dummy.m */; };
+		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A775F9C84FF786FD179CC604A2301E /* Stream.swift */; };
+		B464A04CC4FE29EE9A8B021B20955279 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		BA8B58BD8C0D06680BA81693D7454F9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */; };
+		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290564CDC7C0BA05B1473FCA3CE9692 /* Notifications.swift */; };
+		C06BE350A6AEAEC43A27FD4CF227858C /* Pods-Om-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 793F662C36AAA1C78F1164E9C70FB3DC /* Pods-Om-dummy.m */; };
+		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8634F85B118707467FE3557E3E422B36 /* ParameterEncoding.swift */; };
+		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4AD734EBE7C41C6723362EDF225D5 /* MultipartFormData.swift */; };
+		CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 996DA1B862A891CB28B000FE9FEF1989 /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD3251D651872908E329F4A57A9B55D4 /* KSToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB9161F884FF9614A6448836FF18A /* KSToastView.m */; };
+		D79E0EDD510EDE69EE79270265F649BA /* NSDate+Difference.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EF0E1B5B94761A7293E92B35C946E0 /* NSDate+Difference.m */; };
+		D9D22A950C250411E2C84C5F9C9CEFFF /* NSDate+Difference.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD2B1891EC21C2C8C63554524714524 /* NSDate+Difference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EEAC4DBF5612C9EFF3C288D8517604 /* KSToastView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E536DBDC526A9057CCF249A7A2A92F7C /* KSToastView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E104598FCA8AA3197BA16D7FB239DFBA /* THCalendarDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A85ABBF48428F1C5300C998FA286CD /* THCalendarDatePicker-dummy.m */; };
+		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E3B8ACB15749B0C94367AC584C014 /* Request.swift */; };
+		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2757C839137C4B8D5E795105862A64A /* Foundation.framework */; };
+		FEDAE20455D66F2F708C4FE84F8C9E34 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B69AE20E7ABBBA00D23486AE068D7 /* THDateDay.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1255D59B66F344A7C37E58E52E0627D9 /* PBXContainerItemProxy */ = {
+		12129F661D2950F4ACD877F18A359847 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBC37CE27BB3DBCE4913C2FB1767FC94;
-			remoteInfo = KNSemiModalViewController_hons82;
-		};
-		28EAC1154A5CD298C32FA3B6C8DD1863 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 550F7EEAEEA17E3F92C873912E23B01C;
+			remoteGlobalIDString = 96D3562E47E4792B0A6093A0323EB398;
 			remoteInfo = MMDrawerController;
 		};
-		350244E8CF3BB2418702E39DFD2C75CF /* PBXContainerItemProxy */ = {
+		731CBF85FA7D3E4508CD0015707B35A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 06BA31D1F9CA522CED6A06C5CA36C9B4;
-			remoteInfo = THCalendarDatePicker;
+			remoteGlobalIDString = E3CAF07BEF6216CEEA0759DA9911B4FA;
+			remoteInfo = KSToastView;
 		};
-		3EC39E95774080A4E3C3A0A5E832A6E7 /* PBXContainerItemProxy */ = {
+		96758A158485A2E92D42627253D74AAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBC37CE27BB3DBCE4913C2FB1767FC94;
+			remoteGlobalIDString = 1892213B8242D18974553DCC80A3C3FB;
 			remoteInfo = KNSemiModalViewController_hons82;
 		};
-		6EB97321B2275C4873CECF291A6C2358 /* PBXContainerItemProxy */ = {
+		971A6AE77D37F9F77B40122E21B6EFD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E9C84C6B981716722FB31DFC8E6D908E;
-			remoteInfo = DIDatepicker;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
+		BB9DA33DA980E7A0AF7FDD8F24F57A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1892213B8242D18974553DCC80A3C3FB;
+			remoteInfo = KNSemiModalViewController_hons82;
+		};
+		F55893A9B100D9646F0BE88C68A22973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BF10CB5894CB846C2C620E1A594C394;
+			remoteInfo = THCalendarDatePicker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08519115504DF664E2BA4E48614D8814 /* THDateDay.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = THDateDay.xib; path = THCalendarDatePicker/THDateDay.xib; sourceTree = "<group>"; };
-		092ADB1E9834EAD13A7BDA6B5E4A92A1 /* KNSemiModalViewController_hons82-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KNSemiModalViewController_hons82-dummy.m"; sourceTree = "<group>"; };
-		0BA7CB2C4C84BD1A2058E4EBAD7CC744 /* DIDatepicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIDatepicker.xcconfig; sourceTree = "<group>"; };
-		0EB80DB9E8B0902186D8573E6BAD5C2E /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		12C3BF2EF3D9A2065F31D1D981FF7808 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		1CAE0AAFD6BC9ABDBA9606B5CD2A090E /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KNSemiModal.h"; path = "Source/UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
-		1CCBBE3F275B8B5D8AAD9AF00F426B9D /* THCalendarDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "THCalendarDatePicker-dummy.m"; sourceTree = "<group>"; };
-		216093869F33FF64E84681BAC206076E /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
-		258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		283503D626469AD512FA9BD7F96F08DF /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		29712A6B6E19BBDE6758C0ECCF3F55F8 /* THCalendarDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THCalendarDatePicker-prefix.pch"; sourceTree = "<group>"; };
-		2C868FED7D691C52213EF850DE768A0B /* THDatePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THDatePickerViewController.h; path = THCalendarDatePicker/THDatePickerViewController.h; sourceTree = "<group>"; };
-		3628C702631FC85BA83511D377905A0E /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		3CB65D21816EF402D50A4D106086FCC1 /* KNSemiModalViewController_hons82.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KNSemiModalViewController_hons82.xcconfig; sourceTree = "<group>"; };
-		3D8B32C542BE332DEB70F3D815B67260 /* Pods-Om-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Om-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3E367CD829CC16F759878727160FE10A /* libTHCalendarDatePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTHCalendarDatePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4791F4B3C87A3012EE0AAC28F49C3E31 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
-		548835152C05EF064425B12F2C7D9F8E /* Pods-Om-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Om-dummy.m"; sourceTree = "<group>"; };
-		61B09282D2E352F5A303038B2E956A3F /* DIDatepicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepicker.m; path = Sources/DIDatepicker.m; sourceTree = "<group>"; };
-		6375F705B07B0837DFA262732DA718B1 /* libPods-Om.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Om.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		696D39FC75D8D49CAC343DA7AE4E69DC /* NSDate+Difference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Difference.h"; path = "THCalendarDatePicker/NSDate+Difference.h"; sourceTree = "<group>"; };
-		715672DECE9478619A4CF84DA2204473 /* DIDatepickerDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DIDatepickerDateView.m; path = Sources/DIDatepickerDateView.m; sourceTree = "<group>"; };
-		73938C6124A960FDAE0B91062D483F6B /* DIDatepickerDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DIDatepickerDateView.h; path = Sources/DIDatepickerDateView.h; sourceTree = "<group>"; };
-		7A3DA4B0E4B934C90B11BB3CC92E6B7F /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		7C21ADA4E0D1ED8CAC31EE0C8543C8F2 /* Pods-Om-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Om-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C85B29CED8390734E1CBF124F57A536 /* NSDate+Difference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Difference.m"; path = "THCalendarDatePicker/NSDate+Difference.m"; sourceTree = "<group>"; };
-		8626C2002E04B27931EF3DC349052CFA /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
-		8A4E85ED778686C86492CA3C68EB611C /* THCalendarDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THCalendarDatePicker.xcconfig; sourceTree = "<group>"; };
-		905478F83E73AF1A31D5F990F144EF90 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KNSemiModal.m"; path = "Source/UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
-		968D30AE196A81F6988B0211F29061CE /* THDatePickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = THDatePickerViewController.xib; path = THCalendarDatePicker/THDatePickerViewController.xib; sourceTree = "<group>"; };
-		974345B0A8DE252B96E7424BCCB725E1 /* KNSemiModalViewController_hons82-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KNSemiModalViewController_hons82-prefix.pch"; sourceTree = "<group>"; };
-		9BB26227305CFF69BC0D6D364F17B454 /* DIDatepicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DIDatepicker-dummy.m"; sourceTree = "<group>"; };
-		A4D26393AD9ED4464E8DB07D303104B4 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		A596B5107A457BEE44CDB954B80D9392 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = THCalendarDatePicker/Images.xcassets; sourceTree = "<group>"; };
-		A71C7CCBC3C8E112BDA937CA604131DC /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		AB1CE6CA1EBE2E2A740EB03F2E983AA5 /* libKNSemiModalViewController_hons82.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKNSemiModalViewController_hons82.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACA2CCBDF1F63AC92894743F8D1D903A /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
-		B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		BA393EF85EBE521492BBA9070B99A56F /* Pods-Om-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Om-resources.sh"; sourceTree = "<group>"; };
+		03200B9058237897FE776C140E419CE4 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		047D94CE031F9014AA0A13AF3BC51A79 /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0710E16397A251BDEB54FFE1545A0FE3 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		0806A311471B97A98C67367F6047CD12 /* KSToastView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSToastView.h; path = KSToastView/KSToastView.h; sourceTree = "<group>"; };
+		09A85ABBF48428F1C5300C998FA286CD /* THCalendarDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "THCalendarDatePicker-dummy.m"; sourceTree = "<group>"; };
+		0EF4AB6FB360FF2E49BAD2122DA126DE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		1356C8CACB18537F9CE92BD87083DCC1 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KNSemiModal.m"; path = "Source/UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		13FFCB1921E5A1A4FD4CCA0120F938D8 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		158AACB8ABBCA48FF09964CFDAE94FC6 /* THCalendarDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = THCalendarDatePicker.modulemap; sourceTree = "<group>"; };
+		16F9B9DAF70F5F2118EB0538F883871F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FB1803FD331EE198390E312867719F /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		1A1D52D71801F264430A366007A60C53 /* THDateDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THDateDay.h; path = THCalendarDatePicker/THDateDay.h; sourceTree = "<group>"; };
+		1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		1B842DA4D9B3E721179915FFC56B71B7 /* KSToastView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KSToastView.xcconfig; sourceTree = "<group>"; };
+		1FDC0974422E76A067507141F2336EF5 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KNSemiModal.h"; path = "Source/UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
+		21B5406D19F0C7C595D3335BD8ED8E3C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		220BD04460B604486D29EA574639DA69 /* THCalendarDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THCalendarDatePicker-prefix.pch"; sourceTree = "<group>"; };
+		273225CEE47FDA1D1AA947E9D0C743D7 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		27B5B7C557D1A90F7F9BFFE3C11A357B /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		27EF0E1B5B94761A7293E92B35C946E0 /* NSDate+Difference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Difference.m"; path = "THCalendarDatePicker/NSDate+Difference.m"; sourceTree = "<group>"; };
+		2BD2AB427C7454D11D67A100EE6FDC7B /* THDatePickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = THDatePickerViewController.xib; path = THCalendarDatePicker/THDatePickerViewController.xib; sourceTree = "<group>"; };
+		2DD2B1891EC21C2C8C63554524714524 /* NSDate+Difference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Difference.h"; path = "THCalendarDatePicker/NSDate+Difference.h"; sourceTree = "<group>"; };
+		3257CEA96CA23C7FF74C29195B229CFF /* THDateDay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THDateDay.m; path = THCalendarDatePicker/THDateDay.m; sourceTree = "<group>"; };
+		32A873D3766110EF4FC8846DA3FFD159 /* THCalendarDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THCalendarDatePicker.xcconfig; sourceTree = "<group>"; };
+		4C7DB9161F884FF9614A6448836FF18A /* KSToastView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSToastView.m; path = KSToastView/KSToastView.m; sourceTree = "<group>"; };
+		4E9C0300472F2593FDA1FF8FE79B5522 /* THDatePickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THDatePickerViewController.m; path = THCalendarDatePicker/THDatePickerViewController.m; sourceTree = "<group>"; };
+		50A775F9C84FF786FD179CC604A2301E /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		554B5C032C7D26324DB020DB0C29865E /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		584E55271F3887218D8AE78050C2E7EE /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		5B80C43DF302D00ABCE0FC4231059D3C /* Pods-Om-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Om-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B969D43C2083F4857435C2318B3C5F0 /* KNSemiModalViewController_hons82-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KNSemiModalViewController_hons82-umbrella.h"; sourceTree = "<group>"; };
+		5D5F0B700EA7163607B19532BB98B141 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		66C13BE92E841CFA0C5CD804857156C5 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		6805C47AB37E215CA7D3AF5824823167 /* MMDrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMDrawerController.modulemap; sourceTree = "<group>"; };
+		6B905DEF7FD2FC89B785F2DCF41CAF42 /* Pods-Om-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Om-umbrella.h"; sourceTree = "<group>"; };
+		704A8B4B64640E5908E0B3A08562A6F9 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
+		704F6659DBBCECE670EE4C331CAE6E7D /* MMDrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-umbrella.h"; sourceTree = "<group>"; };
+		708F42D30D067D3E2CA2316C4A58A175 /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
+		7526ACBD5C28C6539348E1EAF50D7FC2 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		756072956F75488C3EB001150D1CDCA2 /* THDatePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THDatePickerViewController.h; path = THCalendarDatePicker/THDatePickerViewController.h; sourceTree = "<group>"; };
+		78FE640450B008EE4613622094A1FBFA /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = THCalendarDatePicker/Images.xcassets; sourceTree = "<group>"; };
+		793F662C36AAA1C78F1164E9C70FB3DC /* Pods-Om-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Om-dummy.m"; sourceTree = "<group>"; };
+		7BC4EDFCBB6B5DE6FA1302583407742E /* KSToastView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSToastView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8028292B1D0E7EFD032E68D36CF25FCF /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		81504929FBBB34C71DB7D377F550F226 /* KNSemiModalViewController_hons82.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KNSemiModalViewController_hons82.xcconfig; sourceTree = "<group>"; };
+		815E3B8ACB15749B0C94367AC584C014 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		832B69AE20E7ABBBA00D23486AE068D7 /* THDateDay.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = THDateDay.xib; path = THCalendarDatePicker/THDateDay.xib; sourceTree = "<group>"; };
+		8475D396DFE91AF70A3B5F578D263CE8 /* THCalendarDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THCalendarDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A0BCE6596E888AAAC83B1863871765 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		8634F85B118707467FE3557E3E422B36 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		8918A911C0E055DCD4E860EDE38DF888 /* Pods-Om-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Om-frameworks.sh"; sourceTree = "<group>"; };
+		891B24C0069D1F98AF641B05A60A17E8 /* KSToastView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KSToastView-prefix.pch"; sourceTree = "<group>"; };
+		8BC16044549021E37E105EA08732EBDD /* KNSemiModalViewController_hons82.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KNSemiModalViewController_hons82.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E70E1AFF97B027637B2A11FA86D69D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9655870B1066D249192B1B08E518BF55 /* KNSemiModalViewController_hons82.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KNSemiModalViewController_hons82.modulemap; sourceTree = "<group>"; };
+		974BB5CDCDECAA01D05289CBB97E4700 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996DA1B862A891CB28B000FE9FEF1989 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		9FEE6FF3830A3C30992ACF0791E01F1D /* Pods-Om.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Om.modulemap"; sourceTree = "<group>"; };
+		A10320FFD8E80B8284DA97624407E2DC /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		A3618CDAB0B070D4B610F1DD119F78AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A371FDE2A731EC80E757A0772B8A1A5F /* KSToastView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KSToastView.modulemap; sourceTree = "<group>"; };
+		A37ED84A071F7D0CF4A27C3553FD67A6 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		A44288D2BE06E7D136D37436F119EE34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B5A3F9C2C0F15F9BB89ACE60E54A9D /* MMDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6781F634CF48A9797FD58DF9ABA7D62 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17BE4DB8273BE5E3B556E0CE37ED6D0 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		B2757C839137C4B8D5E795105862A64A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B300C694B64F46E15417CFACCDFF7EC1 /* KNSemiModalViewController_hons82.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KNSemiModalViewController_hons82.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9521033ABB37F26A713617206713B39 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BCF71E3CC6CB49F83284939414EC40B0 /* DIDatepicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DIDatepicker-prefix.pch"; sourceTree = "<group>"; };
-		C62E237D05D2B92FBD20AC78DD620542 /* Pods-Om-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Om-frameworks.sh"; sourceTree = "<group>"; };
-		C7C1A2A15D21485ED1801B944E7E3F4C /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		D26D8C018B61A646FB9527BC50E6F00B /* THDateDay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THDateDay.m; path = THCalendarDatePicker/THDateDay.m; sourceTree = "<group>"; };
-		DF1A291E92B24D60659C3A397011A9DC /* DIDatepicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DIDatepicker.h; path = Sources/DIDatepicker.h; sourceTree = "<group>"; };
-		E53FCB3F44AB23AED34D3017D6BCEA0D /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		E65FC96EEF9BCF1DA1561A8332EABB77 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		E74B482A451CB8831F2244F2B046EA0E /* THDatePickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THDatePickerViewController.m; path = THCalendarDatePicker/THDatePickerViewController.m; sourceTree = "<group>"; };
-		F42FF64F2E9DDA9D7699321DD09625A7 /* THDateDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THDateDay.h; path = THCalendarDatePicker/THDateDay.h; sourceTree = "<group>"; };
-		F43A76408007EFDB2102ACAC459EC0D1 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		F61E801D01E04A23C2CBA8A8F6972FE7 /* libDIDatepicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDIDatepicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00E58170889F0C1AF71FCE2E770B02B /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		D0C8821013D1592CC3FFBDF43E4FFF18 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		D290564CDC7C0BA05B1473FCA3CE9692 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		D2BF45227C126C54D70A65FF509B960E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DB993AC2E701AE0D1DBCB3D924896D /* KSToastView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KSToastView-dummy.m"; sourceTree = "<group>"; };
+		D69ECB5644F87E1FF13916E1DA845168 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		D8D126634B1336A3FFA37A8DD7293898 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		DA2FCB2D41017FC597B5140DF170FF9F /* Pods-Om-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Om-resources.sh"; sourceTree = "<group>"; };
+		DC302714018644A2BD30A53E6A61090E /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
+		E29182D2F978FBD3B6AA9AE14C6E6C68 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		E29E43D9D8BF3EA5D2F8B701AD0ABA5A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		E4B4AD734EBE7C41C6723362EDF225D5 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		E5214F98DC9ABF13ED6F3F618768843E /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		E536DBDC526A9057CCF249A7A2A92F7C /* KSToastView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KSToastView-umbrella.h"; sourceTree = "<group>"; };
+		E5EDA3BC336ABCD72E0B4A750E439C2D /* KNSemiModalViewController_hons82-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KNSemiModalViewController_hons82-prefix.pch"; sourceTree = "<group>"; };
+		E6C4C4056CBB621D2F38BC94CB21FAFC /* Pods-Om-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Om-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E844D0074F14DBA92335FD00668F319A /* THCalendarDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THCalendarDatePicker-umbrella.h"; sourceTree = "<group>"; };
+		F7DAC5C581780F6C25B4A257394A3180 /* KNSemiModalViewController_hons82-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KNSemiModalViewController_hons82-dummy.m"; sourceTree = "<group>"; };
+		FF66BB1A14DAE2C2CAADE2A1CBE4D46B /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D0E65768F524B502438CF0E9CD5640A /* Frameworks */ = {
+		1685AC63AC0911C7C7EF52A2CF2F4F6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD01331B20B3645888A7112E8031312 /* Foundation.framework in Frameworks */,
+				749F1791475CC831F6DCE1A5BA8ABC27 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5096A85246FC05F62231540D089685A7 /* Frameworks */ = {
+		6B9D9ED7F92F0142B1BF7159E9BC94BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F7626306C8C8DE3D9A639131DD9DFE /* Foundation.framework in Frameworks */,
+				6D54A53BDD4C76F64D7DB37D890563F1 /* Foundation.framework in Frameworks */,
+				504B6709513E2FD98D0B95C3A3AEC735 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B35E66B0B5FAA6AA75DE1F4EEDAC563C /* Frameworks */ = {
+		99E5111A0B7E9416B4916F985BE4F53E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5216F0D56161D7982D9A50FDDFCF8858 /* Foundation.framework in Frameworks */,
-				19DA838760F0E53F90355BA26E98C9F7 /* QuartzCore.framework in Frameworks */,
+				B464A04CC4FE29EE9A8B021B20955279 /* Foundation.framework in Frameworks */,
+				16652B1C253CB1144A125DA706F7B364 /* KNSemiModalViewController_hons82.framework in Frameworks */,
+				48BF0142C52999B56D93A5236E072F32 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C81EA9947F4EA889C80E0571F51007C3 /* Frameworks */ = {
+		A8C3B032E58E4EB1358747C10DC1493B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD819353C30C805E53265229D515F63 /* Foundation.framework in Frameworks */,
-				62445D56D62979170E9966104FDFBFBE /* QuartzCore.framework in Frameworks */,
+				80D87A84DDC61EB264E5BCF52A033565 /* Foundation.framework in Frameworks */,
+				663FCBA606F1862562755A2625670E75 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCFA4E612772AF86B65DF23AC6FD7F60 /* Frameworks */ = {
+		AE46F03F680D2CA1FFC849F4A1D92B53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88399D17BB75DCFA5821EA9519353657 /* Foundation.framework in Frameworks */,
-				C4DE3D68EF5AE409C29EC17051CF52BD /* QuartzCore.framework in Frameworks */,
+				7F5F911A1133F3E3EC21B0D60AAE3C8B /* Foundation.framework in Frameworks */,
+				BA8B58BD8C0D06680BA81693D7454F9D /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37F5EB8AACC4F3A0838AFA47E552E766 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				4791F4B3C87A3012EE0AAC28F49C3E31 /* MMDrawerController.h */,
-				0EB80DB9E8B0902186D8573E6BAD5C2E /* MMDrawerController.m */,
-				A4D26393AD9ED4464E8DB07D303104B4 /* MMDrawerController+Subclass.h */,
-				E53FCB3F44AB23AED34D3017D6BCEA0D /* UIViewController+MMDrawerController.h */,
-				F43A76408007EFDB2102ACAC459EC0D1 /* UIViewController+MMDrawerController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		3926C638AD0708942C88C2BC89261735 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */,
-				B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		3F36055120B0768E25569C51D9FC0619 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F61E801D01E04A23C2CBA8A8F6972FE7 /* libDIDatepicker.a */,
-				AB1CE6CA1EBE2E2A740EB03F2E983AA5 /* libKNSemiModalViewController_hons82.a */,
-				283503D626469AD512FA9BD7F96F08DF /* libMMDrawerController.a */,
-				6375F705B07B0837DFA262732DA718B1 /* libPods-Om.a */,
-				3E367CD829CC16F759878727160FE10A /* libTHCalendarDatePicker.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		42FF02042DD22120020F8F2401A446B2 /* MMDrawerBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				7A3DA4B0E4B934C90B11BB3CC92E6B7F /* MMDrawerBarButtonItem.h */,
-				12C3BF2EF3D9A2065F31D1D981FF7808 /* MMDrawerBarButtonItem.m */,
-			);
-			name = MMDrawerBarButtonItem;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3926C638AD0708942C88C2BC89261735 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4CF209BDB6A17047FDDE7468D2AC250D /* Subclass */ = {
+		0755F173EF2634D98972068FBB58AAB1 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Subclass;
 			sourceTree = "<group>";
 		};
-		584B13A21FED0B32F8F621F74CCE290C /* Support Files */ = {
+		1E1CF1DDA5FC9BA8E101F6AE879FFF48 /* MMDrawerVisualStates */ = {
 			isa = PBXGroup;
 			children = (
-				3CB65D21816EF402D50A4D106086FCC1 /* KNSemiModalViewController_hons82.xcconfig */,
-				092ADB1E9834EAD13A7BDA6B5E4A92A1 /* KNSemiModalViewController_hons82-dummy.m */,
-				974345B0A8DE252B96E7424BCCB725E1 /* KNSemiModalViewController_hons82-prefix.pch */,
+				0710E16397A251BDEB54FFE1545A0FE3 /* MMDrawerVisualState.h */,
+				03200B9058237897FE776C140E419CE4 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		4EAF8B91EE3F8AB3A38A9B3F22AB8BB8 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				8229AB65CFAC03F1E958C168146EF056 /* Core */,
+				CCA1F821D25D6DAC8B22484BDF61FF82 /* MMDrawerBarButtonItem */,
+				1E1CF1DDA5FC9BA8E101F6AE879FFF48 /* MMDrawerVisualStates */,
+				0755F173EF2634D98972068FBB58AAB1 /* Subclass */,
+				C981D713B61D356CF30D656A331F2644 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		562AF7F8DDFDEC7381E047DB0F8A90F3 /* THCalendarDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2B1891EC21C2C8C63554524714524 /* NSDate+Difference.h */,
+				27EF0E1B5B94761A7293E92B35C946E0 /* NSDate+Difference.m */,
+				1A1D52D71801F264430A366007A60C53 /* THDateDay.h */,
+				3257CEA96CA23C7FF74C29195B229CFF /* THDateDay.m */,
+				756072956F75488C3EB001150D1CDCA2 /* THDatePickerViewController.h */,
+				4E9C0300472F2593FDA1FF8FE79B5522 /* THDatePickerViewController.m */,
+				E99A2AD992DF2D23C96DAB45F46589BE /* Resources */,
+				EB52A9B0FD1DEA2E14748AE7611DE787 /* Support Files */,
+			);
+			path = THCalendarDatePicker;
+			sourceTree = "<group>";
+		};
+		5FDDC404DB03F5D98AE2D8C7CDC9BACE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A44288D2BE06E7D136D37436F119EE34 /* Info.plist */,
+				9655870B1066D249192B1B08E518BF55 /* KNSemiModalViewController_hons82.modulemap */,
+				81504929FBBB34C71DB7D377F550F226 /* KNSemiModalViewController_hons82.xcconfig */,
+				F7DAC5C581780F6C25B4A257394A3180 /* KNSemiModalViewController_hons82-dummy.m */,
+				E5EDA3BC336ABCD72E0B4A750E439C2D /* KNSemiModalViewController_hons82-prefix.pch */,
+				5B969D43C2083F4857435C2318B3C5F0 /* KNSemiModalViewController_hons82-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KNSemiModalViewController_hons82";
 			sourceTree = "<group>";
 		};
-		5C1AA6346877D4D5ABD96B1045417B24 /* Support Files */ = {
+		739D446A15720E5C9D61CAC7AB4377DF /* KSToastView */ = {
 			isa = PBXGroup;
 			children = (
-				0BA7CB2C4C84BD1A2058E4EBAD7CC744 /* DIDatepicker.xcconfig */,
-				9BB26227305CFF69BC0D6D364F17B454 /* DIDatepicker-dummy.m */,
-				BCF71E3CC6CB49F83284939414EC40B0 /* DIDatepicker-prefix.pch */,
+				0806A311471B97A98C67367F6047CD12 /* KSToastView.h */,
+				4C7DB9161F884FF9614A6448836FF18A /* KSToastView.m */,
+				CB25E1AB67EFAFB606410CBCEB7DDCF2 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DIDatepicker";
+			path = KSToastView;
 			sourceTree = "<group>";
 		};
-		72FD4E8D0195070BDDEC6D3BAFF8C6EF /* THCalendarDatePicker */ = {
+		784F9E583E8BDFE7FE436DB0A66C4A82 /* KNSemiModalViewController_hons82 */ = {
 			isa = PBXGroup;
 			children = (
-				696D39FC75D8D49CAC343DA7AE4E69DC /* NSDate+Difference.h */,
-				7C85B29CED8390734E1CBF124F57A536 /* NSDate+Difference.m */,
-				F42FF64F2E9DDA9D7699321DD09625A7 /* THDateDay.h */,
-				D26D8C018B61A646FB9527BC50E6F00B /* THDateDay.m */,
-				2C868FED7D691C52213EF850DE768A0B /* THDatePickerViewController.h */,
-				E74B482A451CB8831F2244F2B046EA0E /* THDatePickerViewController.m */,
-				90B7994F4401AA375C91CC1FE90D843A /* Resources */,
-				D8F5019A8DDE53EC19440A1C3F9A23DE /* Support Files */,
+				1FDC0974422E76A067507141F2336EF5 /* UIViewController+KNSemiModal.h */,
+				1356C8CACB18537F9CE92BD87083DCC1 /* UIViewController+KNSemiModal.m */,
+				5FDDC404DB03F5D98AE2D8C7CDC9BACE /* Support Files */,
 			);
-			path = THCalendarDatePicker;
+			path = KNSemiModalViewController_hons82;
+			sourceTree = "<group>";
+		};
+		7A6B34C63F1D6826AF04E203C2F384CD /* Pods-Om */ = {
+			isa = PBXGroup;
+			children = (
+				A6781F634CF48A9797FD58DF9ABA7D62 /* Info.plist */,
+				9FEE6FF3830A3C30992ACF0791E01F1D /* Pods-Om.modulemap */,
+				E6C4C4056CBB621D2F38BC94CB21FAFC /* Pods-Om-acknowledgements.markdown */,
+				5B80C43DF302D00ABCE0FC4231059D3C /* Pods-Om-acknowledgements.plist */,
+				793F662C36AAA1C78F1164E9C70FB3DC /* Pods-Om-dummy.m */,
+				8918A911C0E055DCD4E860EDE38DF888 /* Pods-Om-frameworks.sh */,
+				DA2FCB2D41017FC597B5140DF170FF9F /* Pods-Om-resources.sh */,
+				6B905DEF7FD2FC89B785F2DCF41CAF42 /* Pods-Om-umbrella.h */,
+				DC302714018644A2BD30A53E6A61090E /* Pods-Om.debug.xcconfig */,
+				708F42D30D067D3E2CA2316C4A58A175 /* Pods-Om.release.xcconfig */,
+			);
+			name = "Pods-Om";
+			path = "Target Support Files/Pods-Om";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				BB301D97FC933E682CBF957973B9A12D /* Pods */,
-				3F36055120B0768E25569C51D9FC0619 /* Products */,
-				E3A435DAA38352C301C4798B20674F15 /* Targets Support Files */,
+				D1D4ACE8ADE79ADCC0744B813ABDCC3D /* Frameworks */,
+				E872794CB8AB84E323E1559951A40341 /* Pods */,
+				DA7775D9422D5C2D586D6CFB61C763F7 /* Products */,
+				CE6AEF6CD9847E2CB3E9427ED1648D4E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		90B7994F4401AA375C91CC1FE90D843A /* Resources */ = {
+		8229AB65CFAC03F1E958C168146EF056 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A596B5107A457BEE44CDB954B80D9392 /* Images.xcassets */,
-				08519115504DF664E2BA4E48614D8814 /* THDateDay.xib */,
-				968D30AE196A81F6988B0211F29061CE /* THDatePickerViewController.xib */,
+				584E55271F3887218D8AE78050C2E7EE /* MMDrawerController.h */,
+				17FB1803FD331EE198390E312867719F /* MMDrawerController.m */,
+				D00E58170889F0C1AF71FCE2E770B02B /* MMDrawerController+Subclass.h */,
+				996DA1B862A891CB28B000FE9FEF1989 /* UIViewController+MMDrawerController.h */,
+				13FFCB1921E5A1A4FD4CCA0120F938D8 /* UIViewController+MMDrawerController.m */,
 			);
-			name = Resources;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		BB301D97FC933E682CBF957973B9A12D /* Pods */ = {
+		87BACD0452479CE216A0CCD383D21F8D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C12712FB7C14E45C847D0457A100CBD8 /* DIDatepicker */,
-				CE3EA3863C8C02AC4A449D4C3E73980A /* KNSemiModalViewController_hons82 */,
-				BE6A7D5DC03641F94AA57202111CDA4E /* MMDrawerController */,
-				72FD4E8D0195070BDDEC6D3BAFF8C6EF /* THCalendarDatePicker */,
+				B2757C839137C4B8D5E795105862A64A /* Foundation.framework */,
+				1B5BB71FB8A9D32852DE60945475E25F /* QuartzCore.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BE6A7D5DC03641F94AA57202111CDA4E /* MMDrawerController */ = {
+		A34CE97A83736FD813DE67753DAAF2EC /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				37F5EB8AACC4F3A0838AFA47E552E766 /* Core */,
-				42FF02042DD22120020F8F2401A446B2 /* MMDrawerBarButtonItem */,
-				DB5299102E12B59D3C352B19E4A631B5 /* MMDrawerVisualStates */,
-				4CF209BDB6A17047FDDE7468D2AC250D /* Subclass */,
-				FC38E3E0B76358EAC7ECD60EB0871776 /* Support Files */,
+				B9521033ABB37F26A713617206713B39 /* Alamofire.swift */,
+				E29182D2F978FBD3B6AA9AE14C6E6C68 /* Download.swift */,
+				E5214F98DC9ABF13ED6F3F618768843E /* Error.swift */,
+				7526ACBD5C28C6539348E1EAF50D7FC2 /* Manager.swift */,
+				E4B4AD734EBE7C41C6723362EDF225D5 /* MultipartFormData.swift */,
+				21B5406D19F0C7C595D3335BD8ED8E3C /* NetworkReachabilityManager.swift */,
+				D290564CDC7C0BA05B1473FCA3CE9692 /* Notifications.swift */,
+				8634F85B118707467FE3557E3E422B36 /* ParameterEncoding.swift */,
+				815E3B8ACB15749B0C94367AC584C014 /* Request.swift */,
+				E29E43D9D8BF3EA5D2F8B701AD0ABA5A /* Response.swift */,
+				0EF4AB6FB360FF2E49BAD2122DA126DE /* ResponseSerialization.swift */,
+				273225CEE47FDA1D1AA947E9D0C743D7 /* Result.swift */,
+				8028292B1D0E7EFD032E68D36CF25FCF /* ServerTrustPolicy.swift */,
+				50A775F9C84FF786FD179CC604A2301E /* Stream.swift */,
+				5D5F0B700EA7163607B19532BB98B141 /* Timeline.swift */,
+				A37ED84A071F7D0CF4A27C3553FD67A6 /* Upload.swift */,
+				FF66BB1A14DAE2C2CAADE2A1CBE4D46B /* Validation.swift */,
+				FA1A9F716ED54445EF329DE933B0B07A /* Support Files */,
 			);
-			path = MMDrawerController;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		C12712FB7C14E45C847D0457A100CBD8 /* DIDatepicker */ = {
+		C981D713B61D356CF30D656A331F2644 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DF1A291E92B24D60659C3A397011A9DC /* DIDatepicker.h */,
-				61B09282D2E352F5A303038B2E956A3F /* DIDatepicker.m */,
-				73938C6124A960FDAE0B91062D483F6B /* DIDatepickerDateView.h */,
-				715672DECE9478619A4CF84DA2204473 /* DIDatepickerDateView.m */,
-				5C1AA6346877D4D5ABD96B1045417B24 /* Support Files */,
-			);
-			path = DIDatepicker;
-			sourceTree = "<group>";
-		};
-		CE3EA3863C8C02AC4A449D4C3E73980A /* KNSemiModalViewController_hons82 */ = {
-			isa = PBXGroup;
-			children = (
-				1CAE0AAFD6BC9ABDBA9606B5CD2A090E /* UIViewController+KNSemiModal.h */,
-				905478F83E73AF1A31D5F990F144EF90 /* UIViewController+KNSemiModal.m */,
-				584B13A21FED0B32F8F621F74CCE290C /* Support Files */,
-			);
-			path = KNSemiModalViewController_hons82;
-			sourceTree = "<group>";
-		};
-		D8F5019A8DDE53EC19440A1C3F9A23DE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8A4E85ED778686C86492CA3C68EB611C /* THCalendarDatePicker.xcconfig */,
-				1CCBBE3F275B8B5D8AAD9AF00F426B9D /* THCalendarDatePicker-dummy.m */,
-				29712A6B6E19BBDE6758C0ECCF3F55F8 /* THCalendarDatePicker-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/THCalendarDatePicker";
-			sourceTree = "<group>";
-		};
-		DB5299102E12B59D3C352B19E4A631B5 /* MMDrawerVisualStates */ = {
-			isa = PBXGroup;
-			children = (
-				E65FC96EEF9BCF1DA1561A8332EABB77 /* MMDrawerVisualState.h */,
-				C7C1A2A15D21485ED1801B944E7E3F4C /* MMDrawerVisualState.m */,
-			);
-			name = MMDrawerVisualStates;
-			sourceTree = "<group>";
-		};
-		E07A9E5B43F16062C83CA80746D47AE6 /* Pods-Om */ = {
-			isa = PBXGroup;
-			children = (
-				3D8B32C542BE332DEB70F3D815B67260 /* Pods-Om-acknowledgements.markdown */,
-				7C21ADA4E0D1ED8CAC31EE0C8543C8F2 /* Pods-Om-acknowledgements.plist */,
-				548835152C05EF064425B12F2C7D9F8E /* Pods-Om-dummy.m */,
-				C62E237D05D2B92FBD20AC78DD620542 /* Pods-Om-frameworks.sh */,
-				BA393EF85EBE521492BBA9070B99A56F /* Pods-Om-resources.sh */,
-				ACA2CCBDF1F63AC92894743F8D1D903A /* Pods-Om.debug.xcconfig */,
-				216093869F33FF64E84681BAC206076E /* Pods-Om.release.xcconfig */,
-			);
-			name = "Pods-Om";
-			path = "Target Support Files/Pods-Om";
-			sourceTree = "<group>";
-		};
-		E3A435DAA38352C301C4798B20674F15 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E07A9E5B43F16062C83CA80746D47AE6 /* Pods-Om */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		FC38E3E0B76358EAC7ECD60EB0871776 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8626C2002E04B27931EF3DC349052CFA /* MMDrawerController.xcconfig */,
-				3628C702631FC85BA83511D377905A0E /* MMDrawerController-dummy.m */,
-				A71C7CCBC3C8E112BDA937CA604131DC /* MMDrawerController-prefix.pch */,
+				D2BF45227C126C54D70A65FF509B960E /* Info.plist */,
+				6805C47AB37E215CA7D3AF5824823167 /* MMDrawerController.modulemap */,
+				704A8B4B64640E5908E0B3A08562A6F9 /* MMDrawerController.xcconfig */,
+				27B5B7C557D1A90F7F9BFFE3C11A357B /* MMDrawerController-dummy.m */,
+				554B5C032C7D26324DB020DB0C29865E /* MMDrawerController-prefix.pch */,
+				704F6659DBBCECE670EE4C331CAE6E7D /* MMDrawerController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MMDrawerController";
 			sourceTree = "<group>";
 		};
+		CB25E1AB67EFAFB606410CBCEB7DDCF2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3618CDAB0B070D4B610F1DD119F78AA /* Info.plist */,
+				A371FDE2A731EC80E757A0772B8A1A5F /* KSToastView.modulemap */,
+				1B842DA4D9B3E721179915FFC56B71B7 /* KSToastView.xcconfig */,
+				D5DB993AC2E701AE0D1DBCB3D924896D /* KSToastView-dummy.m */,
+				891B24C0069D1F98AF641B05A60A17E8 /* KSToastView-prefix.pch */,
+				E536DBDC526A9057CCF249A7A2A92F7C /* KSToastView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KSToastView";
+			sourceTree = "<group>";
+		};
+		CCA1F821D25D6DAC8B22484BDF61FF82 /* MMDrawerBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				D0C8821013D1592CC3FFBDF43E4FFF18 /* MMDrawerBarButtonItem.h */,
+				A10320FFD8E80B8284DA97624407E2DC /* MMDrawerBarButtonItem.m */,
+			);
+			name = MMDrawerBarButtonItem;
+			sourceTree = "<group>";
+		};
+		CE6AEF6CD9847E2CB3E9427ED1648D4E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A6B34C63F1D6826AF04E203C2F384CD /* Pods-Om */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D1D4ACE8ADE79ADCC0744B813ABDCC3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B300C694B64F46E15417CFACCDFF7EC1 /* KNSemiModalViewController_hons82.framework */,
+				87BACD0452479CE216A0CCD383D21F8D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA7775D9422D5C2D586D6CFB61C763F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16F9B9DAF70F5F2118EB0538F883871F /* Alamofire.framework */,
+				8BC16044549021E37E105EA08732EBDD /* KNSemiModalViewController_hons82.framework */,
+				7BC4EDFCBB6B5DE6FA1302583407742E /* KSToastView.framework */,
+				A4B5A3F9C2C0F15F9BB89ACE60E54A9D /* MMDrawerController.framework */,
+				047D94CE031F9014AA0A13AF3BC51A79 /* Pods_Om.framework */,
+				8475D396DFE91AF70A3B5F578D263CE8 /* THCalendarDatePicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E872794CB8AB84E323E1559951A40341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A34CE97A83736FD813DE67753DAAF2EC /* Alamofire */,
+				784F9E583E8BDFE7FE436DB0A66C4A82 /* KNSemiModalViewController_hons82 */,
+				739D446A15720E5C9D61CAC7AB4377DF /* KSToastView */,
+				4EAF8B91EE3F8AB3A38A9B3F22AB8BB8 /* MMDrawerController */,
+				562AF7F8DDFDEC7381E047DB0F8A90F3 /* THCalendarDatePicker */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E99A2AD992DF2D23C96DAB45F46589BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78FE640450B008EE4613622094A1FBFA /* Images.xcassets */,
+				832B69AE20E7ABBBA00D23486AE068D7 /* THDateDay.xib */,
+				2BD2AB427C7454D11D67A100EE6FDC7B /* THDatePickerViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EB52A9B0FD1DEA2E14748AE7611DE787 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				974BB5CDCDECAA01D05289CBB97E4700 /* Info.plist */,
+				158AACB8ABBCA48FF09964CFDAE94FC6 /* THCalendarDatePicker.modulemap */,
+				32A873D3766110EF4FC8846DA3FFD159 /* THCalendarDatePicker.xcconfig */,
+				09A85ABBF48428F1C5300C998FA286CD /* THCalendarDatePicker-dummy.m */,
+				220BD04460B604486D29EA574639DA69 /* THCalendarDatePicker-prefix.pch */,
+				E844D0074F14DBA92335FD00668F319A /* THCalendarDatePicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/THCalendarDatePicker";
+			sourceTree = "<group>";
+		};
+		FA1A9F716ED54445EF329DE933B0B07A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8D126634B1336A3FFA37A8DD7293898 /* Alamofire.modulemap */,
+				66C13BE92E841CFA0C5CD804857156C5 /* Alamofire.xcconfig */,
+				85A0BCE6596E888AAAC83B1863871765 /* Alamofire-dummy.m */,
+				D69ECB5644F87E1FF13916E1DA845168 /* Alamofire-prefix.pch */,
+				B17BE4DB8273BE5E3B556E0CE37ED6D0 /* Alamofire-umbrella.h */,
+				8E70E1AFF97B027637B2A11FA86D69D8 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		36A62C3E037EFA6632783773E87FC33D /* Headers */ = {
+		079E9ACE8A655D5FED855E204442BDBD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C4CA96DB9AE389F907BAA0D2F397FB /* UIViewController+KNSemiModal.h in Headers */,
+				2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */,
+				00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */,
+				A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */,
+				2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */,
+				A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */,
+				CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B25487E91D6C44A5A7199EDA11CF451 /* Headers */ = {
+		39592FF0E6D21545842769CA0B9A0050 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7F170BE65EFFD69B5986DB55C1920A /* MMDrawerBarButtonItem.h in Headers */,
-				947575549E0193C1A5A2379EA9D95D46 /* MMDrawerController+Subclass.h in Headers */,
-				F733730F57E794BCFB4B18DC00E2FF9B /* MMDrawerController.h in Headers */,
-				1A378C41991F5219E9959E3A250E9A03 /* MMDrawerVisualState.h in Headers */,
-				984DD4BA68A399F50B9D7849E72385F8 /* UIViewController+MMDrawerController.h in Headers */,
+				D9D22A950C250411E2C84C5F9C9CEFFF /* NSDate+Difference.h in Headers */,
+				7FB9C50D9328E827648779AC34F6168A /* THCalendarDatePicker-umbrella.h in Headers */,
+				95CF672B7FF65E415978E53985E91CE1 /* THDateDay.h in Headers */,
+				5AD5EB047F01272D0A710EC5B836BA38 /* THDatePickerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9176E1ADB04A71E98B56D8F6C4943D /* Headers */ = {
+		6D634604425CD351FA96F9D7AE4751F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FF7D5E88E1B8ADA2D58865A9BBAE9E1 /* DIDatepicker.h in Headers */,
-				278E7CD796E5802067A8D3A005F272D0 /* DIDatepickerDateView.h in Headers */,
+				9133AF7BCAC246F9D25288B938E3CAA1 /* Pods-Om-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC5733512BAB270FDBAF7C1A24B9DF04 /* Headers */ = {
+		87D0C3B8BA1ED4A0018B88FB46097FE3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC7665980519EBBA6927BF5724E59FD /* NSDate+Difference.h in Headers */,
-				81A5FD16631043C89C0A821BFDB7FCE1 /* THDateDay.h in Headers */,
-				83A2A242D39974BEB7457E6CCA311535 /* THDatePickerViewController.h in Headers */,
+				734E6304D8C162FCE59D98A5903BCECE /* KNSemiModalViewController_hons82-umbrella.h in Headers */,
+				0CC065D950865F2E18D9A9726D253DFD /* UIViewController+KNSemiModal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DE0D4BDD85DF879221145C1D6C00BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EEAC4DBF5612C9EFF3C288D8517604 /* KSToastView-umbrella.h in Headers */,
+				1851C6BEAD00DD22AA8316538790C729 /* KSToastView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		06BA31D1F9CA522CED6A06C5CA36C9B4 /* THCalendarDatePicker */ = {
+		1892213B8242D18974553DCC80A3C3FB /* KNSemiModalViewController_hons82 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF8D9BC881B9519BBB65BC9A36C6987 /* Build configuration list for PBXNativeTarget "THCalendarDatePicker" */;
+			buildConfigurationList = 48E611F6A4DF6B2F2E5650DF46233DA7 /* Build configuration list for PBXNativeTarget "KNSemiModalViewController_hons82" */;
 			buildPhases = (
-				2CAFF615AC028CF5117301D8C8EA28C7 /* Sources */,
-				B35E66B0B5FAA6AA75DE1F4EEDAC563C /* Frameworks */,
-				CC5733512BAB270FDBAF7C1A24B9DF04 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB0FEE6EE23431715F02D1605FD5A423 /* PBXTargetDependency */,
-			);
-			name = THCalendarDatePicker;
-			productName = THCalendarDatePicker;
-			productReference = 3E367CD829CC16F759878727160FE10A /* libTHCalendarDatePicker.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6BCBDE524BD4EFDC051B5AD1A976D69B /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
-			buildPhases = (
-				BE1CF9CE4811645411026F952650D228 /* Sources */,
-				C81EA9947F4EA889C80E0571F51007C3 /* Frameworks */,
-				6B25487E91D6C44A5A7199EDA11CF451 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MMDrawerController;
-			productName = MMDrawerController;
-			productReference = 283503D626469AD512FA9BD7F96F08DF /* libMMDrawerController.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		CBC37CE27BB3DBCE4913C2FB1767FC94 /* KNSemiModalViewController_hons82 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9D6850E665C3CFB6CB9DA0236E14D8C9 /* Build configuration list for PBXNativeTarget "KNSemiModalViewController_hons82" */;
-			buildPhases = (
-				5D39975761A8D08CD1C30DF3AD14F2A3 /* Sources */,
-				FCFA4E612772AF86B65DF23AC6FD7F60 /* Frameworks */,
-				36A62C3E037EFA6632783773E87FC33D /* Headers */,
+				768897713C5D76B87C19A9296CE57183 /* Sources */,
+				A8C3B032E58E4EB1358747C10DC1493B /* Frameworks */,
+				87D0C3B8BA1ED4A0018B88FB46097FE3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -490,45 +612,100 @@
 			);
 			name = KNSemiModalViewController_hons82;
 			productName = KNSemiModalViewController_hons82;
-			productReference = AB1CE6CA1EBE2E2A740EB03F2E983AA5 /* libKNSemiModalViewController_hons82.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 8BC16044549021E37E105EA08732EBDD /* KNSemiModalViewController_hons82.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		E9C84C6B981716722FB31DFC8E6D908E /* DIDatepicker */ = {
+		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16E06A20F9B7CD103E2C684B384043F7 /* Build configuration list for PBXNativeTarget "DIDatepicker" */;
+			buildConfigurationList = 3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				5F8B74DDF03D59F60569645EBF45640C /* Sources */,
-				3D0E65768F524B502438CF0E9CD5640A /* Frameworks */,
-				CB9176E1ADB04A71E98B56D8F6C4943D /* Headers */,
+				95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */,
+				B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */,
+				EFDF3B631BBB965A372347705CA14854 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DIDatepicker;
-			productName = DIDatepicker;
-			productReference = F61E801D01E04A23C2CBA8A8F6972FE7 /* libDIDatepicker.a */;
-			productType = "com.apple.product-type.library.static";
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 16F9B9DAF70F5F2118EB0538F883871F /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		FD10FA4069B20DF0552E853F9A9EA858 /* Pods-Om */ = {
+		8BF10CB5894CB846C2C620E1A594C394 /* THCalendarDatePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49D0C2C68105BC5B23DDF50F5C4CD1C2 /* Build configuration list for PBXNativeTarget "Pods-Om" */;
+			buildConfigurationList = DC2901208B8C30CC76AE5CF0CAF6D392 /* Build configuration list for PBXNativeTarget "THCalendarDatePicker" */;
 			buildPhases = (
-				5A7F10186C5352B292BACFF1500BE00F /* Sources */,
-				5096A85246FC05F62231540D089685A7 /* Frameworks */,
+				3C24C089E9197BBF9AE140A4771D4AC0 /* Sources */,
+				99E5111A0B7E9416B4916F985BE4F53E /* Frameworks */,
+				39592FF0E6D21545842769CA0B9A0050 /* Headers */,
+				23B30B5EE424529CE5036A993DA696C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8833123AE8A73519CC574568C9A1B300 /* PBXTargetDependency */,
-				28D49D3DAE02D5579969C8309225A81E /* PBXTargetDependency */,
-				C04AB0314A3BC73E1F8CF3317664C302 /* PBXTargetDependency */,
-				86A34AF832800B0D46E0F6A19909F6C1 /* PBXTargetDependency */,
+				BD176FDAA7D7BF51B9F1504A7277897E /* PBXTargetDependency */,
+			);
+			name = THCalendarDatePicker;
+			productName = THCalendarDatePicker;
+			productReference = 8475D396DFE91AF70A3B5F578D263CE8 /* THCalendarDatePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410F9B5264E3B131C74C0402F62B1BFE /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
+			buildPhases = (
+				1AC8283747C7D044F7E6743D804C3D89 /* Sources */,
+				AE46F03F680D2CA1FFC849F4A1D92B53 /* Frameworks */,
+				079E9ACE8A655D5FED855E204442BDBD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMDrawerController;
+			productName = MMDrawerController;
+			productReference = A4B5A3F9C2C0F15F9BB89ACE60E54A9D /* MMDrawerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C310FF17E4939DB6617F8F81738A09BA /* Pods-Om */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DAEF6B07B6777F82013C0532D33DE7A /* Build configuration list for PBXNativeTarget "Pods-Om" */;
+			buildPhases = (
+				4A64A40F56F2378C40031F148220785B /* Sources */,
+				1685AC63AC0911C7C7EF52A2CF2F4F6C /* Frameworks */,
+				6D634604425CD351FA96F9D7AE4751F4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C0B0519759406C36627FAC50D1B3A6E /* PBXTargetDependency */,
+				53940CCAF4DD9EE6110951FC6E8DB5C7 /* PBXTargetDependency */,
+				2EA1AF2CF956A487E25BB7BE6447F0DC /* PBXTargetDependency */,
+				C1EB5D7585F635D11891E82780EE6515 /* PBXTargetDependency */,
+				9BB34EBB1EA2A08574B3963770A1C1B9 /* PBXTargetDependency */,
 			);
 			name = "Pods-Om";
 			productName = "Pods-Om";
-			productReference = 6375F705B07B0837DFA262732DA718B1 /* libPods-Om.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 047D94CE031F9014AA0A13AF3BC51A79 /* Pods_Om.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E3CAF07BEF6216CEEA0759DA9911B4FA /* KSToastView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE9269724DDAADF90ADA6359E6AED76 /* Build configuration list for PBXNativeTarget "KSToastView" */;
+			buildPhases = (
+				B47553C52593E153EB5F58553C1C5172 /* Sources */,
+				6B9D9ED7F92F0142B1BF7159E9BC94BE /* Frameworks */,
+				E8DE0D4BDD85DF879221145C1D6C00BE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSToastView;
+			productName = KSToastView;
+			productReference = 7BC4EDFCBB6B5DE6FA1302583407742E /* KSToastView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -547,249 +724,374 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3F36055120B0768E25569C51D9FC0619 /* Products */;
+			productRefGroup = DA7775D9422D5C2D586D6CFB61C763F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9C84C6B981716722FB31DFC8E6D908E /* DIDatepicker */,
-				CBC37CE27BB3DBCE4913C2FB1767FC94 /* KNSemiModalViewController_hons82 */,
-				550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */,
-				FD10FA4069B20DF0552E853F9A9EA858 /* Pods-Om */,
-				06BA31D1F9CA522CED6A06C5CA36C9B4 /* THCalendarDatePicker */,
+				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
+				1892213B8242D18974553DCC80A3C3FB /* KNSemiModalViewController_hons82 */,
+				E3CAF07BEF6216CEEA0759DA9911B4FA /* KSToastView */,
+				96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */,
+				C310FF17E4939DB6617F8F81738A09BA /* Pods-Om */,
+				8BF10CB5894CB846C2C620E1A594C394 /* THCalendarDatePicker */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		23B30B5EE424529CE5036A993DA696C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E61730FA1ED7C1B478FCFCECF4015E /* Images.xcassets in Resources */,
+				FEDAE20455D66F2F708C4FE84F8C9E34 /* THDateDay.xib in Resources */,
+				4DD86DA71B7DB19B867B10C5F97B5B6A /* THDatePickerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2CAFF615AC028CF5117301D8C8EA28C7 /* Sources */ = {
+		1AC8283747C7D044F7E6743D804C3D89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A4119C859FA55B8DB9E50FA4FAC22AB /* NSDate+Difference.m in Sources */,
-				8E25AEDB2885D3922D8A48FF4E45015C /* THCalendarDatePicker-dummy.m in Sources */,
-				D7A7FCEB7246B55BFD079AF3C71F8CD2 /* THDateDay.m in Sources */,
-				841830E8CE02C37376F89F5037E3FC64 /* THDatePickerViewController.m in Sources */,
+				1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */,
+				4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */,
+				3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */,
+				87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */,
+				63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A7F10186C5352B292BACFF1500BE00F /* Sources */ = {
+		3C24C089E9197BBF9AE140A4771D4AC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56686555BBED657CA47D45654CDB175 /* Pods-Om-dummy.m in Sources */,
+				D79E0EDD510EDE69EE79270265F649BA /* NSDate+Difference.m in Sources */,
+				E104598FCA8AA3197BA16D7FB239DFBA /* THCalendarDatePicker-dummy.m in Sources */,
+				03030594DA3C0C961259B8E76D867C1D /* THDateDay.m in Sources */,
+				25E3D5649790506C66CA10B7388D21BE /* THDatePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D39975761A8D08CD1C30DF3AD14F2A3 /* Sources */ = {
+		4A64A40F56F2378C40031F148220785B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC11B1DEB424959C8A0D23E206DDA41B /* KNSemiModalViewController_hons82-dummy.m in Sources */,
-				61F0FE865D397FD7F7F0A2BD1C3B6BC6 /* UIViewController+KNSemiModal.m in Sources */,
+				C06BE350A6AEAEC43A27FD4CF227858C /* Pods-Om-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F8B74DDF03D59F60569645EBF45640C /* Sources */ = {
+		768897713C5D76B87C19A9296CE57183 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BCE659A20388C2E4C6373EBE728D4A /* DIDatepicker-dummy.m in Sources */,
-				0632929D34AB69B9B60EC0C3135D5E6C /* DIDatepicker.m in Sources */,
-				829702F1DFE0788D691932DCA5BE0801 /* DIDatepickerDateView.m in Sources */,
+				7DEE6F0E34C5586DA5FA73276AAEE78B /* KNSemiModalViewController_hons82-dummy.m in Sources */,
+				8163A60362E461710D7B192CA81C9FB3 /* UIViewController+KNSemiModal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE1CF9CE4811645411026F952650D228 /* Sources */ = {
+		95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D495DBB9B5D81BE4391E10299F938B /* MMDrawerBarButtonItem.m in Sources */,
-				2D8C79E70B7EEA9C8EB372CD5775A5C1 /* MMDrawerController-dummy.m in Sources */,
-				66549CC91863363861D818B68B136EB6 /* MMDrawerController.m in Sources */,
-				19BD91B5A5ED8A4C820CB6BD33633C7C /* MMDrawerVisualState.m in Sources */,
-				579A1B0E910EF7BB4A3D44D2880570E9 /* UIViewController+MMDrawerController.m in Sources */,
+				ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */,
+				8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */,
+				5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */,
+				095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */,
+				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
+				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
+				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
+				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
+				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
+				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
+				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
+				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
+				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
+				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
+				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,
+				16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */,
+				5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */,
+				2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47553C52593E153EB5F58553C1C5172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				829B789BDB09A5A71B1D2B8140565181 /* KSToastView-dummy.m in Sources */,
+				CD3251D651872908E329F4A57A9B55D4 /* KSToastView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28D49D3DAE02D5579969C8309225A81E /* PBXTargetDependency */ = {
+		0C0B0519759406C36627FAC50D1B3A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = 971A6AE77D37F9F77B40122E21B6EFD5 /* PBXContainerItemProxy */;
+		};
+		2EA1AF2CF956A487E25BB7BE6447F0DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KSToastView;
+			target = E3CAF07BEF6216CEEA0759DA9911B4FA /* KSToastView */;
+			targetProxy = 731CBF85FA7D3E4508CD0015707B35A0 /* PBXContainerItemProxy */;
+		};
+		53940CCAF4DD9EE6110951FC6E8DB5C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KNSemiModalViewController_hons82;
-			target = CBC37CE27BB3DBCE4913C2FB1767FC94 /* KNSemiModalViewController_hons82 */;
-			targetProxy = 3EC39E95774080A4E3C3A0A5E832A6E7 /* PBXContainerItemProxy */;
+			target = 1892213B8242D18974553DCC80A3C3FB /* KNSemiModalViewController_hons82 */;
+			targetProxy = 96758A158485A2E92D42627253D74AAB /* PBXContainerItemProxy */;
 		};
-		86A34AF832800B0D46E0F6A19909F6C1 /* PBXTargetDependency */ = {
+		9BB34EBB1EA2A08574B3963770A1C1B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = THCalendarDatePicker;
-			target = 06BA31D1F9CA522CED6A06C5CA36C9B4 /* THCalendarDatePicker */;
-			targetProxy = 350244E8CF3BB2418702E39DFD2C75CF /* PBXContainerItemProxy */;
+			target = 8BF10CB5894CB846C2C620E1A594C394 /* THCalendarDatePicker */;
+			targetProxy = F55893A9B100D9646F0BE88C68A22973 /* PBXContainerItemProxy */;
 		};
-		8833123AE8A73519CC574568C9A1B300 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DIDatepicker;
-			target = E9C84C6B981716722FB31DFC8E6D908E /* DIDatepicker */;
-			targetProxy = 6EB97321B2275C4873CECF291A6C2358 /* PBXContainerItemProxy */;
-		};
-		BB0FEE6EE23431715F02D1605FD5A423 /* PBXTargetDependency */ = {
+		BD176FDAA7D7BF51B9F1504A7277897E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KNSemiModalViewController_hons82;
-			target = CBC37CE27BB3DBCE4913C2FB1767FC94 /* KNSemiModalViewController_hons82 */;
-			targetProxy = 1255D59B66F344A7C37E58E52E0627D9 /* PBXContainerItemProxy */;
+			target = 1892213B8242D18974553DCC80A3C3FB /* KNSemiModalViewController_hons82 */;
+			targetProxy = BB9DA33DA980E7A0AF7FDD8F24F57A93 /* PBXContainerItemProxy */;
 		};
-		C04AB0314A3BC73E1F8CF3317664C302 /* PBXTargetDependency */ = {
+		C1EB5D7585F635D11891E82780EE6515 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMDrawerController;
-			target = 550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */;
-			targetProxy = 28EAC1154A5CD298C32FA3B6C8DD1863 /* PBXContainerItemProxy */;
+			target = 96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */;
+			targetProxy = 12129F661D2950F4ACD877F18A359847 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		28EA3BDD29EBD420D34ADEA837CBAD6F /* Release */ = {
+		1022DBA76C8409AC52B6B84E7C1CF646 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8626C2002E04B27931EF3DC349052CFA /* MMDrawerController.xcconfig */;
+			baseConfigurationReference = 32A873D3766110EF4FC8846DA3FFD159 /* THCalendarDatePicker.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				GCC_PREFIX_HEADER = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/THCalendarDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = THCalendarDatePicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10520C7BFEB059D9D7DE9CAC6E5C8A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC302714018644A2BD30A53E6A61090E /* Pods-Om.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Om/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Om/Pods-Om.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Om;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		17A30424C220FF679A55DC6645AC39DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81504929FBBB34C71DB7D377F550F226 /* KNSemiModalViewController_hons82.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KNSemiModalViewController_hons82/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KNSemiModalViewController_hons82;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2B2DD9EE51A8BE57A8E72D1506FB3AC3 /* Release */ = {
+		27B8747FCEBACB6B313DE1BD77BC4584 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 216093869F33FF64E84681BAC206076E /* Pods-Om.release.xcconfig */;
+			baseConfigurationReference = 1B842DA4D9B3E721179915FFC56B71B7 /* KSToastView.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				GCC_PREFIX_HEADER = "Target Support Files/KSToastView/KSToastView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KSToastView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KSToastView/KSToastView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KSToastView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		631B4BFBADB0F240504A6D5CDEC80A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A873D3766110EF4FC8846DA3FFD159 /* THCalendarDatePicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/THCalendarDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = THCalendarDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		682426DB37149D29EA6AEB4B34CB3BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81504929FBBB34C71DB7D377F550F226 /* KNSemiModalViewController_hons82.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KNSemiModalViewController_hons82/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KNSemiModalViewController_hons82;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74F7FAC78E5CB4D327B99F47BF099326 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C13BE92E841CFA0C5CD804857156C5 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8D9C8CDFB88A40D9404C5619D7CE2DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 708F42D30D067D3E2CA2316C4A58A175 /* Pods-Om.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Om/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Om/Pods-Om.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Om;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		39D808820DAAF2542EC2A54FE15CD2A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACA2CCBDF1F63AC92894743F8D1D903A /* Pods-Om.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		4F4FF2E702ED9EC64633AAC595932DFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A4E85ED778686C86492CA3C68EB611C /* THCalendarDatePicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5BEF59BA91D64BD0FA304A72B9D498EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8626C2002E04B27931EF3DC349052CFA /* MMDrawerController.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		67659467D7B2CBF8B8EAEBBD7E66F163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB65D21816EF402D50A4D106086FCC1 /* KNSemiModalViewController_hons82.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		7D7E5471FB758957B639C5A87F63F2FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A4E85ED778686C86492CA3C68EB611C /* THCalendarDatePicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/THCalendarDatePicker/THCalendarDatePicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		86722918CAE829D306A2881AEE3252ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB65D21816EF402D50A4D106086FCC1 /* KNSemiModalViewController_hons82.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		B43A72A0E5A6B019DDE8EE5E051113F3 /* Debug */ = {
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -821,14 +1123,123 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C5372B11807A349EC27329D2DBAE6C38 /* Release */ = {
+		B246AA37DA19EE5FDD85E37AF3C9E192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 704A8B4B64640E5908E0B3A08562A6F9 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMDrawerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMDrawerController/MMDrawerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MMDrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C3746E36F91278C40D0DCBA78D124E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C13BE92E841CFA0C5CD804857156C5 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3AA7ABB7FCA95FB709C38DFB0881148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 704A8B4B64640E5908E0B3A08562A6F9 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMDrawerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMDrawerController/MMDrawerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MMDrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E6538C46E54AEDCA46C09E276FA72602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B842DA4D9B3E721179915FFC56B71B7 /* KSToastView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KSToastView/KSToastView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KSToastView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KSToastView/KSToastView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KSToastView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -855,102 +1266,75 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D1C95D7D5A7A600945D94AC36A548C3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA7CB2C4C84BD1A2058E4EBAD7CC744 /* DIDatepicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DIDatepicker/DIDatepicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D269EAB385BCFB7E42AD85E60B738CC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA7CB2C4C84BD1A2058E4EBAD7CC744 /* DIDatepicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DIDatepicker/DIDatepicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16E06A20F9B7CD103E2C684B384043F7 /* Build configuration list for PBXNativeTarget "DIDatepicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D269EAB385BCFB7E42AD85E60B738CC8 /* Debug */,
-				D1C95D7D5A7A600945D94AC36A548C3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B43A72A0E5A6B019DDE8EE5E051113F3 /* Debug */,
-				C5372B11807A349EC27329D2DBAE6C38 /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49D0C2C68105BC5B23DDF50F5C4CD1C2 /* Build configuration list for PBXNativeTarget "Pods-Om" */ = {
+		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				39D808820DAAF2542EC2A54FE15CD2A4 /* Debug */,
-				2B2DD9EE51A8BE57A8E72D1506FB3AC3 /* Release */,
+				C3746E36F91278C40D0DCBA78D124E88 /* Debug */,
+				74F7FAC78E5CB4D327B99F47BF099326 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BCBDE524BD4EFDC051B5AD1A976D69B /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
+		410F9B5264E3B131C74C0402F62B1BFE /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BEF59BA91D64BD0FA304A72B9D498EB /* Debug */,
-				28EA3BDD29EBD420D34ADEA837CBAD6F /* Release */,
+				B246AA37DA19EE5FDD85E37AF3C9E192 /* Debug */,
+				D3AA7ABB7FCA95FB709C38DFB0881148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D6850E665C3CFB6CB9DA0236E14D8C9 /* Build configuration list for PBXNativeTarget "KNSemiModalViewController_hons82" */ = {
+		48E611F6A4DF6B2F2E5650DF46233DA7 /* Build configuration list for PBXNativeTarget "KNSemiModalViewController_hons82" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86722918CAE829D306A2881AEE3252ED /* Debug */,
-				67659467D7B2CBF8B8EAEBBD7E66F163 /* Release */,
+				682426DB37149D29EA6AEB4B34CB3BFD /* Debug */,
+				17A30424C220FF679A55DC6645AC39DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF8D9BC881B9519BBB65BC9A36C6987 /* Build configuration list for PBXNativeTarget "THCalendarDatePicker" */ = {
+		8DAEF6B07B6777F82013C0532D33DE7A /* Build configuration list for PBXNativeTarget "Pods-Om" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D7E5471FB758957B639C5A87F63F2FF /* Debug */,
-				4F4FF2E702ED9EC64633AAC595932DFD /* Release */,
+				10520C7BFEB059D9D7DE9CAC6E5C8A36 /* Debug */,
+				8D9C8CDFB88A40D9404C5619D7CE2DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE9269724DDAADF90ADA6359E6AED76 /* Build configuration list for PBXNativeTarget "KSToastView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6538C46E54AEDCA46C09E276FA72602 /* Debug */,
+				27B8747FCEBACB6B313DE1BD77BC4584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC2901208B8C30CC76AE5CF0CAF6D392 /* Build configuration list for PBXNativeTarget "THCalendarDatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1022DBA76C8409AC52B6B84E7C1CF646 /* Debug */,
+				631B4BFBADB0F240504A6D5CDEC80A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

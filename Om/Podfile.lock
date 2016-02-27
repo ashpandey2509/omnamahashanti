@@ -1,6 +1,7 @@
 PODS:
-  - DIDatepicker (0.1)
+  - Alamofire (3.2.0)
   - KNSemiModalViewController_hons82 (0.4.4)
+  - KSToastView (0.5.6)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -17,13 +18,15 @@ PODS:
     - KNSemiModalViewController_hons82 (~> 0.4.3)
 
 DEPENDENCIES:
-  - DIDatepicker
+  - Alamofire (~> 3.0)
+  - KSToastView (= 0.5.6)
   - MMDrawerController (~> 0.5.7)
   - THCalendarDatePicker (~> 1.2.5)
 
 SPEC CHECKSUMS:
-  DIDatepicker: c990ce1cdc8a6169cf7eb6369cd97604864eed27
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
+  KSToastView: 6c6044f1e8d8a7bb5ba098886421062eabba0478
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   THCalendarDatePicker: 65c63c1814d1a27defc89f4b72ec7a1d01d5503d
 

@@ -82,3 +82,18 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Om/Alamofire.framework"
+  install_framework "Pods-Om/KNSemiModalViewController_hons82.framework"
+  install_framework "Pods-Om/KSToastView.framework"
+  install_framework "Pods-Om/MMDrawerController.framework"
+  install_framework "Pods-Om/THCalendarDatePicker.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Om/Alamofire.framework"
+  install_framework "Pods-Om/KNSemiModalViewController_hons82.framework"
+  install_framework "Pods-Om/KSToastView.framework"
+  install_framework "Pods-Om/MMDrawerController.framework"
+  install_framework "Pods-Om/THCalendarDatePicker.framework"
+fi

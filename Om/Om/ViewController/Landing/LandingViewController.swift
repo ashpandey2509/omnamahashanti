@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class LandingViewController: UIViewController {
     @IBOutlet weak var bookPoojaView: UIView!
 

@@ -7,10 +7,13 @@
 //
 
 import UIKit
-
+import KSToastView
 class DateSelectionViewController: UIViewController {
     @IBOutlet weak var calendarContainer: UIView!
-
+    var selectedTimeSlot : String?
+    @IBOutlet weak var eveningButton: UIButton!
+    @IBOutlet weak var afternoonButton: UIButton!
+    @IBOutlet weak var morningButton: UIButton!
 
     
     override func viewDidLoad() {
@@ -25,7 +28,6 @@ class DateSelectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -35,10 +37,51 @@ class DateSelectionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func nextButtonClicked(button: UIButton) {
+        if let _ = self.selectedTimeSlot{
+            self.title = ""
+            let panditSelectionVC = self.storyboard?.instantiateViewControllerWithIdentifier("PanditSelectionViewController") as! PanditSelectionViewController
+            panditSelectionVC.selectedTimeSlot = self.selectedTimeSlot  
+            self.navigationController?.pushViewController(panditSelectionVC, animated: true)
+        }
+        else
+        {
+            KSToastView.ks_showToast("Please select a time slot")
+        }
+    }
 
+    @IBAction func timeSlotSelected(button: UIButton) {
+        self.morningButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
+        self.afternoonButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
+        self.eveningButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
+        button.backgroundColor = UIColor.getThemeColor()
+        self.updateSelectedTimeSlot(button.tag)
+    }
+    
+    func updateSelectedTimeSlot(slotTag : Int){
+        switch(slotTag){
+            case 0:
+                self.selectedTimeSlot = "Morning"
+                break
+            case 1:
+                self.selectedTimeSlot = "Afternoon"
+                break
+            case 2:
+                self.selectedTimeSlot = "Evening"
+                break
+            default:
+                self.selectedTimeSlot = nil
+                break
+        }
+    }
+    
 }
 
 extension DateSelectionViewController : CKCalendarDelegate  {
     
+    func calendar(calendar: CKCalendarView!, didSelectDate date: NSDate!) {
+        
+    }
 }
 
