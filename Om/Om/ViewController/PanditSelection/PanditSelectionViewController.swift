@@ -13,6 +13,7 @@ class PanditSelectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateCollectionView: UICollectionView!
     var selectedTimeSlot : String?
+    var selectedIndex : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dateCollectionView.registerNib(UINib(nibName: "DateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DateCollectionViewCell")
@@ -76,6 +77,13 @@ extension PanditSelectionViewController : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell : DateCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("DateCollectionViewCell", forIndexPath: indexPath) as! DateCollectionViewCell
+        cell.backgroundColor = UIColor.whiteColor()
+
+        if let _ = self.selectedIndex{
+            if(indexPath.row == selectedIndex!){
+                cell.backgroundColor = UIColor.getThemeColor()
+            }
+        }
         return cell
     }
 }
@@ -83,7 +91,8 @@ extension PanditSelectionViewController : UICollectionViewDataSource {
 extension PanditSelectionViewController : UICollectionViewDelegate{
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell : DateCollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! DateCollectionViewCell
+        self.selectedIndex = indexPath.row
+        self.dateCollectionView.reloadData()
     }
 }
 
