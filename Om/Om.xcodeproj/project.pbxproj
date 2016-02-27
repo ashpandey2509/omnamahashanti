@@ -18,6 +18,12 @@
 		15081C101C80C184006A7F88 /* FontUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C0F1C80C184006A7F88 /* FontUtil.swift */; };
 		15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C131C80C6E5006A7F88 /* DrawerViewController.swift */; };
 		15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C151C80C6F6006A7F88 /* LandingViewController.swift */; };
+		15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C1B1C80DEC7006A7F88 /* PoojaViewController.swift */; };
+		15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C1F1C80E062006A7F88 /* PoojaTableViewCell.swift */; };
+		15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C211C80E083006A7F88 /* DrawerTableViewCell.swift */; };
+		15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C271C80E2C1006A7F88 /* PanditSelectionViewController.swift */; };
+		15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */; };
+		15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15081C391C814CE4006A7F88 /* CKCalendarView.m */; };
 		6C80AEF16FE411337EED0474 /* libPods-Om.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +63,13 @@
 		15081C0F1C80C184006A7F88 /* FontUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontUtil.swift; path = Util/FontUtil/FontUtil.swift; sourceTree = "<group>"; };
 		15081C131C80C6E5006A7F88 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerViewController.swift; path = ViewController/Drawer/DrawerViewController.swift; sourceTree = "<group>"; };
 		15081C151C80C6F6006A7F88 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ViewController/Landing/LandingViewController.swift; sourceTree = "<group>"; };
+		15081C1B1C80DEC7006A7F88 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaViewController.swift; path = ViewController/Pooja/PoojaViewController.swift; sourceTree = "<group>"; };
+		15081C1F1C80E062006A7F88 /* PoojaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaTableViewCell.swift; path = CustomViews/Cell/Pooja/PoojaTableViewCell.swift; sourceTree = "<group>"; };
+		15081C211C80E083006A7F88 /* DrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerTableViewCell.swift; path = CustomViews/Cell/Drawer/DrawerTableViewCell.swift; sourceTree = "<group>"; };
+		15081C271C80E2C1006A7F88 /* PanditSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanditSelectionViewController.swift; path = ViewController/PanditSelection/PanditSelectionViewController.swift; sourceTree = "<group>"; };
+		15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectionViewController.swift; path = ViewController/DateSelection/DateSelectionViewController.swift; sourceTree = "<group>"; };
+		15081C381C814CE4006A7F88 /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCalendarView.h; path = ThirdParty/Calendar/CKCalendarView.h; sourceTree = "<group>"; };
+		15081C391C814CE4006A7F88 /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCalendarView.m; path = ThirdParty/Calendar/CKCalendarView.m; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Om.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +193,9 @@
 		15081C011C80B9FD006A7F88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				15081C261C80E28F006A7F88 /* PanditSelection */,
+				15081C231C80E279006A7F88 /* DateSelection */,
+				15081C1A1C80DEAA006A7F88 /* Pooja */,
 				15081C121C80C6CC006A7F88 /* Landing */,
 				15081C111C80C6C5006A7F88 /* Drawer */,
 				15081C081C80BA61006A7F88 /* ViewController.swift */,
@@ -190,6 +206,7 @@
 		15081C021C80BA04006A7F88 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				15081C2B1C814C98006A7F88 /* Calendar */,
 			);
 			name = ThirdParty;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 		15081C031C80BA0D006A7F88 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				15081C171C80D594006A7F88 /* Cell */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -240,6 +258,64 @@
 				15081C151C80C6F6006A7F88 /* LandingViewController.swift */,
 			);
 			name = Landing;
+			sourceTree = "<group>";
+		};
+		15081C171C80D594006A7F88 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15081C1E1C80E04B006A7F88 /* Pooja */,
+				15081C1D1C80E043006A7F88 /* Drawer */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		15081C1A1C80DEAA006A7F88 /* Pooja */ = {
+			isa = PBXGroup;
+			children = (
+				15081C1B1C80DEC7006A7F88 /* PoojaViewController.swift */,
+			);
+			name = Pooja;
+			sourceTree = "<group>";
+		};
+		15081C1D1C80E043006A7F88 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				15081C211C80E083006A7F88 /* DrawerTableViewCell.swift */,
+			);
+			name = Drawer;
+			sourceTree = "<group>";
+		};
+		15081C1E1C80E04B006A7F88 /* Pooja */ = {
+			isa = PBXGroup;
+			children = (
+				15081C1F1C80E062006A7F88 /* PoojaTableViewCell.swift */,
+			);
+			name = Pooja;
+			sourceTree = "<group>";
+		};
+		15081C231C80E279006A7F88 /* DateSelection */ = {
+			isa = PBXGroup;
+			children = (
+				15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */,
+			);
+			name = DateSelection;
+			sourceTree = "<group>";
+		};
+		15081C261C80E28F006A7F88 /* PanditSelection */ = {
+			isa = PBXGroup;
+			children = (
+				15081C271C80E2C1006A7F88 /* PanditSelectionViewController.swift */,
+			);
+			name = PanditSelection;
+			sourceTree = "<group>";
+		};
+		15081C2B1C814C98006A7F88 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				15081C381C814CE4006A7F88 /* CKCalendarView.h */,
+				15081C391C814CE4006A7F88 /* CKCalendarView.m */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		48536E044A8A4367462F49AE /* Pods */ = {
@@ -442,11 +518,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
+				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
+				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
+				15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */,
+				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
+				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
+				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

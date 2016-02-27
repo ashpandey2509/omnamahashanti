@@ -18,16 +18,19 @@ class LandingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.title = "Om"
+    }
+    
     func customizeView(){
         self.bookPoojaView.layer.borderColor = UIColor.getBookPoojaBorderColor().CGColor
         self.bookPoojaView.layer.borderWidth = 0.5
-        self.title = "Om"
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         self.navigationController!.navigationBar.translucent = false
         
         let button = UIButton(type: UIButtonType.System)
         button.setImage(UIImage(named: "hamburger"), forState: UIControlState.Normal)
-//        button.addTarget(self, action: "didTapOpenButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: "leftBarButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         button.frame = CGRectMake(0, 20, 44, 44)
         button.imageEdgeInsets = UIEdgeInsetsMake(14, 0, 13, 19)
         button.tintColor = UIColor.whiteColor()
@@ -51,5 +54,14 @@ class LandingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func leftBarButtonClicked(button : UIButton){
+        self.mm_drawerController.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "PoojaDetailsSegue"){
+            self.title = ""
+        }
+    }
 }

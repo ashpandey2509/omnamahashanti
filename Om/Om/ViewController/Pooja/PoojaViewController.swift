@@ -1,25 +1,27 @@
 //
-//  DrawerViewController.swift
+//  PoojaViewController.swift
 //  Om
 //
-//  Created by Vinita on 2/26/16.
+//  Created by Vinita on 2/27/16.
 //  Copyright © 2016 Vinita. All rights reserved.
 //
 
 import UIKit
 
-class DrawerViewController: UIViewController {
+class PoojaViewController: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
-
-    let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login"], ["icon" : "ic_action_rate_app" , "title" : "Rate App"], ["icon" : "ic_action_terms" , "title" : "Terms & Conditions"], ["icon" : "ic_action_privacy" , "title" : "Privacy Policy"], ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
-    let postSigninArray = [["icon" : "" , "title" : "Login"], ["icon" : "" , "title" : "Rate App"], ["icon" : "" , "title" : "Terms & Conditions"], ["icon" : "" , "title" : "Privacy Policy"], ["icon" : "" , "title" : "Contact Us"]]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableFooterView = UIView()
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.title = "Select Pooja"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,31 +40,27 @@ class DrawerViewController: UIViewController {
 
 }
 
-
-extension DrawerViewController : UITableViewDataSource {
+extension PoojaViewController : UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return preSigninArray.count
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : DrawerTableViewCell = tableView.dequeueReusableCellWithIdentifier("DrawerTableViewCell") as! DrawerTableViewCell
-        let dictionary = self.preSigninArray[indexPath.row] 
-        cell.iconImageView.image = UIImage(named: dictionary["icon"]!)
-        cell.titleLabel.text = dictionary["title"]!
+        let cell : PoojaTableViewCell = tableView.dequeueReusableCellWithIdentifier("PoojaTableViewCell") as! PoojaTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
 }
 
 
-extension DrawerViewController : UITableViewDelegate {
+extension PoojaViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60.0
+        return 150.0
     }
 }
 
