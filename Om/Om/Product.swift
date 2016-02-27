@@ -26,5 +26,4 @@ class Product {
         afternoon = dataDict["afternoon"] as! Bool
         evening = dataDict["evening"] as! Bool
     }
-
 }

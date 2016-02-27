@@ -23,14 +23,20 @@ class LandingViewController: UIViewController {
     }
 
     func testAwesomeNetworkingCode() {
-        APIService.sharedInstance.getProducts { (productList, error) -> Void in
-            debugPrint(productList)
-            for product in productList {
-                print (product.name)
-            }
-        }
+//        APIService.sharedInstance.getProducts { (productList, error) -> Void in
+//            debugPrint(productList)
+//            for product in productList {
+//                print (product.name)
+//            }
+//        }
+
+//        APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: 1450592887734) { (vendorList, error) -> Void in
+//            debugPrint(vendorList)
+//        }
+
+
     }
-    
+
     func customizeView(){
         self.bookPoojaView.layer.borderColor = UIColor.getBookPoojaBorderColor().CGColor
         self.bookPoojaView.layer.borderWidth = 0.5

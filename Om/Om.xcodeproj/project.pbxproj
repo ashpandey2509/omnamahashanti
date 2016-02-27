@@ -31,6 +31,7 @@
 		251B18DF115C7E41B598192C /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 		5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C711C81F18200ABEAB1 /* APIService.swift */; };
 		5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C741C8205DD00ABEAB1 /* Product.swift */; };
+		5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98880F1C822A6400DEF0F4 /* Vendor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5F009C711C81F18200ABEAB1 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5F009C741C8205DD00ABEAB1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5F98880F1C822A6400DEF0F4 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
 		95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				5F009C741C8205DD00ABEAB1 /* Product.swift */,
+				5F98880F1C822A6400DEF0F4 /* Vendor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,

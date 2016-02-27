@@ -39,4 +39,22 @@ class APIService {
             callback(productList, response.result.error)
         }
     }
+
+    func getVendorAvailability(location: String, bookDate: Int64, callback: ([Vendor], NSError?) -> Void) {
+        let url = baseURL + "vendors?" + "location=" + location + "&book_date=" + String(bookDate)
+        debugPrint(url)
+        Alamofire.request(Alamofire.Method.GET, url).responseJSON { (response) -> Void in
+
+            var list = [Vendor]()
+
+            if let JSON = response.result.value {
+                let vendorListJson = JSON["list"] as? NSArray
+                for vendor in vendorListJson! {
+                    list.append(Vendor(dataDict: vendor as! NSDictionary))
+                }
+            }
+
+            callback(list, response.result.error)
+        }
+    }
 }
