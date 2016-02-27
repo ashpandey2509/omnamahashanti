@@ -14,12 +14,22 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customizeView()
+        self.testAwesomeNetworkingCode()
         
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
         self.title = "Om"
+    }
+
+    func testAwesomeNetworkingCode() {
+        APIService.sharedInstance.getProducts { (productList, error) -> Void in
+            debugPrint(productList)
+            for product in productList {
+                print (product.name)
+            }
+        }
     }
     
     func customizeView(){

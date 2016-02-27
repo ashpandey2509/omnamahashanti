@@ -24,7 +24,9 @@
 		15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C271C80E2C1006A7F88 /* PanditSelectionViewController.swift */; };
 		15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C291C80E2DE006A7F88 /* DateSelectionViewController.swift */; };
 		15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15081C391C814CE4006A7F88 /* CKCalendarView.m */; };
-		6C80AEF16FE411337EED0474 /* libPods-Om.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */; };
+		333A343F217BC10D4FAE523F /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
+		5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C711C81F18200ABEAB1 /* APIService.swift */; };
+		5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C741C8205DD00ABEAB1 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +73,10 @@
 		15081C381C814CE4006A7F88 /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCalendarView.h; path = ThirdParty/Calendar/CKCalendarView.h; sourceTree = "<group>"; };
 		15081C391C814CE4006A7F88 /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCalendarView.m; path = ThirdParty/Calendar/CKCalendarView.m; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
-		5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Om.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F009C711C81F18200ABEAB1 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5F009C741C8205DD00ABEAB1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
+		95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C80AEF16FE411337EED0474 /* libPods-Om.a in Frameworks */,
+				333A343F217BC10D4FAE523F /* Pods_Om.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +134,7 @@
 				15081C031C80BA0D006A7F88 /* CustomViews */,
 				15081C021C80BA04006A7F88 /* ThirdParty */,
 				15081C011C80B9FD006A7F88 /* ViewController */,
-				15081BFE1C80B9E9006A7F88 /* Helper */,
+				15081BFE1C80B9E9006A7F88 /* Services */,
 				15081BFD1C80B9E0006A7F88 /* Appdelegate */,
 				15081BD31C80B9A1006A7F88 /* Main.storyboard */,
 				15081C071C80BA54006A7F88 /* Om-Bridging-Header.h */,
@@ -167,27 +171,13 @@
 			name = Appdelegate;
 			sourceTree = "<group>";
 		};
-		15081BFE1C80B9E9006A7F88 /* Helper */ = {
+		15081BFE1C80B9E9006A7F88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				15081C001C80B9F7006A7F88 /* ApiManager */,
-				15081BFF1C80B9F0006A7F88 /* Parser */,
+				5F009C731C82051600ABEAB1 /* Model */,
+				5F009C711C81F18200ABEAB1 /* APIService.swift */,
 			);
-			name = Helper;
-			sourceTree = "<group>";
-		};
-		15081BFF1C80B9F0006A7F88 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Parser;
-			sourceTree = "<group>";
-		};
-		15081C001C80B9F7006A7F88 /* ApiManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ApiManager;
+			name = Services;
 			sourceTree = "<group>";
 		};
 		15081C011C80B9FD006A7F88 /* ViewController */ = {
@@ -327,10 +317,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5F009C731C82051600ABEAB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F009C741C8205DD00ABEAB1 /* Product.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7246FA8FB015565C4F000DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CA789AAC8D58E316A3AD9A6 /* libPods-Om.a */,
+				95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -526,9 +524,11 @@
 				15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */,
 				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
+				5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
 				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
+				5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
