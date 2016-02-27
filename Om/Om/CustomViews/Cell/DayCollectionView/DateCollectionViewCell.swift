@@ -10,9 +10,28 @@ import UIKit
 
 class DateCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func updateCellUI(index : Int){
+        let calendar = NSCalendar.currentCalendar()
+        let today = NSDate()
+        let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
+            .Day,
+            value: index,
+            toDate: today,
+            options: NSCalendarOptions(rawValue: 0))
+        let components = calendar.components([.Day , .Month , .Year], fromDate: tomorrow!)
+        
+        let day = components.day
+        self.dayLabel.text = tomorrow!.dateNameString.uppercaseString
+        self.monthLabel.text = tomorrow!.month.uppercaseString
+        self.dateLabel.text = "\(String(format: "%02d", day))"
     }
 
 }

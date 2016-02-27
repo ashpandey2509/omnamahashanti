@@ -18,7 +18,8 @@ class PanditSelectionViewController: UIViewController {
         super.viewDidLoad()
         self.dateCollectionView.registerNib(UINib(nibName: "DateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DateCollectionViewCell")
         self.tableView.registerNib(UINib(nibName: "PanditTableViewCell", bundle: nil), forCellReuseIdentifier: "PanditTableViewCell")
-        // Do any additional setup after loading the view.
+        self.selectedIndex = 0
+        self.tableView.reloadData()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -84,6 +85,7 @@ extension PanditSelectionViewController : UICollectionViewDataSource {
                 cell.backgroundColor = UIColor.getThemeColor()
             }
         }
+        cell.updateCellUI(indexPath.row)
         return cell
     }
 }

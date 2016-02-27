@@ -56,6 +56,11 @@
                 <constraint firstItem="eqw-3k-XVC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iTU-LH-7I8"/>
                 <constraint firstItem="M1x-4Z-IqV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l1F-3t-zbE"/>
             </constraints>
+            <connections>
+                <outlet property="dateLabel" destination="M1x-4Z-IqV" id="DGZ-Py-Tvt"/>
+                <outlet property="dayLabel" destination="eqw-3k-XVC" id="mFn-hk-wU7"/>
+                <outlet property="monthLabel" destination="mJu-LV-rde" id="N4v-ul-vVa"/>
+            </connections>
             <point key="canvasLocation" x="196" y="291"/>
         </collectionViewCell>
     </objects>

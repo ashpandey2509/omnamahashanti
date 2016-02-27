@@ -28,6 +28,8 @@
 		15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C471C821005006A7F88 /* DateCollectionViewCell.xib */; };
 		15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */; };
 		15081C4D1C8210C2006A7F88 /* PanditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */; };
+		15081C501C82256B006A7F88 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4F1C82256B006A7F88 /* StringUtil.swift */; };
+		15081C531C82264D006A7F88 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C521C82264D006A7F88 /* DateUtil.swift */; };
 		3264929AFB2A07CBFC4DF64F /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F2372B14BA4D28B160C6D /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		15081C471C821005006A7F88 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCollectionViewCell.xib; path = CustomViews/Cell/DayCollectionView/DateCollectionViewCell.xib; sourceTree = "<group>"; };
 		15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanditTableViewCell.swift; path = CustomViews/Cell/Pandit/PanditTableViewCell.swift; sourceTree = "<group>"; };
 		15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PanditTableViewCell.xib; path = CustomViews/Cell/Pandit/PanditTableViewCell.xib; sourceTree = "<group>"; };
+		15081C4F1C82256B006A7F88 /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUtil.swift; path = Util/StringUtil/StringUtil.swift; sourceTree = "<group>"; };
+		15081C521C82264D006A7F88 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtil.swift; path = Util/DateUtil/DateUtil.swift; sourceTree = "<group>"; };
 		1C8F2372B14BA4D28B160C6D /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 		15081C0A1C80C13A006A7F88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				15081C511C822635006A7F88 /* DateUtil */,
+				15081C4E1C822555006A7F88 /* StringUtil */,
 				15081C0C1C80C15B006A7F88 /* FontUtil */,
 				15081C0B1C80C154006A7F88 /* ColorUtil */,
 			);
@@ -344,6 +350,22 @@
 				15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */,
 			);
 			name = Pandit;
+			sourceTree = "<group>";
+		};
+		15081C4E1C822555006A7F88 /* StringUtil */ = {
+			isa = PBXGroup;
+			children = (
+				15081C4F1C82256B006A7F88 /* StringUtil.swift */,
+			);
+			name = StringUtil;
+			sourceTree = "<group>";
+		};
+		15081C511C822635006A7F88 /* DateUtil */ = {
+			isa = PBXGroup;
+			children = (
+				15081C521C82264D006A7F88 /* DateUtil.swift */,
+			);
+			name = DateUtil;
 			sourceTree = "<group>";
 		};
 		48536E044A8A4367462F49AE /* Pods */ = {
@@ -549,8 +571,10 @@
 			files = (
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
+				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
+				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
