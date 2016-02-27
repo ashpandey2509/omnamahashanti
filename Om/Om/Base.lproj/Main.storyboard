@@ -145,7 +145,7 @@ data</string>
                                 <rect key="frame" x="2" y="126" width="596" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-3e-GFC">
-                                        <rect key="frame" x="15" y="18" width="570" height="58"/>
+                                        <rect key="frame" x="0.0" y="18" width="596" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="TMg-sY-hSN"/>
                                         </constraints>
@@ -173,11 +173,11 @@ steps!</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" constant="15" id="BEu-Hy-uYU"/>
+                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" id="BEu-Hy-uYU"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="centerX" secondItem="o4b-zj-UiS" secondAttribute="centerX" constant="2.5" id="QYj-Vc-VgJ"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="top" secondItem="yr1-3e-GFC" secondAttribute="bottom" constant="11" id="YdI-Lc-EbR"/>
                                     <constraint firstItem="yr1-3e-GFC" firstAttribute="top" secondItem="o4b-zj-UiS" secondAttribute="top" constant="18" id="dXr-C2-wyI"/>
-                                    <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" constant="11" id="g0t-68-CeZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" id="g0t-68-CeZ"/>
                                     <constraint firstAttribute="height" constant="145" id="lfb-B0-I0W"/>
                                 </constraints>
                             </view>
@@ -305,15 +305,8 @@ steps!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-uM-b02">
-                                <rect key="frame" x="20" y="88" width="560" height="355"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="355" id="9AZ-6I-0PT"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred Time Slot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByA-xR-dQY">
-                                <rect key="frame" x="0.0" y="443" width="600" height="21"/>
+                                <rect key="frame" x="0.0" y="419" width="600" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0Vd-Lb-qOk"/>
                                 </constraints>
@@ -322,7 +315,7 @@ steps!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xge-BW-q1i">
-                                <rect key="frame" x="20" y="489" width="560" height="50"/>
+                                <rect key="frame" x="20" y="465" width="560" height="50"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-2e-Gpc">
                                         <rect key="frame" x="187" y="0.0" width="187" height="50"/>
@@ -389,13 +382,20 @@ steps!</string>
                                     <action selector="nextButtonClicked:" destination="6vc-Jt-XAY" eventType="touchUpInside" id="4qv-Af-gvc"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-uM-b02">
+                                <rect key="frame" x="20" y="64" width="560" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="9AZ-6I-0PT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="trailing" secondItem="pNa-WU-QYR" secondAttribute="trailingMargin" id="2U7-q9-tYD"/>
                             <constraint firstItem="79h-qM-Nqq" firstAttribute="trailing" secondItem="pNa-WU-QYR" secondAttribute="trailingMargin" id="ESd-Ep-UQH"/>
                             <constraint firstItem="zjj-7i-wPL" firstAttribute="top" secondItem="79h-qM-Nqq" secondAttribute="bottom" constant="20" id="GiW-Ut-jEF"/>
-                            <constraint firstItem="WHN-uM-b02" firstAttribute="top" secondItem="eGG-78-49c" secondAttribute="bottom" constant="24" id="OtM-Cf-KvD"/>
+                            <constraint firstItem="WHN-uM-b02" firstAttribute="top" secondItem="eGG-78-49c" secondAttribute="bottom" id="OtM-Cf-KvD"/>
                             <constraint firstItem="ByA-xR-dQY" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" constant="-20" id="TDA-KX-PAU"/>
                             <constraint firstItem="xge-BW-q1i" firstAttribute="trailing" secondItem="pNa-WU-QYR" secondAttribute="trailingMargin" id="Ubr-42-Ya6"/>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" id="YPR-da-KyJ"/>
@@ -408,6 +408,7 @@ steps!</string>
                     <connections>
                         <outlet property="afternoonButton" destination="2qO-2e-Gpc" id="4n1-1D-Fah"/>
                         <outlet property="calendarContainer" destination="WHN-uM-b02" id="pXi-5I-AlQ"/>
+                        <outlet property="containerHeightConstraint" destination="9AZ-6I-0PT" id="HSf-cd-ZXG"/>
                         <outlet property="eveningButton" destination="UWG-0d-WN2" id="aHR-o5-n9M"/>
                         <outlet property="morningButton" destination="vQF-bv-HBW" id="My1-y6-pDf"/>
                     </connections>
