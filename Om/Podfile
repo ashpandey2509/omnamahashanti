@@ -4,10 +4,16 @@
 # use_frameworks!
 
 target 'Om' do
-pod 'MMDrawerController', '~> 0.5.7'
+
 platform :ios, '6.1'
 pod 'THCalendarDatePicker', '~> 1.2.5'
 pod 'DIDatepicker'
+pod 'MMDrawerController', '~> 0.5.7'
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+pod 'Alamofire', '~> 3.0'
 end
 
 target 'OmTests' do
