@@ -31,9 +31,9 @@
 		15081C501C82256B006A7F88 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4F1C82256B006A7F88 /* StringUtil.swift */; };
 		15081C531C82264D006A7F88 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C521C82264D006A7F88 /* DateUtil.swift */; };
 		15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C581C822B2F006A7F88 /* DeviceUtil.swift */; };
-		5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C711C81F18200ABEAB1 /* APIService.swift */; };
-		5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C741C8205DD00ABEAB1 /* Product.swift */; };
-		5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98880F1C822A6400DEF0F4 /* Vendor.swift */; };
+		15081C5C1C8231B0006A7F88 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5A1C8231B0006A7F88 /* Product.swift */; };
+		15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5B1C8231B0006A7F88 /* Vendor.swift */; };
+		15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5E1C8231C0006A7F88 /* APIService.swift */; };
 		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,10 +88,10 @@
 		15081C521C82264D006A7F88 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtil.swift; path = Util/DateUtil/DateUtil.swift; sourceTree = "<group>"; };
 		15081C541C822AA8006A7F88 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		15081C581C822B2F006A7F88 /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceUtil.swift; path = Util/DeviceUtil/DeviceUtil.swift; sourceTree = "<group>"; };
+		15081C5A1C8231B0006A7F88 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Services/Model/Product.swift; sourceTree = "<group>"; };
+		15081C5B1C8231B0006A7F88 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vendor.swift; path = Services/Model/Vendor.swift; sourceTree = "<group>"; };
+		15081C5E1C8231C0006A7F88 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = Services/APIService.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
-		5F009C711C81F18200ABEAB1 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		5F009C741C8205DD00ABEAB1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		5F98880F1C822A6400DEF0F4 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
 		95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,8 +192,8 @@
 		15081BFE1C80B9E9006A7F88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				15081C5E1C8231C0006A7F88 /* APIService.swift */,
 				5F009C731C82051600ABEAB1 /* Model */,
-				5F009C711C81F18200ABEAB1 /* APIService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -385,8 +385,8 @@
 		5F009C731C82051600ABEAB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5F009C741C8205DD00ABEAB1 /* Product.swift */,
-				5F98880F1C822A6400DEF0F4 /* Vendor.swift */,
+				15081C5A1C8231B0006A7F88 /* Product.swift */,
+				15081C5B1C8231B0006A7F88 /* Vendor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -583,12 +583,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */,
+				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
 				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
+				15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */,
 				15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */,
 				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
@@ -597,11 +598,10 @@
 				15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */,
 				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
-				5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
+				15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */,
 				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
-				5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */,
 				15081C481C821005006A7F88 /* DateCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
