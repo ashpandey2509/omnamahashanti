@@ -4,12 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DIDatepicker.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>KNSemiModalViewController_hons82.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KSToastView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06BA31D1F9CA522CED6A06C5CA36C9B4</key>
+		<key>1892213B8242D18974553DCC80A3C3FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>550F7EEAEEA17E3F92C873912E23B01C</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBC37CE27BB3DBCE4913C2FB1767FC94</key>
+		<key>8BF10CB5894CB846C2C620E1A594C394</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9C84C6B981716722FB31DFC8E6D908E</key>
+		<key>96D3562E47E4792B0A6093A0323EB398</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD10FA4069B20DF0552E853F9A9EA858</key>
+		<key>C310FF17E4939DB6617F8F81738A09BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3CAF07BEF6216CEEA0759DA9911B4FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

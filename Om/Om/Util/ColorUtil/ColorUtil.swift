@@ -36,4 +36,8 @@ extension UIColor{
     class func getBookPoojaBorderColor() -> UIColor{
         return UIColor(hexString: "#ffcccccc")
     }
+    
+    class func getTimeSlotBackgroundColor() -> UIColor{
+        return UIColor(hexString: "#fff19368")
+    }
 }

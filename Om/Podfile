@@ -6,7 +6,9 @@
 target 'Om' do
 
 platform :ios, '6.1'
+pod 'KSToastView', '0.5.6'
 pod 'THCalendarDatePicker', '~> 1.2.5'
+
 pod 'DIDatepicker'
 pod 'MMDrawerController', '~> 0.5.7'
 

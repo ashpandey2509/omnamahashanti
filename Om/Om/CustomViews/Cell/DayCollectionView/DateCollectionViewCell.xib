@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DateCollectionViewCell" customModule="Om" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJu-LV-rde">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="sPn-W6-MNP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqw-3k-XVC">
+                        <rect key="frame" x="0.0" y="49" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="egK-DI-Yhg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-4Z-IqV">
+                        <rect key="frame" x="0.0" y="24" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ABo-xI-9g1"/>
+                            <constraint firstAttribute="height" constant="21" id="C9c-lV-1Yw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="M1x-4Z-IqV" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GYJ-QC-FVT"/>
+                <constraint firstAttribute="trailing" secondItem="mJu-LV-rde" secondAttribute="trailing" id="Hd3-F2-NQH"/>
+                <constraint firstItem="mJu-LV-rde" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KcK-L9-lhT"/>
+                <constraint firstAttribute="trailing" secondItem="M1x-4Z-IqV" secondAttribute="trailing" id="NDA-57-cnl"/>
+                <constraint firstAttribute="trailing" secondItem="eqw-3k-XVC" secondAttribute="trailing" id="WPo-GD-ucw"/>
+                <constraint firstItem="mJu-LV-rde" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b2m-nL-uQZ"/>
+                <constraint firstAttribute="bottom" secondItem="eqw-3k-XVC" secondAttribute="bottom" id="bNu-bc-2A3"/>
+                <constraint firstItem="eqw-3k-XVC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iTU-LH-7I8"/>
+                <constraint firstItem="M1x-4Z-IqV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l1F-3t-zbE"/>
+            </constraints>
+            <point key="canvasLocation" x="196" y="291"/>
+        </collectionViewCell>
+    </objects>
+</document>
