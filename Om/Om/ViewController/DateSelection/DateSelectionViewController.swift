@@ -9,6 +9,7 @@
 import UIKit
 import KSToastView
 class DateSelectionViewController: UIViewController {
+    @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var calendarContainer: UIView!
     var selectedTimeSlot : String?
     @IBOutlet weak var eveningButton: UIButton!
@@ -21,6 +22,11 @@ class DateSelectionViewController: UIViewController {
         let calendar = CKCalendarView()
         self.calendarContainer.addSubview(calendar)
         calendar.delegate = self;
+        self.containerHeightConstraint.constant = DeviceType.IS_IPHONE_6_OR_MORE ? 350 : 290
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.title = "Select Date"
     }
 
     override func didReceiveMemoryWarning() {

@@ -28,10 +28,13 @@
 		15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C471C821005006A7F88 /* DateCollectionViewCell.xib */; };
 		15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */; };
 		15081C4D1C8210C2006A7F88 /* PanditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */; };
-		251B18DF115C7E41B598192C /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
+		15081C501C82256B006A7F88 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C4F1C82256B006A7F88 /* StringUtil.swift */; };
+		15081C531C82264D006A7F88 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C521C82264D006A7F88 /* DateUtil.swift */; };
+		15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C581C822B2F006A7F88 /* DeviceUtil.swift */; };
 		5F009C721C81F18200ABEAB1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C711C81F18200ABEAB1 /* APIService.swift */; };
 		5F009C751C8205DD00ABEAB1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F009C741C8205DD00ABEAB1 /* Product.swift */; };
 		5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98880F1C822A6400DEF0F4 /* Vendor.swift */; };
+		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,10 @@
 		15081C471C821005006A7F88 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCollectionViewCell.xib; path = CustomViews/Cell/DayCollectionView/DateCollectionViewCell.xib; sourceTree = "<group>"; };
 		15081C4A1C8210C2006A7F88 /* PanditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanditTableViewCell.swift; path = CustomViews/Cell/Pandit/PanditTableViewCell.swift; sourceTree = "<group>"; };
 		15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PanditTableViewCell.xib; path = CustomViews/Cell/Pandit/PanditTableViewCell.xib; sourceTree = "<group>"; };
+		15081C4F1C82256B006A7F88 /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUtil.swift; path = Util/StringUtil/StringUtil.swift; sourceTree = "<group>"; };
+		15081C521C82264D006A7F88 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtil.swift; path = Util/DateUtil/DateUtil.swift; sourceTree = "<group>"; };
+		15081C541C822AA8006A7F88 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		15081C581C822B2F006A7F88 /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceUtil.swift; path = Util/DeviceUtil/DeviceUtil.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5F009C711C81F18200ABEAB1 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5F009C741C8205DD00ABEAB1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -94,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251B18DF115C7E41B598192C /* Pods_Om.framework in Frameworks */,
+				6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +158,7 @@
 				15081BD61C80B9A1006A7F88 /* Assets.xcassets */,
 				15081BD81C80B9A1006A7F88 /* LaunchScreen.storyboard */,
 				15081BDB1C80B9A1006A7F88 /* Info.plist */,
+				15081C541C822AA8006A7F88 /* Constant.h */,
 			);
 			path = Om;
 			sourceTree = "<group>";
@@ -222,6 +230,9 @@
 		15081C0A1C80C13A006A7F88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				15081C551C822B02006A7F88 /* DeviceUtil */,
+				15081C511C822635006A7F88 /* DateUtil */,
+				15081C4E1C822555006A7F88 /* StringUtil */,
 				15081C0C1C80C15B006A7F88 /* FontUtil */,
 				15081C0B1C80C154006A7F88 /* ColorUtil */,
 			);
@@ -336,6 +347,30 @@
 				15081C4B1C8210C2006A7F88 /* PanditTableViewCell.xib */,
 			);
 			name = Pandit;
+			sourceTree = "<group>";
+		};
+		15081C4E1C822555006A7F88 /* StringUtil */ = {
+			isa = PBXGroup;
+			children = (
+				15081C4F1C82256B006A7F88 /* StringUtil.swift */,
+			);
+			name = StringUtil;
+			sourceTree = "<group>";
+		};
+		15081C511C822635006A7F88 /* DateUtil */ = {
+			isa = PBXGroup;
+			children = (
+				15081C521C82264D006A7F88 /* DateUtil.swift */,
+			);
+			name = DateUtil;
+			sourceTree = "<group>";
+		};
+		15081C551C822B02006A7F88 /* DeviceUtil */ = {
+			isa = PBXGroup;
+			children = (
+				15081C581C822B2F006A7F88 /* DeviceUtil.swift */,
+			);
+			name = DeviceUtil;
 			sourceTree = "<group>";
 		};
 		48536E044A8A4367462F49AE /* Pods */ = {
@@ -551,8 +586,11 @@
 				5F9888101C822A6400DEF0F4 /* Vendor.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
+				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
+				15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */,
+				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
