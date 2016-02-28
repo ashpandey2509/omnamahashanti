@@ -34,6 +34,8 @@
 		15081C5C1C8231B0006A7F88 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5A1C8231B0006A7F88 /* Product.swift */; };
 		15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5B1C8231B0006A7F88 /* Vendor.swift */; };
 		15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C5E1C8231C0006A7F88 /* APIService.swift */; };
+		15081C651C82AA8D006A7F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C641C82AA8D006A7F88 /* LoginViewController.swift */; };
+		15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C671C82AE91006A7F88 /* SignUpViewController.swift */; };
 		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		15081C5A1C8231B0006A7F88 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Services/Model/Product.swift; sourceTree = "<group>"; };
 		15081C5B1C8231B0006A7F88 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vendor.swift; path = Services/Model/Vendor.swift; sourceTree = "<group>"; };
 		15081C5E1C8231C0006A7F88 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = Services/APIService.swift; sourceTree = "<group>"; };
+		15081C641C82AA8D006A7F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewController/Login/LoginViewController.swift; sourceTree = "<group>"; };
+		15081C671C82AE91006A7F88 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewController/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
 		95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,10 @@
 		15081C011C80B9FD006A7F88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				15081C631C82AA36006A7F88 /* PrivacyPolicy */,
+				15081C621C82AA2A006A7F88 /* TermsnConditions */,
+				15081C611C82AA22006A7F88 /* SignUp */,
+				15081C601C82AA1C006A7F88 /* Login */,
 				15081C261C80E28F006A7F88 /* PanditSelection */,
 				15081C231C80E279006A7F88 /* DateSelection */,
 				15081C1A1C80DEAA006A7F88 /* Pooja */,
@@ -371,6 +379,36 @@
 				15081C581C822B2F006A7F88 /* DeviceUtil.swift */,
 			);
 			name = DeviceUtil;
+			sourceTree = "<group>";
+		};
+		15081C601C82AA1C006A7F88 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				15081C641C82AA8D006A7F88 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		15081C611C82AA22006A7F88 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				15081C671C82AE91006A7F88 /* SignUpViewController.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		15081C621C82AA2A006A7F88 /* TermsnConditions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TermsnConditions;
+			sourceTree = "<group>";
+		};
+		15081C631C82AA36006A7F88 /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PrivacyPolicy;
 			sourceTree = "<group>";
 		};
 		48536E044A8A4367462F49AE /* Pods */ = {
@@ -583,6 +621,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */,
+				15081C651C82AA8D006A7F88 /* LoginViewController.swift in Sources */,
 				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
