@@ -10,14 +10,17 @@ import UIKit
 
 class PanditTableViewCell: UITableViewCell {
     @IBOutlet weak var borderView: UIView!
+    @IBOutlet weak var vendorName: UILabel!
+    @IBOutlet weak var vendorExperience: UILabel!
+    @IBOutlet weak var vendorLanguages: UILabel!
+    @IBOutlet weak var vendorImage: UIImageView!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         self.borderView.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.borderView.layer.borderWidth = 0.5
-        
-        
         
     }
 

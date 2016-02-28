@@ -9,25 +9,29 @@
 import Foundation
 
 public class Vendor {
-    var id: String
-    var location: String
-    var image: String
-    var address: String
-    var mobile: String
-    var country_code: String
-    var email: String
-    var last_name: String
-    var first_name: String
+    var id: String?
+    var location: String?
+    var image: String?
+    var address: String?
+    var mobile: String?
+    var country_code: String?
+    var email: String?
+    var last_name: String?
+    var first_name: String?
+    var experience: String?
+    var languages: String?
 
     init(dataDict: NSDictionary) {
-        id = dataDict["id"] as! String
-        location = dataDict["id"] as! String
-        image = dataDict["id"] as! String
-        address = dataDict["id"] as! String
-        mobile = dataDict["id"] as! String
-        country_code = dataDict["id"] as! String
-        email = dataDict["id"] as! String
-        last_name = dataDict["id"] as! String
-        first_name = dataDict["id"] as! String
+        id = dataDict["id"] as? String
+        location = dataDict["location"] as? String
+        image = dataDict["image"] as? String
+        address = dataDict["address"] as? String
+        mobile = dataDict["mobile"] as? String
+        country_code = dataDict["country_code"] as? String
+        email = dataDict["email"] as? String
+        last_name = dataDict["last_name"] as? String
+        first_name = dataDict["first_name"] as? String
+        experience = dataDict["experience"] as? String
+        languages = dataDict["languages"] as? String
     }
 }

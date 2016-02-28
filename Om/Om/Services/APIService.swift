@@ -11,7 +11,7 @@ import Alamofire
 
 class APIService {
 
-    let baseURL = "http://mentalligent.com:4000/"
+    let baseURL = "http://159.203.93.220:4000/"
 
     static let sharedInstance = APIService()
 

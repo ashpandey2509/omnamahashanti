@@ -23,7 +23,7 @@ class DateCollectionViewCell: UICollectionViewCell {
         let today = NSDate()
         let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
             .Day,
-            value: index,
+            value: index + 1,
             toDate: today,
             options: NSCalendarOptions(rawValue: 0))
         let components = calendar.components([.Day , .Month , .Year], fromDate: tomorrow!)

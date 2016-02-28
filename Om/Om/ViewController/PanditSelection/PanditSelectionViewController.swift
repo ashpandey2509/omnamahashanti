@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Haneke
 
 class PanditSelectionViewController: UIViewController {
+
+    var vendors = [Vendor]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateCollectionView: UICollectionView!
@@ -19,6 +22,12 @@ class PanditSelectionViewController: UIViewController {
         self.dateCollectionView.registerNib(UINib(nibName: "DateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DateCollectionViewCell")
         self.tableView.registerNib(UINib(nibName: "PanditTableViewCell", bundle: nil), forCellReuseIdentifier: "PanditTableViewCell")
         self.selectedIndex = 0
+        let selectedDate = NSCalendar.currentCalendar().dateByAddingUnit(
+            .Day,
+            value: 1,
+            toDate: NSDate(),
+            options: NSCalendarOptions(rawValue: 0))
+        getVendorForSelectedDate(selectedDate!)
         self.tableView.reloadData()
     }
 
@@ -42,6 +51,14 @@ class PanditSelectionViewController: UIViewController {
     }
     */
 
+    func getVendorForSelectedDate(selectedDate: NSDate) {
+        let selectedDateMilli = selectedDate.timeIntervalSince1970*1000
+        APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
+            self.vendors = vendors
+            self.tableView.reloadData()
+        }
+    }
+
 }
 
 extension PanditSelectionViewController : UITableViewDataSource {
@@ -50,12 +67,23 @@ extension PanditSelectionViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return vendors.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : PanditTableViewCell = tableView.dequeueReusableCellWithIdentifier("PanditTableViewCell") as! PanditTableViewCell
+        let vendor = vendors[indexPath.row]
+        cell.vendorImage.image = nil
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.vendorName.text = "\(vendor.first_name!) \(vendor.last_name!)"
+        cell.vendorExperience.text = vendor.experience == nil ? "8 years" : vendor.experience!
+        cell.vendorLanguages.text = vendor.languages == nil ? "Hindi, Marathi" : vendor.languages!
+        if let _ = vendor.image {
+            cell.vendorImage.hnk_setImageFromURL(NSURL(string: vendor.image!)!)
+        } else {
+            cell.vendorImage.image = UIImage(named: "ic_vendor_placeholder")
+        }
+
         return cell
     }
 }
@@ -95,6 +123,13 @@ extension PanditSelectionViewController : UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         self.selectedIndex = indexPath.row
         self.dateCollectionView.reloadData()
+        let selectedDate = NSCalendar.currentCalendar().dateByAddingUnit(
+            .Day,
+            value: indexPath.row,
+            toDate: NSDate(),
+            options: NSCalendarOptions(rawValue: 0))
+        // on data selection by the user reload data get vendor listing for given date.
+        getVendorForSelectedDate(selectedDate!)
     }
 }
 
