@@ -79,4 +79,8 @@ class LandingViewController: UIViewController {
             self.title = ""
         }
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.title = ""
+    }
 }

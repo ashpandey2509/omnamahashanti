@@ -11,7 +11,7 @@ import UIKit
 class DrawerViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login"], ["icon" : "ic_action_rate_app" , "title" : "Rate App"], ["icon" : "ic_action_terms" , "title" : "Terms & Conditions"], ["icon" : "ic_action_privacy" , "title" : "Privacy Policy"], ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
+    let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login", "centerIdentifier" : "LoginViewController"], ["icon" : "ic_action_rate_app" , "title" : "Rate App"], ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"], ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"], ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
     let postSigninArray = [["icon" : "" , "title" : "Login"], ["icon" : "" , "title" : "Rate App"], ["icon" : "" , "title" : "Terms & Conditions"], ["icon" : "" , "title" : "Privacy Policy"], ["icon" : "" , "title" : "Contact Us"]]
 
     override func viewDidLoad() {
@@ -63,6 +63,15 @@ extension DrawerViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let dictionary = self.preSigninArray[indexPath.row]
+        if let identifier = dictionary["centerIdentifier"]{
+            let viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier)
+            (self.mm_drawerController.centerViewController as! UINavigationController).pushViewController(viewController!, animated: true)
+            self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
+        }
     }
 }
 

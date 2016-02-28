@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  TermsnConditionsViewController.swift
 //  Om
 //
 //  Created by Vinita on 2/28/16.
@@ -8,26 +8,14 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
-    @IBOutlet weak var emailHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var mobileTextField: UILabel!
-    @IBOutlet weak var emailtextField: UILabel!
-    @IBOutlet weak var confirmPasswordTextField: UILabel!
-    @IBOutlet weak var passwordTextField: UILabel!
-    @IBOutlet weak var confirmPasswordHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var passwordHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
+class TermsnConditionsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(animated: Bool) {
-        self.title = "Create Account"
-    }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
