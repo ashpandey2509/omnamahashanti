@@ -21,6 +21,8 @@ class APIService {
 
     func getProducts(callback: ([Product], NSError?) -> Void) {
 
+        debugPrint("DEBUG: ", "api service call for products")
+
         let url = baseURL + "products"
         Alamofire.request(Alamofire.Method.GET, url).responseJSON { (response) -> Void in
 

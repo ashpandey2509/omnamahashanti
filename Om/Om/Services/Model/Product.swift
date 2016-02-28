@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Product {
+public class Product {
     var id: String
     var cost: Int
     var detail: String

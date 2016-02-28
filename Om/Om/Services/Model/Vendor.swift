@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Vendor {
+public class Vendor {
     var id: String
     var location: String
     var image: String

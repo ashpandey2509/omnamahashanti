@@ -10,6 +10,12 @@ import UIKit
 
 class PoojaTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productCost: UILabel!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
