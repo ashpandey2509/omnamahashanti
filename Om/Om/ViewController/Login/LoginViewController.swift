@@ -70,6 +70,12 @@ class LoginViewController: UIViewController {
             if (response.result.isSuccess) {
                 self.navigationController?.popViewControllerAnimated(true)
                 debugPrint("logged in user", response.result.value)
+
+                if let json = response.result.value {
+                    let userProfileDict = json as? NSDictionary
+                    let userProfile = UserProfile(dataDict: userProfileDict!)
+                    UserSession.sharedInstance.loggedInUser = userProfile
+                }
 //                UserSession.sharedInstance.loggedInUser = UserProfile(response.result.value as NSD)
             } else {
                 // show user invalid credentials

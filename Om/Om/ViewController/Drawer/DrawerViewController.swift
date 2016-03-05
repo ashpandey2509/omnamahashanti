@@ -9,6 +9,9 @@
 import UIKit
 
 class DrawerViewController: UIViewController {
+
+
+    @IBOutlet weak var drawerHeaderUserName: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
     let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login", "centerIdentifier" : "LoginViewController"],
@@ -28,11 +31,25 @@ class DrawerViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
+
+
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        if (UserSession.sharedInstance.isLoggedInUser()) {
+            updateDrawerForLoggedInUser()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func updateDrawerForLoggedInUser() {
+        if let user = UserSession.sharedInstance.loggedInUser {
+            drawerHeaderUserName.text = user.first_name! + " " + user.last_name!
+        }
     }
     
 
