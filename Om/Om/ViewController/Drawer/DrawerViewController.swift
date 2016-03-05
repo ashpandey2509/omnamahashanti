@@ -9,20 +9,47 @@
 import UIKit
 
 class DrawerViewController: UIViewController {
+
+
+    @IBOutlet weak var drawerHeaderUserName: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
-    let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login", "centerIdentifier" : "LoginViewController"], ["icon" : "ic_action_rate_app" , "title" : "Rate App"], ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"], ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"], ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
-    let postSigninArray = [["icon" : "" , "title" : "Login"], ["icon" : "" , "title" : "Rate App"], ["icon" : "" , "title" : "Terms & Conditions"], ["icon" : "" , "title" : "Privacy Policy"], ["icon" : "" , "title" : "Contact Us"]]
+    let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login", "centerIdentifier" : "LoginViewController"],
+        ["icon" : "ic_action_login" , "title" : "Profile", "centerIdentifier" : "LoginViewController"],
+        ["icon" : "ic_action_rate_app" , "title" : "Rate App"],
+        ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
+        ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
+            ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
+
+    let postSigninArray = [["icon" : "" , "title" : "Login"],
+        ["icon" : "" , "title" : "Rate App"],
+        ["icon" : "" , "title" : "Terms & Conditions"],
+        ["icon" : "" , "title" : "Privacy Policy"],
+        ["icon" : "" , "title" : "Contact Us"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
+
+
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        if (UserSession.sharedInstance.isLoggedInUser()) {
+            updateDrawerForLoggedInUser()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func updateDrawerForLoggedInUser() {
+        if let user = UserSession.sharedInstance.loggedInUser {
+            drawerHeaderUserName.text = user.first_name! + " " + user.last_name!
+        }
     }
     
 

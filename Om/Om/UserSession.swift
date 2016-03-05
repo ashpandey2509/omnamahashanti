@@ -12,6 +12,7 @@ public class UserSession {
 
     static let sharedInstance = UserSession()
     var products : [Product]?
+    var loggedInUser : UserProfile?
 
     public func getProducts(callback: ([Product], NSError?) -> Void ) {
 
@@ -24,5 +25,9 @@ public class UserSession {
                 callback(products, error)
             })
         }
+    }
+
+    public func isLoggedInUser() -> Bool {
+        return !(self.loggedInUser == nil)
     }
 }

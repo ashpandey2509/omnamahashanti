@@ -10,17 +10,24 @@ import UIKit
 
 class PrivacyPolicyViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
-        // Do any additional setup after loading the view.
+        self.webView.loadRequest(NSURLRequest(URL: APIService.sharedInstance.getPrivacyPolicyURL()))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    override func viewWillAppear(animated: Bool) {
+        self.title = "Privacy Policy"
+    }
+
 
     /*
     // MARK: - Navigation

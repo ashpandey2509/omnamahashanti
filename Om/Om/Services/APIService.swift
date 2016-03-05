@@ -59,4 +59,29 @@ class APIService {
             callback(list, response.result.error)
         }
     }
+
+    func validateUser(mobile: String, password: String, callback: (Response<AnyObject, NSError>) -> Void) {
+        let url = baseURL + "users/auth"
+        debugPrint(url)
+        let params = ["mobile": mobile, "password": password ]
+        Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
+            .validate()
+            .responseJSON { (response) -> Void in
+            callback(response)
+        }
+    }
+
+    func getTncUrl() -> NSURL {
+        return NSURL(string: baseURL + "policies/terms")!
+    }
+
+    func getPrivacyPolicyURL() -> NSURL {
+        return NSURL(string: baseURL + "policies/privacy")!
+    }
+
+
+
+
+
+
 }
