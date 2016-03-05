@@ -120,6 +120,49 @@ data</string>
             </objects>
             <point key="canvasLocation" x="-474" y="233"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="wEU-WI-DgS">
+            <objects>
+                <viewController id="tiJ-RH-bDy" customClass="ProfileViewController" customModule="Om" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZr-ZZ-8gQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="yka-e4-bpr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oy0-bG-Op2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-LP-FnP">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1i-uq-Q0k">
+                                        <rect key="frame" x="8" y="8" width="378" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voE-I9-ds4">
+                                        <rect key="frame" x="8" y="37" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78967071919999998" green="0.80686459659999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FE4-LP-FnP" firstAttribute="leading" secondItem="Oy0-bG-Op2" secondAttribute="leading" constant="20" id="NbJ-jE-T4m"/>
+                            <constraint firstAttribute="trailing" secondItem="FE4-LP-FnP" secondAttribute="trailing" constant="20" id="io3-Pb-XDb"/>
+                            <constraint firstItem="FE4-LP-FnP" firstAttribute="top" secondItem="vZr-ZZ-8gQ" secondAttribute="bottom" constant="20" id="k5d-QV-m1h"/>
+                            <constraint firstItem="yka-e4-bpr" firstAttribute="top" secondItem="FE4-LP-FnP" secondAttribute="bottom" constant="20" id="o8W-Cl-JRe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvM-bG-4mR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-465"/>
+        </scene>
         <!--Landing View Controller-->
         <scene sceneID="ryG-qJ-u0h">
             <objects>
@@ -221,7 +264,7 @@ steps!</string>
                                         <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0H-JW-2ug" id="vnU-Wj-Uf3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhateras Pooja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-8W-p7p">
@@ -244,7 +287,7 @@ steps!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 3100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-AV-0Lb">
-                                                    <rect key="frame" x="487" y="118" width="100" height="21"/>
+                                                    <rect key="frame" x="479" y="118" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="MCZ-TD-Q59"/>
                                                         <constraint firstAttribute="width" constant="100" id="iDP-zC-bBu"/>
@@ -262,7 +305,7 @@ steps!</string>
                                                 <constraint firstAttribute="bottomMargin" secondItem="SEr-AV-0Lb" secondAttribute="bottom" constant="2.5" id="pff-kZ-TI4"/>
                                                 <constraint firstItem="SJx-8W-p7p" firstAttribute="leading" secondItem="vnU-Wj-Uf3" secondAttribute="leadingMargin" constant="13" id="t21-lp-cge"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SJx-8W-p7p" secondAttribute="trailing" constant="13" id="tbt-Jn-3AN"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="SEr-AV-0Lb" secondAttribute="trailing" constant="5" id="yYe-uq-du8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SEr-AV-0Lb" secondAttribute="trailing" constant="13" id="yYe-uq-du8"/>
                                                 <constraint firstItem="SJx-8W-p7p" firstAttribute="top" secondItem="vnU-Wj-Uf3" secondAttribute="topMargin" constant="12" id="zA8-cf-CRp"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -282,10 +325,10 @@ steps!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="30n-Ob-eGZ" secondAttribute="trailing" constant="-20" id="DR1-pa-V9c"/>
+                            <constraint firstAttribute="trailing" secondItem="30n-Ob-eGZ" secondAttribute="trailing" id="FvG-qF-YKw"/>
                             <constraint firstItem="30n-Ob-eGZ" firstAttribute="top" secondItem="vpW-D4-L9f" secondAttribute="topMargin" id="Yle-Wy-ifE"/>
                             <constraint firstItem="trd-EW-dWe" firstAttribute="top" secondItem="30n-Ob-eGZ" secondAttribute="bottom" id="fEd-sy-DOr"/>
-                            <constraint firstItem="30n-Ob-eGZ" firstAttribute="leading" secondItem="vpW-D4-L9f" secondAttribute="leadingMargin" constant="-20" id="xVw-ai-gwV"/>
+                            <constraint firstItem="30n-Ob-eGZ" firstAttribute="leading" secondItem="vpW-D4-L9f" secondAttribute="leading" id="iWc-7q-GeQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -525,7 +568,7 @@ steps!</string>
                                     <constraint firstAttribute="height" constant="30" id="f2d-EQ-XSa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="n2s-sv-Uu5" id="mZ5-5C-hkR"/>
                                 </connections>
@@ -834,7 +877,7 @@ steps!</string>
         <!--Termsn Conditions View Controller-->
         <scene sceneID="q6q-9l-wmf">
             <objects>
-                <viewController id="hB4-7M-llb" customClass="TermsnConditionsViewController" customModule="Om" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsnConditionsViewController" id="hB4-7M-llb" customClass="TermsnConditionsViewController" customModule="Om" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pSp-5g-WXb"/>
                         <viewControllerLayoutGuide type="bottom" id="uaV-bR-hvm"/>
@@ -842,8 +885,26 @@ steps!</string>
                     <view key="view" contentMode="scaleToFill" id="Uc0-hx-V9H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="299" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4W-MZ-mOx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uaV-bR-hvm" firstAttribute="top" secondItem="a4W-MZ-mOx" secondAttribute="bottom" id="3YN-Hv-f6K"/>
+                            <constraint firstAttribute="trailing" secondItem="a4W-MZ-mOx" secondAttribute="trailing" id="WNU-Hf-6tg"/>
+                            <constraint firstItem="a4W-MZ-mOx" firstAttribute="top" secondItem="Uc0-hx-V9H" secondAttribute="top" id="e9d-TJ-P3T"/>
+                            <constraint firstItem="a4W-MZ-mOx" firstAttribute="leading" secondItem="Uc0-hx-V9H" secondAttribute="leading" id="mzG-sK-2UV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="a4W-MZ-mOx" id="XSa-pt-kfu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xe4-3S-0yQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -860,8 +921,26 @@ steps!</string>
                     <view key="view" contentMode="scaleToFill" id="p2O-uJ-6t9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-zK-DQg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zAc-zK-DQg" firstAttribute="leading" secondItem="p2O-uJ-6t9" secondAttribute="leading" id="MUW-zW-oZA"/>
+                            <constraint firstAttribute="trailing" secondItem="zAc-zK-DQg" secondAttribute="trailing" id="bgb-zd-gCp"/>
+                            <constraint firstItem="zAc-zK-DQg" firstAttribute="bottom" secondItem="U3V-AR-9vV" secondAttribute="top" id="gFx-dQ-WO7"/>
+                            <constraint firstItem="zAc-zK-DQg" firstAttribute="top" secondItem="p2O-uJ-6t9" secondAttribute="top" id="yg2-3b-E2c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="zAc-zK-DQg" id="7nw-yx-LLW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh2-gv-1SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

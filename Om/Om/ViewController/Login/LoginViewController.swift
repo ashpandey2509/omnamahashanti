@@ -64,6 +64,18 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonClicked(sender: AnyObject) {
+        // validate user
+
+        APIService.sharedInstance.validateUser(self.mobileTextField.text!, password: self.passwordtextField.text!) { (response) -> Void in
+            if (response.result.isSuccess) {
+                self.navigationController?.popViewControllerAnimated(true)
+                debugPrint("logged in user", response.result.value)
+//                UserSession.sharedInstance.loggedInUser = UserProfile(response.result.value as NSD)
+            } else {
+                // show user invalid credentials
+                debugPrint("login error", response.result.error)
+            }
+        }
     }
     
     @IBAction func createPorfileButtonClicked(sender: AnyObject) {

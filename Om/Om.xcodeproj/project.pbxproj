@@ -39,6 +39,8 @@
 		15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C691C82F206006A7F88 /* TermsnConditionsViewController.swift */; };
 		15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */; };
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
+		5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */; };
+		5F9888501C88A82300DEF0F4 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98884F1C88A82300DEF0F4 /* UserProfile.swift */; };
 		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacyPolicyViewController.swift; path = ViewController/PrivacyPolicy/PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5F9888111C8356DC00DEF0F4 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5F98884F1C88A82300DEF0F4 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
 		95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Om.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -392,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				15081C641C82AA8D006A7F88 /* LoginViewController.swift */,
+				5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			children = (
 				15081C5A1C8231B0006A7F88 /* Product.swift */,
 				15081C5B1C8231B0006A7F88 /* Vendor.swift */,
+				5F98884F1C88A82300DEF0F4 /* UserProfile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -640,12 +646,14 @@
 				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
+				5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */,
 				15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */,
 				15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */,
 				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
+				5F9888501C88A82300DEF0F4 /* UserProfile.swift in Sources */,
 				15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */,
 				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
 				15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */,
