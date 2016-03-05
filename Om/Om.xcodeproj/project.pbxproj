@@ -38,6 +38,9 @@
 		15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C671C82AE91006A7F88 /* SignUpViewController.swift */; };
 		15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C691C82F206006A7F88 /* TermsnConditionsViewController.swift */; };
 		15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */; };
+		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
+		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
+		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
 		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +103,9 @@
 		15081C671C82AE91006A7F88 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewController/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
 		15081C691C82F206006A7F88 /* TermsnConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsnConditionsViewController.swift; path = ViewController/TermsnConditions/TermsnConditionsViewController.swift; sourceTree = "<group>"; };
 		15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacyPolicyViewController.swift; path = ViewController/PrivacyPolicy/PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderHistoryViewController.swift; path = ViewController/OrderHistory/OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5F9888111C8356DC00DEF0F4 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		6600977B59B812B0367F21ED /* Pods-Om.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 		15081C011C80B9FD006A7F88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				15D312D81C8B5CB100EDB389 /* OrderConfirmation */,
+				15D312D51C8B5C7600EDB389 /* OrderHistory */,
 				15081C631C82AA36006A7F88 /* PrivacyPolicy */,
 				15081C621C82AA2A006A7F88 /* TermsnConditions */,
 				15081C611C82AA22006A7F88 /* SignUp */,
@@ -289,6 +297,7 @@
 		15081C171C80D594006A7F88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				15D312DB1C8B5F3400EDB389 /* PoojaConfirmation */,
 				15081C451C820FDE006A7F88 /* Pandit */,
 				15081C441C820FD5006A7F88 /* DayCollectionView */,
 				15081C1E1C80E04B006A7F88 /* Pooja */,
@@ -418,6 +427,30 @@
 				15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */,
 			);
 			name = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
+		15D312D51C8B5C7600EDB389 /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */,
+			);
+			name = OrderHistory;
+			sourceTree = "<group>";
+		};
+		15D312D81C8B5CB100EDB389 /* OrderConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */,
+			);
+			name = OrderConfirmation;
+			sourceTree = "<group>";
+		};
+		15D312DB1C8B5F3400EDB389 /* PoojaConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */,
+			);
+			name = PoojaConfirmation;
 			sourceTree = "<group>";
 		};
 		48536E044A8A4367462F49AE /* Pods */ = {
@@ -635,6 +668,7 @@
 				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
 				15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
+				15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */,
 				15081C281C80E2C1006A7F88 /* PanditSelectionViewController.swift in Sources */,
 				5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */,
 				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
@@ -645,6 +679,7 @@
 				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
+				15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */,
 				15081C091C80BA61006A7F88 /* ViewController.swift in Sources */,
 				15081C3F1C814CE4006A7F88 /* CKCalendarView.m in Sources */,
 				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
@@ -652,6 +687,7 @@
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
+				15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */,
 				15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */,
 				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
 				15081C481C821005006A7F88 /* DateCollectionViewCell.swift in Sources */,

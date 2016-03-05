@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.2.0)
+  - Alamofire (3.2.1)
   - DIDatepicker (0.1)
   - HanekeSwift (0.10.1)
   - KNSemiModalViewController_hons82 (0.4.4)
@@ -28,7 +28,7 @@ DEPENDENCIES:
   - THCalendarDatePicker (~> 1.2.5)
 
 SPEC CHECKSUMS:
-  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   DIDatepicker: c990ce1cdc8a6169cf7eb6369cd97604864eed27
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3

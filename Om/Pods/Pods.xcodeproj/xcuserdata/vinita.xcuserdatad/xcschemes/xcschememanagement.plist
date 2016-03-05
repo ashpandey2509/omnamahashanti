@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KNSemiModalViewController_hons82.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6635237805C25829615D1298D9AF35FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DAA7916E5447CC34BF905834201BAFC</key>
+		<key>7DDF79495F24B309AF089ACC99FC1151</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3CAF07BEF6216CEEA0759DA9911B4FA</key>
+		<key>D8B7DF5EEF404CA400564C82958F5744</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F09886F7312961D72356C86989BC8B12</key>
+		<key>E3CAF07BEF6216CEEA0759DA9911B4FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

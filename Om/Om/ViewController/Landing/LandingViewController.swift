@@ -84,3 +84,41 @@ class LandingViewController: UIViewController {
         self.title = ""
     }
 }
+
+//extension LandingViewController : UITableViewDataSource {
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return vendors.count;
+//    }
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell : PanditTableViewCell = tableView.dequeueReusableCellWithIdentifier("PanditTableViewCell") as! PanditTableViewCell
+//        let vendor = vendors[indexPath.row]
+//        cell.vendorImage.image = nil
+//        cell.selectionStyle = UITableViewCellSelectionStyle.None
+//        cell.vendorName.text = "\(vendor.first_name!) \(vendor.last_name!)"
+//        cell.vendorExperience.text = vendor.experience == nil ? "8 years" : vendor.experience!
+//        cell.vendorLanguages.text = vendor.languages == nil ? "Hindi, Marathi" : vendor.languages!
+//        if let _ = vendor.image {
+//            cell.vendorImage.hnk_setImageFromURL(NSURL(string: vendor.image!)!)
+//        } else {
+//            cell.vendorImage.image = UIImage(named: "ic_vendor_placeholder")
+//        }
+//        
+//        return cell
+//    }
+//}
+//
+//
+//extension LandingViewController : UITableViewDelegate {
+//    
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return 110.0
+//    }
+//}
+
+
+
