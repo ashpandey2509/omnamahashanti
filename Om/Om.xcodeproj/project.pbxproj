@@ -44,7 +44,7 @@
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
 		5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */; };
 		5F9888501C88A82300DEF0F4 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98884F1C88A82300DEF0F4 /* UserProfile.swift */; };
-		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
+		6A67EE6381DDB4508909ADEA /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

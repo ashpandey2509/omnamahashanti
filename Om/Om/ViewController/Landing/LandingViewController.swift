@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MMDrawerController
 class LandingViewController: UIViewController {
+    
     @IBOutlet weak var bookPoojaView: UIView!
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customizeView()
         self.testAwesomeNetworkingCode()
-        
+        self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
     }
 
@@ -23,18 +26,6 @@ class LandingViewController: UIViewController {
     }
 
     func testAwesomeNetworkingCode() {
-//        APIService.sharedInstance.getProducts { (productList, error) -> Void in
-//            debugPrint(productList)
-//            for product in productList {
-//                print (product.name)
-//            }
-//        }
-
-//        APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: 1450592887734) { (vendorList, error) -> Void in
-//            debugPrint(vendorList)
-//        }
-
-
     }
 
     func customizeView(){

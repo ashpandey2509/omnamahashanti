@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DrawerViewController: UIViewController {
 
@@ -19,25 +20,29 @@ class DrawerViewController: UIViewController {
         ["icon" : "ic_action_rate_app" , "title" : "Rate App"],
         ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
         ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
-            ["icon" : "ic_action_contact_us" , "title" : "Contact Us"]]
+        ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
 
-    let postSigninArray = [["icon" : "" , "title" : "Login"],
-        ["icon" : "" , "title" : "Rate App"],
-        ["icon" : "" , "title" : "Terms & Conditions"],
-        ["icon" : "" , "title" : "Privacy Policy"],
-        ["icon" : "" , "title" : "Contact Us"]]
+    let postSigninArray = [["icon" : "ic_action_login" , "title" : "Logout", "centerIdentifier" : "LoginViewController"],
+        ["icon" : "ic_action_login" , "title" : "Profile", "centerIdentifier" : "LoginViewController"],
+        ["icon" : "ic_action_rate_app" , "title" : "Rate App"],
+        ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
+        ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
+        ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
+
+    var currentDrawerArray = [NSDictionary]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
-
-
+        currentDrawerArray = preSigninArray
     }
 
     override func viewWillAppear(animated: Bool) {
         if (UserSession.sharedInstance.isLoggedInUser()) {
             updateDrawerForLoggedInUser()
+        } else {
+            updateDrawerForLoggedOutUser()
         }
     }
 
@@ -49,6 +54,33 @@ class DrawerViewController: UIViewController {
     func updateDrawerForLoggedInUser() {
         if let user = UserSession.sharedInstance.loggedInUser {
             drawerHeaderUserName.text = user.first_name! + " " + user.last_name!
+        }
+
+        currentDrawerArray = postSigninArray
+        self.tableView.reloadData()
+    }
+
+    func updateDrawerForLoggedOutUser() {
+        drawerHeaderUserName.text = "Please login to see your data"
+        currentDrawerArray = preSigninArray
+        self.tableView.reloadData()
+    }
+
+    func sendEmail() {
+        if !MFMailComposeViewController.canSendMail() {
+            print("Mail Services are not available")
+        } else {
+            let composeVC = MFMailComposeViewController()
+            //composeVC.mailComposeDelegate = self
+
+            // Configure the fields of the interface.
+            composeVC.setToRecipients(["contact@omnamahshanti.com"])
+            composeVC.setSubject("Feedback for OM")
+            composeVC.setMessageBody("", isHTML: false)
+
+            (self.mm_drawerController.centerViewController as! UINavigationController).presentViewController(composeVC, animated: true, completion: nil)
+
+            self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
         }
     }
     
@@ -72,14 +104,14 @@ extension DrawerViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return preSigninArray.count
+        return currentDrawerArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : DrawerTableViewCell = tableView.dequeueReusableCellWithIdentifier("DrawerTableViewCell") as! DrawerTableViewCell
-        let dictionary = self.preSigninArray[indexPath.row] 
-        cell.iconImageView.image = UIImage(named: dictionary["icon"]!)
-        cell.titleLabel.text = dictionary["title"]!
+        let dictionary = self.currentDrawerArray[indexPath.row]
+        cell.iconImageView.image = UIImage(named: dictionary["icon"]! as! String)
+        cell.titleLabel.text = dictionary["title"]! as? String
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
@@ -93,11 +125,15 @@ extension DrawerViewController : UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let dictionary = self.preSigninArray[indexPath.row]
+        let dictionary = self.currentDrawerArray[indexPath.row]
         if let identifier = dictionary["centerIdentifier"]{
-            let viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier)
+            let viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier as! String)
             (self.mm_drawerController.centerViewController as! UINavigationController).pushViewController(viewController!, animated: true)
             self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
+        }
+
+        if let action = dictionary["action"] {
+            self.performSelector(Selector(action as! String))
         }
     }
 }
