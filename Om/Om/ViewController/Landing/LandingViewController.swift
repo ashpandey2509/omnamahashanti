@@ -35,10 +35,10 @@ class LandingViewController: UIViewController {
         self.navigationController!.navigationBar.translucent = false
         
         let button = UIButton(type: UIButtonType.System)
-        button.setImage(UIImage(named: "hamburger"), forState: UIControlState.Normal)
+        button.setImage(UIImage(named: "ic_menu_white"), forState: UIControlState.Normal)
         button.addTarget(self, action: "leftBarButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         button.frame = CGRectMake(0, 20, 44, 44)
-        button.imageEdgeInsets = UIEdgeInsetsMake(14, 0, 13, 19)
+        button.imageEdgeInsets = UIEdgeInsetsMake(10, 6, 10, 8)
         button.tintColor = UIColor.whiteColor()
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.leftBarButtonItem = barButton
