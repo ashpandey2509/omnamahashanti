@@ -13,7 +13,7 @@ public class UserSession {
     static let sharedInstance = UserSession()
     var products : [Product]?
     var loggedInUser : UserProfile?
-
+    var selectedPooja : Product?
     public func getProducts(callback: ([Product], NSError?) -> Void ) {
 
         if let _ = products {

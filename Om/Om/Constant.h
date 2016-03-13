@@ -9,6 +9,6 @@
 #ifndef Constant_h
 #define Constant_h
 #define IS_ABOVE_IPHNE6 (IS_IPHONE && SCREEN_MAX_LENGTH >= 667.0)
-
+#define marginWidth = 8
 
 #endif /* Constant_h */

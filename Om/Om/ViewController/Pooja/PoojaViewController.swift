@@ -16,6 +16,7 @@ class PoojaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        self.tableView.tableFooterView = UIView()
         getProducts()
         // Do any additional setup after loading the view.
     }
@@ -68,6 +69,12 @@ extension PoojaViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150.0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let dateSelectionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateSelectionViewController") as! DateSelectionViewController
+        UserSession.sharedInstance.selectedPooja = products[indexPath.row]
+        self.navigationController?.pushViewController(dateSelectionViewController, animated: true)
     }
 }
 

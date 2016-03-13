@@ -19,6 +19,7 @@ class PanditSelectionViewController: UIViewController {
     var selectedIndex : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.tableFooterView = UIView()
         self.dateCollectionView.registerNib(UINib(nibName: "DateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DateCollectionViewCell")
         self.tableView.registerNib(UINib(nibName: "PanditTableViewCell", bundle: nil), forCellReuseIdentifier: "PanditTableViewCell")
         self.selectedIndex = 0
@@ -41,21 +42,18 @@ class PanditSelectionViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func bookButtonClicked(button : UIButton){
+        let orderVC = self.storyboard?.instantiateViewControllerWithIdentifier("OrderConfirmationViewController") as! OrderConfirmationViewController
+        orderVC.vendor = vendors[button.tag]
+        self.navigationController?.pushViewController(orderVC, animated: true)
     }
-    */
 
     func getVendorForSelectedDate(selectedDate: NSDate) {
         let selectedDateMilli = selectedDate.timeIntervalSince1970*1000
         APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
             self.vendors = vendors
             self.tableView.reloadData()
+            self.tableView.contentOffset = CGPointMake(0, 0)
         }
     }
 
@@ -83,7 +81,8 @@ extension PanditSelectionViewController : UITableViewDataSource {
         } else {
             cell.vendorImage.image = UIImage(named: "ic_vendor_placeholder")
         }
-
+        cell.bookButton.addTarget(self, action: "bookButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.bookButton.tag = indexPath.row
         return cell
     }
 }

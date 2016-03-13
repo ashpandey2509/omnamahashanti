@@ -1,5 +1,5 @@
 //
-//  PoojaConfirmationTableViewCell.swift
+//  CurrentBookingCell.swift
 //  Om
 //
 //  Created by Vinita on 3/6/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PoojaConfirmationTableViewCell: UITableViewCell {
+class CurrentBookingCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
 
     @IBOutlet weak var cancelButton: UIButton!

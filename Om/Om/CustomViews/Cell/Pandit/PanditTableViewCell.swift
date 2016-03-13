@@ -14,6 +14,7 @@ class PanditTableViewCell: UITableViewCell {
     @IBOutlet weak var vendorExperience: UILabel!
     @IBOutlet weak var vendorLanguages: UILabel!
     @IBOutlet weak var vendorImage: UIImageView!
+    @IBOutlet weak var bookButton: UIButton!
 
 
     override func awakeFromNib() {
