@@ -13,7 +13,9 @@ public class UserSession {
     static let sharedInstance = UserSession()
     var products : [Product]?
     var loggedInUser : UserProfile?
-    var selectedPooja : Product?
+    var newBookingProduct: Product?
+    var newBookingTimeSlot : String?
+
     public func getProducts(callback: ([Product], NSError?) -> Void ) {
 
         if let _ = products {
@@ -29,5 +31,10 @@ public class UserSession {
 
     public func isLoggedInUser() -> Bool {
         return !(self.loggedInUser == nil)
+    }
+
+    public func clearNewBooking() {
+        newBookingTimeSlot = nil
+        newBookingProduct = nil
     }
 }

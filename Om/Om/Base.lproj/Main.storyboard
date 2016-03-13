@@ -479,8 +479,8 @@ steps!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Preferred Time Slot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByA-xR-dQY">
-                                <rect key="frame" x="0.0" y="419" width="600" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred Time Slot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByA-xR-dQY">
+                                <rect key="frame" x="0.0" y="391" width="600" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0Vd-Lb-qOk"/>
                                 </constraints>
@@ -488,59 +488,6 @@ steps!</string>
                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xge-BW-q1i">
-                                <rect key="frame" x="20" y="465" width="560" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-2e-Gpc">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <state key="normal" title="AFTERNOON">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="timeSlotSelected:" destination="6vc-Jt-XAY" eventType="touchUpInside" id="gYf-T5-i3L"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWG-0d-WN2">
-                                        <rect key="frame" x="374" y="0.0" width="187" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <state key="normal" title="EVENING">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="timeSlotSelected:" destination="6vc-Jt-XAY" eventType="touchUpInside" id="WcI-Ex-pD8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQF-bv-HBW">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="yTl-BK-iJ2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <state key="normal" title="MORNING">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="timeSlotSelected:" destination="6vc-Jt-XAY" eventType="touchUpInside" id="xh2-jk-KQl"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94509803921568625" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="UWG-0d-WN2" firstAttribute="width" secondItem="2qO-2e-Gpc" secondAttribute="width" id="2Ls-m9-Uim"/>
-                                    <constraint firstItem="vQF-bv-HBW" firstAttribute="leading" secondItem="xge-BW-q1i" secondAttribute="leading" id="4mn-xZ-AjS"/>
-                                    <constraint firstAttribute="bottom" secondItem="vQF-bv-HBW" secondAttribute="bottom" id="5eA-DE-ZFd"/>
-                                    <constraint firstAttribute="bottom" secondItem="2qO-2e-Gpc" secondAttribute="bottom" id="6wG-H4-4ne"/>
-                                    <constraint firstItem="2qO-2e-Gpc" firstAttribute="leading" secondItem="vQF-bv-HBW" secondAttribute="trailing" id="C7e-NX-0vv"/>
-                                    <constraint firstItem="UWG-0d-WN2" firstAttribute="width" secondItem="vQF-bv-HBW" secondAttribute="width" id="JS4-2R-iLy"/>
-                                    <constraint firstItem="UWG-0d-WN2" firstAttribute="leading" secondItem="2qO-2e-Gpc" secondAttribute="trailing" id="Pi1-bl-e6e"/>
-                                    <constraint firstAttribute="trailing" secondItem="UWG-0d-WN2" secondAttribute="trailing" constant="-1" id="S54-2y-eRO"/>
-                                    <constraint firstAttribute="bottom" secondItem="UWG-0d-WN2" secondAttribute="bottom" id="ggq-Gw-xEE"/>
-                                    <constraint firstItem="vQF-bv-HBW" firstAttribute="top" secondItem="xge-BW-q1i" secondAttribute="top" id="rYa-vs-R8I"/>
-                                    <constraint firstItem="UWG-0d-WN2" firstAttribute="top" secondItem="xge-BW-q1i" secondAttribute="top" id="wn3-ok-fSe"/>
-                                    <constraint firstItem="2qO-2e-Gpc" firstAttribute="top" secondItem="xge-BW-q1i" secondAttribute="top" id="zqn-sk-bLx"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79h-qM-Nqq">
                                 <rect key="frame" x="495" y="535" width="85" height="45"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.26274509800000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -556,13 +503,25 @@ steps!</string>
                                     <action selector="nextButtonClicked:" destination="6vc-Jt-XAY" eventType="touchUpInside" id="4qv-Af-gvc"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-uM-b02">
-                                <rect key="frame" x="20" y="64" width="560" height="355"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-uM-b02">
+                                <rect key="frame" x="20" y="20" width="560" height="355"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="355" id="9AZ-6I-0PT"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-dc-EHv">
+                                <rect key="frame" x="36" y="457" width="528" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5rD-ze-o2L"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Morning"/>
+                                    <segment title="Afternoon"/>
+                                    <segment title="Evening"/>
+                                </segments>
+                                <color key="tintColor" red="0.90980392156862744" green="0.2627450980392157" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -571,20 +530,18 @@ steps!</string>
                             <constraint firstItem="zjj-7i-wPL" firstAttribute="top" secondItem="79h-qM-Nqq" secondAttribute="bottom" constant="20" id="GiW-Ut-jEF"/>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="top" secondItem="eGG-78-49c" secondAttribute="bottom" id="OtM-Cf-KvD"/>
                             <constraint firstItem="ByA-xR-dQY" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" constant="-20" id="TDA-KX-PAU"/>
-                            <constraint firstItem="xge-BW-q1i" firstAttribute="trailing" secondItem="pNa-WU-QYR" secondAttribute="trailingMargin" id="Ubr-42-Ya6"/>
+                            <constraint firstAttribute="trailing" secondItem="WxP-dc-EHv" secondAttribute="trailing" constant="36" id="W9B-nJ-0gY"/>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" id="YPR-da-KyJ"/>
+                            <constraint firstItem="WxP-dc-EHv" firstAttribute="top" secondItem="ByA-xR-dQY" secondAttribute="bottom" constant="45" id="dM0-W7-er0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ByA-xR-dQY" secondAttribute="trailing" constant="-20" id="dUV-AQ-JuS"/>
-                            <constraint firstItem="xge-BW-q1i" firstAttribute="top" secondItem="ByA-xR-dQY" secondAttribute="bottom" constant="25" id="lxx-LH-SUr"/>
-                            <constraint firstItem="xge-BW-q1i" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" id="sgU-va-JEh"/>
-                            <constraint firstItem="ByA-xR-dQY" firstAttribute="top" secondItem="WHN-uM-b02" secondAttribute="bottom" id="tVN-Iw-lfn"/>
+                            <constraint firstItem="WxP-dc-EHv" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leading" constant="36" id="fa3-od-jTe"/>
+                            <constraint firstItem="ByA-xR-dQY" firstAttribute="top" secondItem="WHN-uM-b02" secondAttribute="bottom" constant="16" id="tVN-Iw-lfn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="afternoonButton" destination="2qO-2e-Gpc" id="4n1-1D-Fah"/>
                         <outlet property="calendarContainer" destination="WHN-uM-b02" id="pXi-5I-AlQ"/>
                         <outlet property="containerHeightConstraint" destination="9AZ-6I-0PT" id="HSf-cd-ZXG"/>
-                        <outlet property="eveningButton" destination="UWG-0d-WN2" id="aHR-o5-n9M"/>
-                        <outlet property="morningButton" destination="vQF-bv-HBW" id="My1-y6-pDf"/>
+                        <outlet property="timeslotSegmentedControl" destination="WxP-dc-EHv" id="kJO-DF-1e4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psT-QT-FRt" userLabel="First Responder" sceneMemberID="firstResponder"/>

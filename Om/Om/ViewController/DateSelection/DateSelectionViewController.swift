@@ -11,11 +11,15 @@ import KSToastView
 class DateSelectionViewController: UIViewController {
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var calendarContainer: UIView!
-    var selectedTimeSlot : String?
-    @IBOutlet weak var eveningButton: UIButton!
-    @IBOutlet weak var afternoonButton: UIButton!
-    @IBOutlet weak var morningButton: UIButton!
+    @IBOutlet weak var timeslotSegmentedControl: UISegmentedControl!
 
+    var product: Product?
+
+    enum Timeslot: String {
+        case Morning = "Morning"
+        case Afternoon = "Afternoon"
+        case Evening = "Evening"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,65 +27,37 @@ class DateSelectionViewController: UIViewController {
         self.calendarContainer.addSubview(calendar)
         calendar.delegate = self;
         self.containerHeightConstraint.constant = DeviceType.IS_IPHONE_6_OR_MORE ? 350 : 290
+        initTimeslotSegmentedControl()
     }
 
     override func viewWillAppear(animated: Bool) {
         self.title = "Select Date"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func nextButtonClicked(button: UIButton) {
-        if let _ = self.selectedTimeSlot{
-            self.title = ""
-            let panditSelectionVC = self.storyboard?.instantiateViewControllerWithIdentifier("PanditSelectionViewController") as! PanditSelectionViewController
-            panditSelectionVC.selectedTimeSlot = self.selectedTimeSlot  
-            self.navigationController?.pushViewController(panditSelectionVC, animated: true)
-        }
-        else
-        {
+
+        if (timeslotSegmentedControl.selectedSegmentIndex > -1) {
+            let selectedTimeslotName = timeslotSegmentedControl.titleForSegmentAtIndex(timeslotSegmentedControl.selectedSegmentIndex)
+            showVendorAvailability(Timeslot(rawValue: selectedTimeslotName!)!)
+        } else {
             KSToastView.ks_showToast("Please select a time slot")
         }
     }
 
-    @IBAction func timeSlotSelected(button: UIButton) {
-        self.morningButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
-        self.afternoonButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
-        self.eveningButton.backgroundColor = UIColor.getTimeSlotBackgroundColor()
-        button.backgroundColor = UIColor.getThemeColor()
-        self.updateSelectedTimeSlot(button.tag)
-    }
-    
-    func updateSelectedTimeSlot(slotTag : Int){
-        switch(slotTag){
-            case 0:
-                self.selectedTimeSlot = "Morning"
-                break
-            case 1:
-                self.selectedTimeSlot = "Afternoon"
-                break
-            case 2:
-                self.selectedTimeSlot = "Evening"
-                break
-            default:
-                self.selectedTimeSlot = nil
-                break
+    func initTimeslotSegmentedControl() {
+        if let selectedProduct = product {
+            timeslotSegmentedControl.setEnabled(selectedProduct.morning, forSegmentAtIndex: 0)
+            timeslotSegmentedControl.setEnabled(selectedProduct.afternoon, forSegmentAtIndex: 1)
+            timeslotSegmentedControl.setEnabled(selectedProduct.evening, forSegmentAtIndex: 2)
         }
     }
-    
+
+    func showVendorAvailability(timeslot: Timeslot) {
+        let vendorAvailabilityVC = self.storyboard?.instantiateViewControllerWithIdentifier("PanditSelectionViewController") as!
+        PanditSelectionViewController
+        UserSession.sharedInstance.newBookingTimeSlot = timeslot.rawValue
+        self.navigationController?.pushViewController(vendorAvailabilityVC, animated: true)
+    }
 }
 
 extension DateSelectionViewController : CKCalendarDelegate  {
