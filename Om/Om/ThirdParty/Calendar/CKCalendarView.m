@@ -307,7 +307,7 @@
         if (self.selectedDate && [self date:self.selectedDate isSameDayAsDate:date]) {
             [dateButton setTitleColor:item.selectedTextColor forState:UIControlStateNormal];
             dateButton.backgroundColor = item.selectedBackgroundColor;
-            dateButton.layer.cornerRadius = (dateButton.frame.size.width)/2;
+//            dateButton.layer.cornerRadius = (dateButton.frame.size.width)/2;
         } else {
             [dateButton setTitleColor:item.textColor forState:UIControlStateNormal];
             dateButton.backgroundColor = item.backgroundColor;

@@ -68,7 +68,6 @@ extension PoojaViewController : UITableViewDataSource {
     }
 }
 
-
 extension PoojaViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -77,8 +76,9 @@ extension PoojaViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dateSelectionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateSelectionViewController") as! DateSelectionViewController
-        UserSession.sharedInstance.selectedPooja = products[indexPath.row]
+        let selectedProduct = products[indexPath.row]
+        UserSession.sharedInstance.newBookingProduct = selectedProduct
+        dateSelectionViewController.product = selectedProduct
         self.navigationController?.pushViewController(dateSelectionViewController, animated: true)
     }
 }
-

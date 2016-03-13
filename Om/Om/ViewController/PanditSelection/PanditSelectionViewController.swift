@@ -50,12 +50,24 @@ class PanditSelectionViewController: UIViewController {
     }
 
     func getVendorForSelectedDate(selectedDate: NSDate) {
+        let activityIndicator = ActivityIndicator(parent: self.view)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.showIndicator()
+
+        resetVendorTable()
+
         let selectedDateMilli = selectedDate.timeIntervalSince1970*1000
         APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
             self.vendors = vendors
             self.tableView.reloadData()
             self.tableView.contentOffset = CGPointMake(0, 0)
+            activityIndicator.hideIndicator()
         }
+    }
+
+    func resetVendorTable() {
+        self.vendors = [Vendor]()
+        self.tableView.reloadData()
     }
 
 }
