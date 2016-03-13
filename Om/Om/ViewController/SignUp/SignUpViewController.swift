@@ -76,6 +76,16 @@ extension SignUpViewController  : UITextFieldDelegate{
             }
             self.confirmPasswordTextField.updateConstraintsIfNeeded()
         }
+        else if(textField == self.mobileTextField){
+            if(newString.characters.count > 0)
+            {
+                self.mobileHeightConstraint.constant = 18.0
+            }
+            else{
+                self.mobileHeightConstraint.constant = 0.0
+            }
+            self.mobileTextField.updateConstraintsIfNeeded()
+        }
         return true
     }
     

@@ -21,7 +21,7 @@ class DrawerViewController: UIViewController {
         ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
         ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
 
-    let postSigninArray = [["icon" : "ic_action_login" , "title" : "Logout", "centerIdentifier" : "LoginViewController"],
+    let postSigninArray = [["icon" : "ic_action_login" , "title" : "Logout", "action" : "logoutClicked"],
         ["icon" : "ic_action_login" , "title" : "Edit Profile", "centerIdentifier" : "ProfileViewController"],
         ["icon" : "ic_action_rate_app" , "title" : "Rate App", "action" : "rateApp"],
         ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
@@ -38,13 +38,17 @@ class DrawerViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        self.updateDrawerState()
+    }
+    
+    func updateDrawerState(){
         if (UserSession.sharedInstance.isLoggedInUser()) {
             updateDrawerForLoggedInUser()
         } else {
             updateDrawerForLoggedOutUser()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,6 +91,14 @@ class DrawerViewController: UIViewController {
         ToastView.ShowToast("Coming Soon!")
     }
     
+    func logoutClicked(){
+        UserSession.sharedInstance.products = nil
+        UserSession.sharedInstance.loggedInUser = nil
+        UserSession.sharedInstance.selectedVendor = nil
+        UserSession.sharedInstance.newBookingProduct = nil
+        UserSession.sharedInstance.newBookingTimeSlot = nil
+        self.updateDrawerState()
+    }
 
     /*
     // MARK: - Navigation

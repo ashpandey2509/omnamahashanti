@@ -21,14 +21,14 @@ class OrderConfirmationViewController: UIViewController {
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationContentCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationContentCell")
         self.tableView.estimatedRowHeight = 21.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.updateCoinfirmButtonState()
+        self.updateConfirmButtonState()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.title = "Booking Confirmation"
     }
 
-    func updateCoinfirmButtonState(){
+    func updateConfirmButtonState(){
         if(UserSession.sharedInstance.loggedInUser?.address == nil){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
@@ -45,6 +45,16 @@ class OrderConfirmationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func orderConfirmationButtonClicked(sender: AnyObject) {
+        if(UserSession.sharedInstance.loggedInUser?.address == nil){
+            let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        }
+        else
+        {
+            
+        }
+    }
 
 }
 

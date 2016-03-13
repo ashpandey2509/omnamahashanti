@@ -71,6 +71,7 @@ class APIService {
         }
     }
 
+    
     func getTncUrl() -> NSURL {
         return NSURL(string: baseURL + "policies/terms")!
     }
