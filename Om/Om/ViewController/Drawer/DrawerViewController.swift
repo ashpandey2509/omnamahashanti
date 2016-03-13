@@ -71,7 +71,7 @@ class DrawerViewController: UIViewController {
             print("Mail Services are not available")
         } else {
             let composeVC = MFMailComposeViewController()
-            //composeVC.mailComposeDelegate = self
+            composeVC.mailComposeDelegate = self
 
             // Configure the fields of the interface.
             composeVC.setToRecipients(["contact@omnamahshanti.com"])
@@ -135,6 +135,15 @@ extension DrawerViewController : UITableViewDelegate {
         if let action = dictionary["action"] {
             self.performSelector(Selector(action as! String))
         }
+    }
+}
+
+extension DrawerViewController: MFMailComposeViewControllerDelegate {
+
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+
+        // TODO: Show Toast for email
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
