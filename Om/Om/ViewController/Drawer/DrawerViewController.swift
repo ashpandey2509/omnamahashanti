@@ -98,6 +98,8 @@ class DrawerViewController: UIViewController {
         UserSession.sharedInstance.newBookingProduct = nil
         UserSession.sharedInstance.newBookingTimeSlot = nil
         self.updateDrawerState()
+        self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
+
     }
 
     /*
