@@ -79,7 +79,6 @@ class LoginViewController: UIViewController {
 
                     ToastView.ShowToast("Welcome \(userProfile.first_name!)")
                 }
-//                UserSession.sharedInstance.loggedInUser = UserProfile(response.result.value as NSD)
             } else {
                 ToastView.ShowToast("Invalid Credentials. Please try again.")
             }

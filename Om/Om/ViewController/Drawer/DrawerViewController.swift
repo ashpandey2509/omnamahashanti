@@ -17,14 +17,14 @@ class DrawerViewController: UIViewController {
 
     let preSigninArray = [["icon" : "ic_action_login" , "title" : "Login", "centerIdentifier" : "LoginViewController"],
         ["icon" : "ic_action_login" , "title" : "Profile", "centerIdentifier" : "LoginViewController"],
-        ["icon" : "ic_action_rate_app" , "title" : "Rate App"],
+        ["icon" : "ic_action_rate_app" , "title" : "Rate App", "action" : "rateApp"],
         ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
         ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
         ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
 
     let postSigninArray = [["icon" : "ic_action_login" , "title" : "Logout", "centerIdentifier" : "LoginViewController"],
         ["icon" : "ic_action_login" , "title" : "Profile", "centerIdentifier" : "LoginViewController"],
-        ["icon" : "ic_action_rate_app" , "title" : "Rate App"],
+        ["icon" : "ic_action_rate_app" , "title" : "Rate App", "action" : "rateApp"],
         ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],
         ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
         ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
@@ -82,6 +82,10 @@ class DrawerViewController: UIViewController {
 
             self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
         }
+    }
+
+    func rateApp() {
+        ToastView.ShowToast("Coming Soon!")
     }
     
 
