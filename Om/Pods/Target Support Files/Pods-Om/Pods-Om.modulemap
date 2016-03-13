@@ -1,6 +1,0 @@
-framework module Pods_Om {
-  umbrella header "Pods-Om-umbrella.h"
-
-  export *
-  module * { export * }
-}
