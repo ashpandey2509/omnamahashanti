@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KSToastView
 
 enum FocusType {
     case MobileType
@@ -75,11 +76,12 @@ class LoginViewController: UIViewController {
                     let userProfileDict = json as? NSDictionary
                     let userProfile = UserProfile(dataDict: userProfileDict!)
                     UserSession.sharedInstance.loggedInUser = userProfile
+
+                    ToastView.ShowToast("Welcome \(userProfile.first_name!)")
                 }
 //                UserSession.sharedInstance.loggedInUser = UserProfile(response.result.value as NSD)
             } else {
-                // show user invalid credentials
-                debugPrint("login error", response.result.error)
+                ToastView.ShowToast("Invalid Credentials. Please try again.")
             }
         }
     }

@@ -41,6 +41,7 @@
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
 		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
 		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
+		5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E76591C95577000C2C29E /* ToastView.swift */; };
 		5F7A841E1C9537AD0090E2E5 /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 		5F7A841F1C9537AD0090E2E5 /* Pods_Om.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
@@ -124,6 +125,7 @@
 		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
+		5F5E76591C95577000C2C29E /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5F9888111C8356DC00DEF0F4 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F98884F1C88A82300DEF0F4 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				15081C171C80D594006A7F88 /* Cell */,
+				5F5E76591C95577000C2C29E /* ToastView.swift */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 			files = (
 				15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */,
 				15081C651C82AA8D006A7F88 /* LoginViewController.swift in Sources */,
+				5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */,
 				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
 				15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
