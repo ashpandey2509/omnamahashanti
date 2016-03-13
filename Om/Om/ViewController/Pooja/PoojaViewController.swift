@@ -35,9 +35,13 @@ class PoojaViewController: UIViewController {
     }
 
     func getProducts() {
+        let activityIndicator = ActivityIndicator(parent: self.view)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.showIndicator()
         UserSession.sharedInstance.getProducts { (products, error) -> Void in
             self.products = products
             self.tableView.reloadData()
+            activityIndicator.hideIndicator()
         }
     }
 }
@@ -68,7 +72,7 @@ extension PoojaViewController : UITableViewDataSource {
 extension PoojaViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 150.0
+        return 158.0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
