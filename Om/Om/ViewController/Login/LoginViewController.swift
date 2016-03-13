@@ -30,8 +30,12 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonClicked(sender: AnyObject) {
         // validate user
-
+        let activityIndicator = ActivityIndicator(parent: self.view)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.showIndicator()
         APIService.sharedInstance.validateUser(self.mobileTextField.text!, password: self.passwordtextField.text!) { (response) -> Void in
+            activityIndicator.hideIndicator()
+
             if (response.result.isSuccess) {
                 self.navigationController?.popViewControllerAnimated(true)
                 debugPrint("logged in user", response.result.value)
