@@ -71,7 +71,24 @@ class APIService {
         }
     }
 
-    
+    func editProfile(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
+        let url = baseURL + "users/\(user.id!)"
+        debugPrint(url)
+        var params = [String: String]()
+        params["first_name"] = user.first_name ?? ""
+        params["last_name"] = user.last_name ?? ""
+        params["email"] = user.email ?? ""
+        params["caste"] = user.caste ?? ""
+        params["address"] = user.address ?? ""
+        params["preferred_language"] = user.preferred_language ?? ""
+
+        Alamofire.request(.PUT, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
+            .validate()
+            .responseJSON { (response) -> Void in
+            callback(response)
+        }
+    }
+
     func getTncUrl() -> NSURL {
         return NSURL(string: baseURL + "policies/terms")!
     }
@@ -79,10 +96,4 @@ class APIService {
     func getPrivacyPolicyURL() -> NSURL {
         return NSURL(string: baseURL + "policies/privacy")!
     }
-
-
-
-
-
-
 }

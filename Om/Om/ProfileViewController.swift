@@ -172,4 +172,31 @@ extension ProfileViewController  : UITextFieldDelegate{
         self.lastNameView.backgroundColor = UIColor.blackColor()
         self.firstNameView.backgroundColor = UIColor.blackColor()
     }
+
+    @IBAction func editProfile(sender: AnyObject) {
+
+        let userProfile = UserSession.sharedInstance.loggedInUser
+        userProfile?.first_name = firstNameTextField.text
+        userProfile?.last_name = lastNameTextField.text
+        userProfile?.email = emailTextField.text
+        userProfile?.caste = casteTextField.text
+        userProfile?.address = addressTextField.text
+        userProfile?.preferred_language = languageTextField.text
+
+        let activityIndicator = ActivityIndicator(parent: self.view)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.showIndicator()
+
+        APIService.sharedInstance.editProfile(userProfile!) { (response) -> Void in
+            activityIndicator.hideIndicator()
+
+            if (response.result.isSuccess) {
+                debugPrint(response.result.value)
+            } else {
+                debugPrint(response.result.error)
+                ToastView.ShowToast("Error updating user profile. Try again later.")
+            }
+        }
+    }
+
 }
