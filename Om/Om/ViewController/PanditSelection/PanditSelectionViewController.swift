@@ -28,6 +28,7 @@ class PanditSelectionViewController: UIViewController {
             value: 1,
             toDate: NSDate(),
             options: NSCalendarOptions(rawValue: 0))
+        UserSession.sharedInstance.newBookingDate = selectedDate!
         getVendorForSelectedDate(selectedDate!)
         self.tableView.reloadData()
     }
@@ -141,6 +142,7 @@ extension PanditSelectionViewController : UICollectionViewDelegate{
             toDate: NSDate(),
             options: NSCalendarOptions(rawValue: 0))
         // on data selection by the user reload data get vendor listing for given date.
+        UserSession.sharedInstance.newBookingDate = selectedDate!
         getVendorForSelectedDate(selectedDate!)
     }
 }

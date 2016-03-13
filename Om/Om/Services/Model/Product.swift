@@ -16,7 +16,7 @@ public class Product {
     var morning: Bool
     var afternoon: Bool
     var evening: Bool
-    
+    var items = [String]()
     init(dataDict: NSDictionary) {
         id = dataDict["id"] as! String
         cost = dataDict["cost"] as! Int
@@ -25,5 +25,10 @@ public class Product {
         morning = dataDict["morning"] as! Bool
         afternoon = dataDict["afternoon"] as! Bool
         evening = dataDict["evening"] as! Bool
+        if let items = dataDict["items"] as? [String]{
+            for item in items{
+                self.items.append(item)
+            }
+        }
     }
 }

@@ -16,6 +16,7 @@ public class UserSession {
     var selectedVendor : Vendor?
     var newBookingProduct: Product?
     var newBookingTimeSlot : String?
+    var newBookingDate : NSDate?
 
     public func getProducts(callback: ([Product], NSError?) -> Void ) {
 

@@ -15,21 +15,38 @@ class OrderConfirmationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.poojaInfo = [["Pooja Details" : ["Pooja Name" : UserSession.sharedInstance.newBookingProduct!.name, "Panditji Name" : "\(UserSession.sharedInstance.selectedVendor!.first_name!) \(UserSession.sharedInstance.selectedVendor!.last_name!)", "Date Selected" : "03- March - 2016"]], ["Amount Details" : ["Dhanteras Pooja" : "Rs. 3100"]], ["Address Details" : ["Please edit your profile to update your address"]], ["Saamagri (Included in the pooja cost and delivered to your place)" : ["Raksha (Red/ Yellow/ Orange thread", "Roree", "Sindur", "Haldi", "Abeer", "Gulal", "Chandan Wood"]]]
+        
+        self.poojaInfo = [["Pooja Details" : ["Pooja Name" : UserSession.sharedInstance.newBookingProduct!.name, "Panditji Name" : "\(UserSession.sharedInstance.selectedVendor!.first_name!) \(UserSession.sharedInstance.selectedVendor!.last_name!)", "Date Selected" : self.getFormattedDate()]], ["Amount Details" : [UserSession.sharedInstance.newBookingProduct!.name : "Rs. \(UserSession.sharedInstance.newBookingProduct!.cost)"]], ["Address Details" : ["Please edit your profile to update your address"]], ["Saamagri (Included in the pooja cost and delivered to your place)" : (UserSession.sharedInstance.newBookingProduct!.items.count > 0) ? (UserSession.sharedInstance.newBookingProduct!.items) : ["NA"]]]
         self.tableView.registerNib(UINib(nibName: "TermsnConditionsCell", bundle: nil), forCellReuseIdentifier: "TermsnConditionsCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationContentCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationContentCell")
         self.tableView.estimatedRowHeight = 21.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.updateConfirmButtonState()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.title = "Booking Confirmation"
+        updateConfirmButtonState()
     }
 
+    func navigateToProfile(){
+        self.title = ""
+        let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        self.navigationController?.pushViewController(profileVC, animated: true)
+    }
+
+    func navigateToLogin(){
+        self.title = ""
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
     func updateConfirmButtonState(){
-        if(UserSession.sharedInstance.loggedInUser?.address == nil){
+        if(UserSession.sharedInstance.loggedInUser == nil){
+            self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)
+            self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Selected)
+        }
+        else if(UserSession.sharedInstance.loggedInUser?.address == nil){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
         }
@@ -46,9 +63,11 @@ class OrderConfirmationViewController: UIViewController {
     }
     
     @IBAction func orderConfirmationButtonClicked(sender: AnyObject) {
-        if(UserSession.sharedInstance.loggedInUser?.address == nil){
-            let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
-            self.navigationController?.pushViewController(profileVC, animated: true)
+        if(UserSession.sharedInstance.loggedInUser == nil){
+            self.navigateToLogin()
+        }
+        else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
+            self.navigateToProfile()
         }
         else
         {
@@ -56,6 +75,17 @@ class OrderConfirmationViewController: UIViewController {
         }
     }
 
+    
+    func handleTap(sender: UITapGestureRecognizer? = nil) {
+        self.navigateToProfile()
+    }
+    
+    func getFormattedDate() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        let dateString = dateFormatter.stringFromDate(UserSession.sharedInstance.newBookingDate!)
+        return dateString
+    }
 }
 
 extension OrderConfirmationViewController : UITableViewDataSource {
@@ -72,16 +102,19 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             let headerCell  = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationHeaderCell") as! BookingConfirmationHeaderCell
             
             headerCell.titleLabel.text = ((self.poojaInfo[section]).allKeys[0] as! String)
-            if(headerCell.titleLabel.text != "Address Details"){
+            if(headerCell.titleLabel.text != "Address Details" || UserSession.sharedInstance.loggedInUser == nil){
                 headerCell.editWidthConstraint.constant = 0
                 headerCell.titleLabel.updateConstraints()
             }
-            else
+            else if(UserSession.sharedInstance.loggedInUser != nil)
             {
                 headerCell.editWidthConstraint.constant = 50
                 headerCell.titleLabel.updateConstraints()
                 
                 headerCell.valueLabel.text = "edit"
+                
+                let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+                headerCell.valueLabel.addGestureRecognizer(tap)
             }
             return headerCell
         }
@@ -127,7 +160,10 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             if((sectionDictionary.allKeys as! [String])[0] == "Address Details"){
                 cell.titleLabel.textColor = UIColor.getThemeColor()
                 
-                if(UserSession.sharedInstance.loggedInUser?.address == nil){
+                if(UserSession.sharedInstance.loggedInUser == nil){
+                    cell.titleLabel.text = "Please login to fetch your address"
+                }
+                else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
                     cell.titleLabel.text = "Please edit your profile to update your address"
                 }
                 else
