@@ -16,13 +16,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWP-Tb-lPs">
-                        <rect key="frame" x="13" y="0.0" width="243" height="43.5"/>
+                        <rect key="frame" x="8" y="5" width="254" height="43.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-MT-PyI">
-                        <rect key="frame" x="264" y="0.0" width="48" height="43.5"/>
+                        <rect key="frame" x="264" y="5" width="48" height="43.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="48" id="IP4-ZY-bgJ"/>
                         </constraints>
@@ -31,16 +31,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="wWP-Tb-lPs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="8f6-MH-TkS"/>
-                    <constraint firstItem="Voc-MT-PyI" firstAttribute="leading" secondItem="wWP-Tb-lPs" secondAttribute="trailing" constant="8" id="AWG-9A-Uv8"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Voc-MT-PyI" secondAttribute="bottom" constant="-8" id="N2X-CC-d5o"/>
+                    <constraint firstItem="wWP-Tb-lPs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="8f6-MH-TkS"/>
+                    <constraint firstItem="Voc-MT-PyI" firstAttribute="leading" secondItem="wWP-Tb-lPs" secondAttribute="trailing" constant="2" id="AWG-9A-Uv8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Voc-MT-PyI" secondAttribute="bottom" constant="-13" id="N2X-CC-d5o"/>
                     <constraint firstItem="Voc-MT-PyI" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="S1q-uR-OQ4"/>
-                    <constraint firstItem="wWP-Tb-lPs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="ask-M8-e1Z"/>
-                    <constraint firstItem="Voc-MT-PyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="h6a-Qq-zEd"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wWP-Tb-lPs" secondAttribute="bottom" constant="-8" id="l1Q-zt-yXO"/>
+                    <constraint firstItem="wWP-Tb-lPs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ask-M8-e1Z"/>
+                    <constraint firstItem="Voc-MT-PyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="h6a-Qq-zEd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wWP-Tb-lPs" secondAttribute="bottom" constant="-13" id="l1Q-zt-yXO"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="editWidthConstraint" destination="IP4-ZY-bgJ" id="rmY-TV-xYu"/>
                 <outlet property="titleLabel" destination="wWP-Tb-lPs" id="nVB-I6-gfs"/>

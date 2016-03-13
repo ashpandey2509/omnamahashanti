@@ -20,7 +20,7 @@ extension UIFont {
             context: nil).size
     }
     
-    func heightOfString(string: String, constrainedToWidth width: Double) -> CGSize {
+    func heightOfString(string: String, constrainedToWidth width: CGFloat) -> CGSize {
         let attrString = NSAttributedString.init(string: string, attributes: [NSFontAttributeName:self])
         let rect = attrString.boundingRectWithSize(CGSize(width: width, height: 999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
         let size = CGSizeMake(rect.size.width, rect.size.height)

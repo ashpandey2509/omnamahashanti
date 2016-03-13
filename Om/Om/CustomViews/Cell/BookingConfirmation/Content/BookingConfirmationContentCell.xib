@@ -26,14 +26,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWX-5Z-Ast">
-                        <rect key="frame" x="8" y="0.0" width="160" height="43.5"/>
+                        <rect key="frame" x="8" y="0.0" width="152" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="BWX-5Z-Ast" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:2" id="5V7-Dj-mq8"/>
+                    <constraint firstItem="BWX-5Z-Ast" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:2" constant="-8" id="5V7-Dj-mq8"/>
                     <constraint firstItem="4Sc-nS-OuT" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="HzZ-sY-Cgo"/>
                     <constraint firstItem="4Sc-nS-OuT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="IVV-uD-05P"/>
                     <constraint firstAttribute="bottomMargin" secondItem="BWX-5Z-Ast" secondAttribute="bottom" constant="-8" id="Mg5-OA-jJs"/>
@@ -42,11 +43,13 @@
                     <constraint firstItem="BWX-5Z-Ast" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="t09-Bk-5pe"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4Sc-nS-OuT" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="1:2" id="CiQ-38-g7p"/>
             </constraints>
             <connections>
                 <outlet property="titleLabel" destination="BWX-5Z-Ast" id="OyO-eo-oJQ"/>
+                <outlet property="titleMutiplier" destination="5V7-Dj-mq8" id="Q8X-2L-TNp"/>
                 <outlet property="valueLabel" destination="4Sc-nS-OuT" id="0g0-90-98T"/>
             </connections>
         </tableViewCell>

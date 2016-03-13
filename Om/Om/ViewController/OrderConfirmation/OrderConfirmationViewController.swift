@@ -14,13 +14,12 @@ class OrderConfirmationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.poojaInfo = [["Pooja Details" : ["Pooja Name" : "Dhanteras Pooja", "Panditji Name" : "Pt. Brahmdev Pandey", "Date Selected" : "03- March - 2016"]], ["Amount Details" : ["Dhanteras Pooja" : "Rs. 3100"]], ["Address Details" : ["Please update your profile to update your address"]], ["Saamagri (Included in the pooja cost and delivered to your place)" : ["Raksha (Red/ Yellow/ Orange thread", "Roree", "Sindur", "Haldi", "Abeer", "Gulal", "Chandan Wood"]]]
-        self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "BookingConfirmationHeaderCell")
+        self.poojaInfo = [["Pooja Details" : ["Pooja Name" : "Dhanteras Pooja", "Panditji Name" : "Pt. Brahmdev Pandey", "Date Selected" : "03- March - 2016"]], ["Amount Details" : ["Dhanteras Pooja" : "Rs. 3100"]], ["Address Details" : ["Please edit your profile to update your address"]], ["Saamagri (Included in the pooja cost and delivered to your place)" : ["Raksha (Red/ Yellow/ Orange thread", "Roree", "Sindur", "Haldi", "Abeer", "Gulal", "Chandan Wood"]]]
+        self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationContentCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationContentCell")
-        self.tableView.estimatedRowHeight = 44.0
-        self.tableView.estimatedSectionHeaderHeight = 44.0
+        self.tableView.estimatedRowHeight = 21.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +36,7 @@ extension OrderConfirmationViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell  = tableView.dequeueReusableHeaderFooterViewWithIdentifier("BookingConfirmationHeaderCell") as! BookingConfirmationHeaderCell
+        let headerCell  = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationHeaderCell") as! BookingConfirmationHeaderCell
         
         headerCell.titleLabel.text = ((self.poojaInfo[section]).allKeys[0] as! String)
         if(headerCell.titleLabel.text != "Address Details"){
@@ -48,6 +47,8 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         {
             headerCell.editWidthConstraint.constant = 50
             headerCell.titleLabel.updateConstraints()
+            
+            headerCell.titleLabel.text = "edit"
         }
         return headerCell
     }
@@ -72,11 +73,23 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             cell.valueLabel.hidden = false
             cell.valueLabel.text = dictionary[dictionary.allKeys[indexPath.row] as! String] as? String
             cell.titleLabel.text = dictionary.allKeys[indexPath.row] as? String
+            cell.titleMutiplier.constant = -8
         }
         else if let array = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSArray{
             cell.titleLabel.text = array[indexPath.row] as? String
             cell.valueLabel.hidden = true
+            cell.titleMutiplier.constant = -16
+            cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
+            
+            if((sectionDictionary.allKeys as! [String])[0] == "Address Details"){
+                cell.titleLabel.textColor = UIColor.getThemeColor()
+            }
+            else
+            {
+                cell.titleLabel.textColor = UIColor.getOrderConfirmationTitleColor()
+            }
         }
+
         return cell
     }
 }
@@ -84,6 +97,6 @@ extension OrderConfirmationViewController : UITableViewDataSource {
 extension OrderConfirmationViewController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UIFont.boldSystemFontOfSize(16).heightOfString(((self.poojaInfo[section]).allKeys[0] as! String), constrainedToWidth: tableView.frame.size.width - )
+        return ceil(((UIFont.boldSystemFontOfSize(16).heightOfString(((self.poojaInfo[section] ).allKeys[0] as! String), constrainedToWidth: tableView.frame.size.width - CGFloat(16)).height) / UIFont.boldSystemFontOfSize(16).lineHeight) * UIFont.boldSystemFontOfSize(16).lineHeight) + 10
     }
 }

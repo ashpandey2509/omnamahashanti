@@ -42,6 +42,8 @@
 		15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */; };
 		15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */; };
 		15256FA71C95485800AF7197 /* BookingConfirmationContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */; };
+		15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */; };
+		15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7F1C956C78004BDB84 /* ViewUtil.swift */; };
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
 		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
 		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
@@ -129,6 +131,8 @@
 		15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationHeaderCell.xib; path = CustomViews/Cell/BookingConfirmation/Header/BookingConfirmationHeaderCell.xib; sourceTree = "<group>"; };
 		15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingConfirmationContentCell.swift; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.swift; sourceTree = "<group>"; };
 		15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationContentCell.xib; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.xib; sourceTree = "<group>"; };
+		15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintUtil.swift; path = Util/Constraint/ConstraintUtil.swift; sourceTree = "<group>"; };
+		15B55F7F1C956C78004BDB84 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewUtil.swift; path = Util/ViewUtil/ViewUtil.swift; sourceTree = "<group>"; };
 		15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderHistoryViewController.swift; path = ViewController/OrderHistory/OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 		15081C0A1C80C13A006A7F88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				15B55F7C1C956BD6004BDB84 /* View */,
+				15B55F771C956742004BDB84 /* Constraint */,
 				15081C551C822B02006A7F88 /* DeviceUtil */,
 				15081C511C822635006A7F88 /* DateUtil */,
 				15081C4E1C822555006A7F88 /* StringUtil */,
@@ -486,6 +492,22 @@
 				15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */,
 			);
 			name = Content;
+			sourceTree = "<group>";
+		};
+		15B55F771C956742004BDB84 /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */,
+			);
+			name = Constraint;
+			sourceTree = "<group>";
+		};
+		15B55F7C1C956BD6004BDB84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15B55F7F1C956C78004BDB84 /* ViewUtil.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		15D312D51C8B5C7600EDB389 /* OrderHistory */ = {
@@ -728,6 +750,7 @@
 			files = (
 				15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */,
 				15081C651C82AA8D006A7F88 /* LoginViewController.swift in Sources */,
+				15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */,
 				5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */,
 				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
 				15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */,
@@ -754,6 +777,7 @@
 				15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */,
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
+				15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
 				15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */,
 				15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */,

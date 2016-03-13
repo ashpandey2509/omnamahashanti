@@ -8,13 +8,13 @@
 
 import UIKit
 
-class BookingConfirmationHeaderCell: UITableViewHeaderFooterView {
+class BookingConfirmationHeaderCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     @IBOutlet weak var editWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
  
