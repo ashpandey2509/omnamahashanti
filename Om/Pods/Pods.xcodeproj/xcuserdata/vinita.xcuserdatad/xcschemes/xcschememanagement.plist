@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DLRadioButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MMMaterialDesignSpinner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6635237805C25829615D1298D9AF35FF</key>
+		<key>201E54B29FC9F0CF50A0697356CEF9E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26D544E2AB4347C6148F3C2036EE5545</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68DD50BE9CDFC880B2A369AB468E633A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8B7DF5EEF404CA400564C82958F5744</key>
+		<key>E3CAF07BEF6216CEEA0759DA9911B4FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3CAF07BEF6216CEEA0759DA9911B4FA</key>
+		<key>F3990E3EAC160D4E4F89177D966FC1E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

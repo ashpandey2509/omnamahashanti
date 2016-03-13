@@ -45,7 +45,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="editWidthConstraint" destination="IP4-ZY-bgJ" id="rmY-TV-xYu"/>
-                <outlet property="titleLabel" destination="wWP-Tb-lPs" id="nVB-I6-gfs"/>
+                <outlet property="titleLabel" destination="wWP-Tb-lPs" id="RMP-65-gBY"/>
+                <outlet property="valueLabel" destination="Voc-MT-PyI" id="f2C-dI-xpW"/>
             </connections>
         </tableViewCell>
     </objects>

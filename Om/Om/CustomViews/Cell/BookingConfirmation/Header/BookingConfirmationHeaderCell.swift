@@ -10,6 +10,7 @@ import UIKit
 
 class BookingConfirmationHeaderCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
 
     @IBOutlet weak var editWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {

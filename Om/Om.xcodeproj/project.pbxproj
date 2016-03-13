@@ -42,6 +42,8 @@
 		15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */; };
 		15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */; };
 		15256FA71C95485800AF7197 /* BookingConfirmationContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */; };
+		15B10B911C95C41F00E93902 /* TermsnConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10B8F1C95C41F00E93902 /* TermsnConditionsCell.swift */; };
+		15B10B921C95C41F00E93902 /* TermsnConditionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */; };
 		15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */; };
 		15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7F1C956C78004BDB84 /* ViewUtil.swift */; };
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
@@ -132,6 +134,8 @@
 		15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationHeaderCell.xib; path = CustomViews/Cell/BookingConfirmation/Header/BookingConfirmationHeaderCell.xib; sourceTree = "<group>"; };
 		15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingConfirmationContentCell.swift; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.swift; sourceTree = "<group>"; };
 		15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationContentCell.xib; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.xib; sourceTree = "<group>"; };
+		15B10B8F1C95C41F00E93902 /* TermsnConditionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsnConditionsCell.swift; path = CustomViews/Cell/BookingConfirmation/TermsnConditions/TermsnConditionsCell.swift; sourceTree = "<group>"; };
+		15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TermsnConditionsCell.xib; path = CustomViews/Cell/BookingConfirmation/TermsnConditions/TermsnConditionsCell.xib; sourceTree = "<group>"; };
 		15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintUtil.swift; path = Util/Constraint/ConstraintUtil.swift; sourceTree = "<group>"; };
 		15B55F7F1C956C78004BDB84 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewUtil.swift; path = Util/ViewUtil/ViewUtil.swift; sourceTree = "<group>"; };
 		15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderHistoryViewController.swift; path = ViewController/OrderHistory/OrderHistoryViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 		15081C171C80D594006A7F88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				15B10B8E1C95C3FF00E93902 /* TermsNConditions */,
 				15256F951C9544AA00AF7197 /* BookingConfirmation */,
 				15D312DB1C8B5F3400EDB389 /* PoojaConfirmation */,
 				15081C451C820FDE006A7F88 /* Pandit */,
@@ -495,6 +500,15 @@
 				15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */,
 			);
 			name = Content;
+			sourceTree = "<group>";
+		};
+		15B10B8E1C95C3FF00E93902 /* TermsNConditions */ = {
+			isa = PBXGroup;
+			children = (
+				15B10B8F1C95C41F00E93902 /* TermsnConditionsCell.swift */,
+				15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */,
+			);
+			name = TermsNConditions;
 			sourceTree = "<group>";
 		};
 		15B55F771C956742004BDB84 /* Constraint */ = {
@@ -676,6 +690,7 @@
 				15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */,
 				15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */,
 				15081BDA1C80B9A1006A7F88 /* LaunchScreen.storyboard in Resources */,
+				15B10B921C95C41F00E93902 /* TermsnConditionsCell.xib in Resources */,
 				15081BD71C80B9A1006A7F88 /* Assets.xcassets in Resources */,
 				15256FA71C95485800AF7197 /* BookingConfirmationContentCell.xib in Resources */,
 				15081BD51C80B9A1006A7F88 /* Main.storyboard in Resources */,
@@ -785,6 +800,7 @@
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
 				15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */,
 				15081C5D1C8231B0006A7F88 /* Vendor.swift in Sources */,
+				15B10B911C95C41F00E93902 /* TermsnConditionsCell.swift in Sources */,
 				15081C201C80E062006A7F88 /* PoojaTableViewCell.swift in Sources */,
 				15081C481C821005006A7F88 /* DateCollectionViewCell.swift in Sources */,
 			);

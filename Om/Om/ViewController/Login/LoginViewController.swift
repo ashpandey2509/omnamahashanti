@@ -9,12 +9,6 @@
 import UIKit
 import KSToastView
 
-enum FocusType {
-    case MobileType
-    case PasswordType
-    case DefaultType
-}
-
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
@@ -27,37 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mobileHighLightView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateUIStateForType(.DefaultType)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-    }
-    
-    func updateUIStateForType(type : FocusType){
-        switch(type){
-            case FocusType.MobileType:
-                self.mobileHeightConstraint.constant = 21
-                self.mobileHighLightView.backgroundColor = UIColor.getThemeColor()
-                self.mobileLabel.textColor = UIColor.getThemeColor()
-                self.passwordLabel.textColor = UIColor.blackColor()
-                self.passwordHeightConstraint.constant = 0
-                self.passwordHighLightView.backgroundColor = UIColor.blackColor()
-                self.mobileTextField.tintColor = UIColor.getThemeColor()
-                break
-            case FocusType.PasswordType:
-                self.mobileHeightConstraint.constant = 0
-                self.mobileHighLightView.backgroundColor = UIColor.blackColor()
-                self.mobileLabel.textColor = UIColor.blackColor()
-                self.passwordLabel.textColor = UIColor.getThemeColor()
-                self.passwordHeightConstraint.constant = 21
-                self.mobileHighLightView.backgroundColor = UIColor.getThemeColor()
-                break
-            default:
-                self.mobileHeightConstraint.constant = 0
-                self.passwordHeightConstraint.constant = 0
-                self.mobileHighLightView.backgroundColor = UIColor.blackColor()
-                self.passwordHeightConstraint.constant = 0
-                self.mobileHighLightView.backgroundColor = UIColor.blackColor()
-                break
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -100,15 +64,46 @@ class LoginViewController: UIViewController {
 
 }
 
-extension LoginViewController : UITextFieldDelegate {
-    
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        self.updateUIStateForType(textField == self.mobileTextField ? .MobileType : .PasswordType)
+extension LoginViewController  : UITextFieldDelegate{
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        
+        if(textField == self.mobileTextField){
+            if(newString.characters.count > 0)
+            {
+                self.mobileHeightConstraint.constant = 18.0
+            }
+            else{
+                self.mobileHeightConstraint.constant = 0.0
+            }
+            self.mobileTextField.updateConstraintsIfNeeded()
+        }
+        else if(textField == self.passwordtextField ){
+            if(newString.characters.count > 0)
+            {
+                self.passwordHeightConstraint.constant = 18.0
+            }
+            else{
+                self.passwordHeightConstraint.constant = 0.0
+            }
+            self.passwordtextField.updateConstraintsIfNeeded()
+        }
         return true
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        self.updateUIStateForType(.DefaultType)
-        return true
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if(textField == self.mobileTextField){
+            self.mobileHighLightView.backgroundColor = UIColor.getThemeColor()
+            self.passwordHighLightView.backgroundColor = UIColor.blackColor()
+        }
+        else if(textField == self.passwordtextField){
+            self.mobileHighLightView.backgroundColor = UIColor.blackColor()
+            self.passwordHighLightView.backgroundColor = UIColor.getThemeColor()
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.mobileHighLightView.backgroundColor = UIColor.blackColor()
+        self.passwordHighLightView.backgroundColor = UIColor.blackColor()
     }
 }

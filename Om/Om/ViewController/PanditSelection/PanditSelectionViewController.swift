@@ -43,8 +43,9 @@ class PanditSelectionViewController: UIViewController {
     
 
     func bookButtonClicked(button : UIButton){
+        self.title = ""
         let orderVC = self.storyboard?.instantiateViewControllerWithIdentifier("OrderConfirmationViewController") as! OrderConfirmationViewController
-        orderVC.vendor = vendors[button.tag]
+        UserSession.sharedInstance.selectedVendor = vendors[button.tag]
         self.navigationController?.pushViewController(orderVC, animated: true)
     }
 
