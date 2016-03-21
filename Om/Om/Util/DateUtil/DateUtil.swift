@@ -31,4 +31,6 @@ extension NSDate {
         dateFormatter.dateFormat = "EEE"
         return dateFormatter.stringFromDate(self)
     }
+    
+    
 }

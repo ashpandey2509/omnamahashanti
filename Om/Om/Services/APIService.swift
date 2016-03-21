@@ -70,6 +70,19 @@ class APIService {
             callback(response)
         }
     }
+    
+    
+    func book(user_id : String, vendor_id: String,product_id : String, book_date : Double, city : String, slot : String, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
+        let url = baseURL + "bookings"
+        debugPrint(url)
+        let params = ["user_id": user_id, "vendor_id": vendor_id,"product_id": product_id, "book_date": book_date, "city" : city, "slot" : slot, "address" : address]
+        Alamofire.request(Alamofire.Method.POST, url, parameters: params as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: nil)
+            .validate()
+            .responseJSON { (response) -> Void in
+                callback(response)
+        }
+    }
+
 
     
     func getTncUrl() -> NSURL {

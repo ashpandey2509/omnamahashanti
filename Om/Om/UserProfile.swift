@@ -23,7 +23,7 @@ class UserProfile {
 
 
     init(dataDict: NSDictionary) {
-        id = dataDict["id"] as? String
+        id = dataDict["_id"] as? String
         email = dataDict["email"] as? String
         mobile = dataDict["mobile"] as? String
         country_code = dataDict["country_code"] as? String

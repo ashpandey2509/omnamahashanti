@@ -10,6 +10,7 @@ import UIKit
 
 class TermsnConditionsCell: UITableViewCell {
     @IBOutlet weak var termsLabel: UILabel!
+    @IBOutlet weak var checkmarkButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

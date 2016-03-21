@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import KSToastView
 class OrderConfirmationViewController: UIViewController {
-    
+    var isTermsAccepted = false
     @IBOutlet weak var confirmButton: UIButton!
     var poojaInfo = [NSDictionary]()
     @IBOutlet weak var tableView: UITableView!
@@ -71,10 +71,25 @@ class OrderConfirmationViewController: UIViewController {
         }
         else
         {
-            
+            if(!self.isTermsAccepted){
+                KSToastView.ks_showToast("Please agree to the terms and conditions.")
+            }
+            else
+            {
+                let activityIndicator = ActivityIndicator(parent: self.view)
+                self.view.addSubview(activityIndicator)
+                activityIndicator.showIndicator()
+                APIService.sharedInstance.book(UserSession.sharedInstance.loggedInUser!.id!, vendor_id: UserSession.sharedInstance.selectedVendor!.id!, product_id: UserSession.sharedInstance.newBookingProduct!.id, book_date: UserSession.sharedInstance.newBookingDate!.timeIntervalSince1970 * 1000, city: "Mumbai", slot: UserSession.sharedInstance.newBookingTimeSlot!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
+                    
+                })
+            }
         }
     }
 
+    func acceptTerms(button : UIButton){
+        self.isTermsAccepted = !self.isTermsAccepted
+        self.tableView.reloadData()
+    }
     
     func handleTap(sender: UITapGestureRecognizer? = nil) {
         self.navigateToProfile()
@@ -140,6 +155,8 @@ extension OrderConfirmationViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if(indexPath.section == self.poojaInfo.count){
             let cell : TermsnConditionsCell = tableView.dequeueReusableCellWithIdentifier("TermsnConditionsCell") as! TermsnConditionsCell
+            cell.checkmarkButton.addTarget(self, action: "acceptTerms:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.checkmarkButton.selected = self.isTermsAccepted
             return cell
         }
         let cell : BookingConfirmationContentCell = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationContentCell") as! BookingConfirmationContentCell

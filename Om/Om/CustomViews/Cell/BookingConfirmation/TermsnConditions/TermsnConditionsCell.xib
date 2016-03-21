@@ -15,22 +15,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-hb-ZBS" customClass="DLRadioButton">
-                        <rect key="frame" x="8" y="9" width="25" height="25"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-hb-ZBS">
+                        <rect key="frame" x="8" y="9.5" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="QnL-ca-Ski"/>
                             <constraint firstAttribute="height" constant="25" id="dB0-8o-Nfo"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                <color key="value" red="0.93333333330000001" green="0.25490196079999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
-                        </userDefinedRuntimeAttributes>
+                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                        <state key="normal" image="unchecked"/>
+                        <state key="selected" image="checked"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-nf-72M">
                         <rect key="frame" x="36" y="11" width="276" height="21"/>
@@ -51,8 +44,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="checkmarkButton" destination="RyW-hb-ZBS" id="R67-90-gQD"/>
                 <outlet property="termsLabel" destination="4WO-nf-72M" id="Fya-on-Gc2"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checked" width="64" height="64"/>
+        <image name="unchecked" width="64" height="64"/>
+    </resources>
 </document>

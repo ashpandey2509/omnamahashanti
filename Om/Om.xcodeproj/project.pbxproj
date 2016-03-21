@@ -46,6 +46,9 @@
 		15B10B921C95C41F00E93902 /* TermsnConditionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */; };
 		15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */; };
 		15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7F1C956C78004BDB84 /* ViewUtil.swift */; };
+		15CDB80E1C96B3580063E363 /* BookingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CDB80C1C96B3580063E363 /* BookingHistoryCell.swift */; };
+		15CDB80F1C96B3580063E363 /* BookingHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDB80D1C96B3580063E363 /* BookingHistoryCell.xib */; };
+		15CDB8111C96C5DE0063E363 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CDB8101C96C5DE0063E363 /* Booking.swift */; };
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
 		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
 		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
@@ -138,6 +141,9 @@
 		15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TermsnConditionsCell.xib; path = CustomViews/Cell/BookingConfirmation/TermsnConditions/TermsnConditionsCell.xib; sourceTree = "<group>"; };
 		15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintUtil.swift; path = Util/Constraint/ConstraintUtil.swift; sourceTree = "<group>"; };
 		15B55F7F1C956C78004BDB84 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewUtil.swift; path = Util/ViewUtil/ViewUtil.swift; sourceTree = "<group>"; };
+		15CDB80C1C96B3580063E363 /* BookingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingHistoryCell.swift; path = CustomViews/Cell/BookingHistory/BookingHistoryCell.swift; sourceTree = "<group>"; };
+		15CDB80D1C96B3580063E363 /* BookingHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingHistoryCell.xib; path = CustomViews/Cell/BookingHistory/BookingHistoryCell.xib; sourceTree = "<group>"; };
+		15CDB8101C96C5DE0063E363 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Booking.swift; path = Services/Model/Booking.swift; sourceTree = "<group>"; };
 		15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderHistoryViewController.swift; path = ViewController/OrderHistory/OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 		15081C171C80D594006A7F88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				15CDB80B1C96B33A0063E363 /* BookingHistory */,
 				15B10B8E1C95C3FF00E93902 /* TermsNConditions */,
 				15256F951C9544AA00AF7197 /* BookingConfirmation */,
 				15D312DB1C8B5F3400EDB389 /* PoojaConfirmation */,
@@ -527,6 +534,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		15CDB80B1C96B33A0063E363 /* BookingHistory */ = {
+			isa = PBXGroup;
+			children = (
+				15CDB80C1C96B3580063E363 /* BookingHistoryCell.swift */,
+				15CDB80D1C96B3580063E363 /* BookingHistoryCell.xib */,
+			);
+			name = BookingHistory;
+			sourceTree = "<group>";
+		};
 		15D312D51C8B5C7600EDB389 /* OrderHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +582,7 @@
 				15081C5A1C8231B0006A7F88 /* Product.swift */,
 				15081C5B1C8231B0006A7F88 /* Vendor.swift */,
 				5F98884F1C88A82300DEF0F4 /* UserProfile.swift */,
+				15CDB8101C96C5DE0063E363 /* Booking.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -687,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15081C4D1C8210C2006A7F88 /* PanditTableViewCell.xib in Resources */,
+				15CDB80F1C96B3580063E363 /* BookingHistoryCell.xib in Resources */,
 				15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */,
 				15081C491C821005006A7F88 /* DateCollectionViewCell.xib in Resources */,
 				15081BDA1C80B9A1006A7F88 /* LaunchScreen.storyboard in Resources */,
@@ -784,6 +802,7 @@
 				15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */,
 				15081C591C822B2F006A7F88 /* DeviceUtil.swift in Sources */,
 				15081C531C82264D006A7F88 /* DateUtil.swift in Sources */,
+				15CDB80E1C96B3580063E363 /* BookingHistoryCell.swift in Sources */,
 				5F5E765E1C95692000C2C29E /* ActivityIndicator.swift in Sources */,
 				15081C141C80C6E5006A7F88 /* DrawerViewController.swift in Sources */,
 				15081C1C1C80DEC7006A7F88 /* PoojaViewController.swift in Sources */,
@@ -796,6 +815,7 @@
 				15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */,
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
+				15CDB8111C96C5DE0063E363 /* Booking.swift in Sources */,
 				15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */,
 				15081C061C80BA39006A7F88 /* AppDelegate.swift in Sources */,
 				15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */,
