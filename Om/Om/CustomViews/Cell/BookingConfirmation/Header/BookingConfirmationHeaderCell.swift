@@ -15,8 +15,5 @@ class BookingConfirmationHeaderCell: UITableViewCell {
     @IBOutlet weak var editWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
-
- 
 }

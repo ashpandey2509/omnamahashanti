@@ -25,13 +25,19 @@ class OrderConfirmationViewController: UIViewController {
 
 
         let amountDetails = BookingConfirmationGroup(header: "Amount Details", type: BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE)
-        amountDetails.entries?.append(BookingConfirmationEntry(title: (newBooking.product?.name)!, value: String((newBooking.product?.cost)!)))
+        amountDetails.entries?.append(BookingConfirmationEntry(title: (newBooking.product?.name)!, value: String("₹ \((newBooking.product?.cost)!)")))
 
         let addressDetails = BookingConfirmationGroup(header: "Address Details", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
+
+        let productIngredientsGroup = BookingConfirmationGroup(header: "Saamagri (included in the pooja cost and delivered to your place)", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
+        for ingredient in (newBooking.product?.items)! {
+            productIngredientsGroup.entries?.append(ingredient)
+        }
 
         poojaInfo.append(bookingDetails)
         poojaInfo.append(amountDetails)
         poojaInfo.append(addressDetails)
+        poojaInfo.append(productIngredientsGroup)
 
         self.tableView.registerNib(UINib(nibName: "TermsnConditionsCell", bundle: nil), forCellReuseIdentifier: "TermsnConditionsCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
@@ -149,7 +155,6 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         } else {
             return self.poojaInfo[section].entries!.count
         }
-        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

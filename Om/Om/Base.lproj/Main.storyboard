@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -434,18 +434,18 @@ data</string>
                                 <rect key="frame" x="2" y="126" width="596" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-3e-GFC">
-                                        <rect key="frame" x="0.0" y="18" width="596" height="58"/>
+                                        <rect key="frame" x="8" y="18" width="580" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="TMg-sY-hSN"/>
+                                            <constraint firstAttribute="height" constant="64" id="TMg-sY-hSN"/>
                                         </constraints>
                                         <string key="text">Book your Pooja in three easy 
 steps!</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZv-UX-8jK">
-                                        <rect key="frame" x="187" y="87" width="227" height="45"/>
+                                        <rect key="frame" x="187" y="93" width="227" height="45"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.2627450980392157" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="227" id="IIe-9Y-1Xe"/>
@@ -462,11 +462,11 @@ steps!</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" id="BEu-Hy-uYU"/>
+                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" constant="8" id="BEu-Hy-uYU"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="centerX" secondItem="o4b-zj-UiS" secondAttribute="centerX" constant="2.5" id="QYj-Vc-VgJ"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="top" secondItem="yr1-3e-GFC" secondAttribute="bottom" constant="11" id="YdI-Lc-EbR"/>
                                     <constraint firstItem="yr1-3e-GFC" firstAttribute="top" secondItem="o4b-zj-UiS" secondAttribute="top" constant="18" id="dXr-C2-wyI"/>
-                                    <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" id="g0t-68-CeZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" constant="8" id="g0t-68-CeZ"/>
                                     <constraint firstAttribute="height" constant="145" id="lfb-B0-I0W"/>
                                 </constraints>
                             </view>
@@ -1294,7 +1294,7 @@ steps!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-Fz-Oh2">
-                                <rect key="frame" x="20" y="20" width="560" height="514"/>
+                                <rect key="frame" x="8" y="20" width="584" height="514"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1302,7 +1302,7 @@ steps!</string>
                                     <outlet property="delegate" destination="aex-H9-WfT" id="rEb-dn-lKL"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-gM-Y31">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-gM-Y31">
                                 <rect key="frame" x="20" y="542" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.25490196079999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1317,16 +1317,28 @@ steps!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="484-ZE-8cg"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="MIM-aI-KTv"/>
+                            <constraint firstAttribute="trailing" secondItem="EIf-Fz-Oh2" secondAttribute="trailing" constant="8" id="MiA-Ik-MFP"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="SsP-XN-sXg"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="top" secondItem="MJE-Kd-tER" secondAttribute="bottom" id="X4u-Gn-T2C"/>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="top" secondItem="EIf-Fz-Oh2" secondAttribute="bottom" constant="8" id="fW5-X6-Hwb"/>
                             <constraint firstItem="sJv-xI-h4N" firstAttribute="top" secondItem="U9n-gM-Y31" secondAttribute="bottom" constant="8" id="hhe-Uv-k9f"/>
+                            <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" constant="8" id="qGo-Gc-c9L"/>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="vEh-m0-sMl"/>
+                            <constraint firstAttribute="trailing" secondItem="U9n-gM-Y31" secondAttribute="trailing" constant="8" id="w9w-bL-Had"/>
+                            <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" constant="8" id="xqa-N3-hOk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MIM-aI-KTv"/>
+                                <exclude reference="SsP-XN-sXg"/>
+                                <exclude reference="484-ZE-8cg"/>
+                                <exclude reference="vEh-m0-sMl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="U9n-gM-Y31" id="3Tq-6O-a8k"/>
