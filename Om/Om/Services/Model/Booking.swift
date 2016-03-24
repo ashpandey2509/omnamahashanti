@@ -16,6 +16,7 @@ class Booking{
     var slot : String?
     var location : String?
     var book_date : String?
+    var book_date_NSDate : NSDate?
     var address : String?
     var __v : Int?
     var active : Bool?
@@ -23,6 +24,10 @@ class Booking{
     var created_date : String?
     var status : String?
     var book_date_display : String?
+
+    init() {
+        // empty constructor
+    }
     
     init(dataDict: NSDictionary) {
         _id = dataDict["_id"] as? String
@@ -48,7 +53,7 @@ class Booking{
     }
 
     
-    func getDisplayDate() -> String{
+    func getDisplayDate() -> String {
         let dateFormatter = NSDateFormatter()
         let date = dateFormatter.dateFromString(self.updated_date!)
         dateFormatter.dateFormat = "dd MMM"

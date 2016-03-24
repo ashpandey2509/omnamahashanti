@@ -55,15 +55,15 @@ class DateSelectionViewController: UIViewController {
     func showVendorAvailability(timeslot: Timeslot) {
         let vendorAvailabilityVC = self.storyboard?.instantiateViewControllerWithIdentifier("PanditSelectionViewController") as!
         PanditSelectionViewController
-        UserSession.sharedInstance.newBookingTimeSlot = timeslot.rawValue
+        UserSession.sharedInstance.newBooking?.slot = timeslot.rawValue
         self.navigationController?.pushViewController(vendorAvailabilityVC, animated: true)
     }
 }
 
 extension DateSelectionViewController : CKCalendarDelegate  {
-    
+
     func calendar(calendar: CKCalendarView!, didSelectDate date: NSDate!) {
-        
+        UserSession.sharedInstance.newBooking?.book_date_NSDate = date
     }
 }
 

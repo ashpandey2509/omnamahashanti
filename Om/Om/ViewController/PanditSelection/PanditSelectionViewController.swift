@@ -28,7 +28,7 @@ class PanditSelectionViewController: UIViewController {
             value: 1,
             toDate: NSDate(),
             options: NSCalendarOptions(rawValue: 0))
-        UserSession.sharedInstance.newBookingDate = selectedDate!
+        UserSession.sharedInstance.newBooking?.book_date_NSDate = selectedDate!
         getVendorForSelectedDate(selectedDate!)
         self.tableView.reloadData()
     }
@@ -46,7 +46,7 @@ class PanditSelectionViewController: UIViewController {
     func bookButtonClicked(button : UIButton){
         self.title = ""
         let orderVC = self.storyboard?.instantiateViewControllerWithIdentifier("OrderConfirmationViewController") as! OrderConfirmationViewController
-        UserSession.sharedInstance.selectedVendor = vendors[button.tag]
+        UserSession.sharedInstance.newBooking?.vendor = vendors[button.tag]
         self.navigationController?.pushViewController(orderVC, animated: true)
     }
 
@@ -142,7 +142,7 @@ extension PanditSelectionViewController : UICollectionViewDelegate{
             toDate: NSDate(),
             options: NSCalendarOptions(rawValue: 0))
         // on data selection by the user reload data get vendor listing for given date.
-        UserSession.sharedInstance.newBookingDate = selectedDate!
+        UserSession.sharedInstance.newBooking?.book_date_NSDate = selectedDate!
         getVendorForSelectedDate(selectedDate!)
     }
 }

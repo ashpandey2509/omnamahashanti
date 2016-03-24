@@ -94,9 +94,7 @@ class DrawerViewController: UIViewController {
     func logoutClicked(){
         UserSession.sharedInstance.products = nil
         UserSession.sharedInstance.loggedInUser = nil
-        UserSession.sharedInstance.selectedVendor = nil
-        UserSession.sharedInstance.newBookingProduct = nil
-        UserSession.sharedInstance.newBookingTimeSlot = nil
+        UserSession.sharedInstance.clearNewBooking()
         self.updateDrawerState()
         self.mm_drawerController.closeDrawerAnimated(true, completion: nil)
 

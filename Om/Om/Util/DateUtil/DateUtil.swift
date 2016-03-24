@@ -31,6 +31,7 @@ extension NSDate {
         dateFormatter.dateFormat = "EEE"
         return dateFormatter.stringFromDate(self)
     }
-    
-    
+    var dateMilliSecs: Int64 {
+        return Int64(self.timeIntervalSince1970*1000)
+    }
 }

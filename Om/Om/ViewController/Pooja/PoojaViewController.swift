@@ -77,7 +77,7 @@ extension PoojaViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dateSelectionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateSelectionViewController") as! DateSelectionViewController
         let selectedProduct = products[indexPath.row]
-        UserSession.sharedInstance.newBookingProduct = selectedProduct
+        UserSession.sharedInstance.newBooking?.product = selectedProduct
         dateSelectionViewController.product = selectedProduct
         self.navigationController?.pushViewController(dateSelectionViewController, animated: true)
     }

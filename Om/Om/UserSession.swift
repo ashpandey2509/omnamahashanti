@@ -13,10 +13,12 @@ public class UserSession {
     static let sharedInstance = UserSession()
     var products : [Product]?
     var loggedInUser : UserProfile?
-    var selectedVendor : Vendor?
-    var newBookingProduct: Product?
-    var newBookingTimeSlot : String?
-    var newBookingDate : NSDate?
+    var newBooking : Booking?
+
+    init() {
+        newBooking = Booking()
+        newBooking?.user_id = loggedInUser?.id
+    }
 
     public func getProducts(callback: ([Product], NSError?) -> Void ) {
 
@@ -36,7 +38,6 @@ public class UserSession {
     }
 
     public func clearNewBooking() {
-        newBookingTimeSlot = nil
-        newBookingProduct = nil
+        newBooking = nil
     }
 }

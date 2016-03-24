@@ -11,12 +11,28 @@ import KSToastView
 class OrderConfirmationViewController: UIViewController {
     var isTermsAccepted = false
     @IBOutlet weak var confirmButton: UIButton!
-    var poojaInfo = [NSDictionary]()
+    var poojaInfo = [BookingConfirmationGroup]()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.poojaInfo = [["Pooja Details" : ["Pooja Name" : UserSession.sharedInstance.newBookingProduct!.name, "Panditji Name" : "\(UserSession.sharedInstance.selectedVendor!.first_name!) \(UserSession.sharedInstance.selectedVendor!.last_name!)", "Date Selected" : self.getFormattedDate()]], ["Amount Details" : [UserSession.sharedInstance.newBookingProduct!.name : "Rs. \(UserSession.sharedInstance.newBookingProduct!.cost)"]], ["Address Details" : ["Please edit your profile to update your address"]], ["Saamagri (Included in the pooja cost and delivered to your place)" : (UserSession.sharedInstance.newBookingProduct!.items.count > 0) ? (UserSession.sharedInstance.newBookingProduct!.items) : ["NA"]]]
+
+    let newBooking = UserSession.sharedInstance.newBooking!
+
+        let bookingDetails = BookingConfirmationGroup(header: "Pooja Details", type: BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE)
+        bookingDetails.entries?.append(BookingConfirmationEntry(title: "Pooja Name", value: (newBooking.product?.name)!))
+        bookingDetails.entries?.append(BookingConfirmationEntry(title: "Panditji Name", value: (newBooking.vendor?.first_name)!))
+        bookingDetails.entries?.append(BookingConfirmationEntry(title: "Date Selected", value: getFormattedDate()))
+
+
+        let amountDetails = BookingConfirmationGroup(header: "Amount Details", type: BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE)
+        amountDetails.entries?.append(BookingConfirmationEntry(title: (newBooking.product?.name)!, value: String((newBooking.product?.cost)!)))
+
+        let addressDetails = BookingConfirmationGroup(header: "Address Details", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
+
+    poojaInfo.append(bookingDetails)
+    poojaInfo.append(amountDetails)
+    poojaInfo.append(addressDetails)
+
         self.tableView.registerNib(UINib(nibName: "TermsnConditionsCell", bundle: nil), forCellReuseIdentifier: "TermsnConditionsCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationContentCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationContentCell")
@@ -79,7 +95,7 @@ class OrderConfirmationViewController: UIViewController {
                 let activityIndicator = ActivityIndicator(parent: self.view)
                 self.view.addSubview(activityIndicator)
                 activityIndicator.showIndicator()
-                APIService.sharedInstance.book(UserSession.sharedInstance.loggedInUser!.id!, vendor_id: UserSession.sharedInstance.selectedVendor!.id!, product_id: UserSession.sharedInstance.newBookingProduct!.id, book_date: UserSession.sharedInstance.newBookingDate!.timeIntervalSince1970 * 1000, city: "Mumbai", slot: UserSession.sharedInstance.newBookingTimeSlot!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
+                APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
                     
                 })
             }
@@ -98,12 +114,13 @@ class OrderConfirmationViewController: UIViewController {
     func getFormattedDate() -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MMM-yyyy"
-        let dateString = dateFormatter.stringFromDate(UserSession.sharedInstance.newBookingDate!)
+        let dateString = dateFormatter.stringFromDate((UserSession.sharedInstance.newBooking?.book_date_NSDate)!)
         return dateString
     }
 }
 
 extension OrderConfirmationViewController : UITableViewDataSource {
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.poojaInfo.count + 1
     }
@@ -115,8 +132,8 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         else
         {
             let headerCell  = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationHeaderCell") as! BookingConfirmationHeaderCell
-            
-            headerCell.titleLabel.text = ((self.poojaInfo[section]).allKeys[0] as! String)
+
+            headerCell.titleLabel.text = ((self.poojaInfo[section]).header)
             if(headerCell.titleLabel.text != "Address Details" || UserSession.sharedInstance.loggedInUser == nil){
                 headerCell.editWidthConstraint.constant = 0
                 headerCell.titleLabel.updateConstraints()
@@ -136,67 +153,91 @@ extension OrderConfirmationViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == self.poojaInfo.count){
+        if (section == self.poojaInfo.count) {
             return 1
+        } else {
+            return self.poojaInfo[section].entries!.count
         }
-        else
-        {
-            let sectionDictionary = self.poojaInfo[section]
-            if let dictionary = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSDictionary{
-                return dictionary.allKeys.count
-            }
-            else if let array = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSArray{
-                return array.count
-            }
-            return 1
-        }
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if(indexPath.section == self.poojaInfo.count){
-            let cell : TermsnConditionsCell = tableView.dequeueReusableCellWithIdentifier("TermsnConditionsCell") as! TermsnConditionsCell
-            cell.checkmarkButton.addTarget(self, action: "acceptTerms:", forControlEvents: UIControlEvents.TouchUpInside)
-            cell.checkmarkButton.selected = self.isTermsAccepted
-            return cell
+
+        // Returns Terms n Condition cell as the last cell of the tableview.
+        if(indexPath.section == self.poojaInfo.count) {
+            return getTnCCell()
         }
+
+        let bookingConfirmationGroupInfo = self.poojaInfo[indexPath.section]
+
         let cell : BookingConfirmationContentCell = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationContentCell") as! BookingConfirmationContentCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        let sectionDictionary = self.poojaInfo[indexPath.section]
-        if let dictionary = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSDictionary{
+
+        if (bookingConfirmationGroupInfo.type == BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE) {
+
+            let bookingEntry = bookingConfirmationGroupInfo.entries![indexPath.row] as! BookingConfirmationEntry
+
             cell.valueLabel.hidden = false
-            cell.valueLabel.text = dictionary[dictionary.allKeys[indexPath.row] as! String] as? String
-            cell.titleLabel.text = dictionary.allKeys[indexPath.row] as? String
+            cell.valueLabel.text = bookingEntry.value
+            cell.titleLabel.text = bookingEntry.title
             cell.titleMutiplier.constant = -8
-        }
-        else if let array = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSArray{
-            cell.titleLabel.text = array[indexPath.row] as? String
+
+        } else if (bookingConfirmationGroupInfo.type == BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY) {
+
+            let bookingEntry = bookingConfirmationGroupInfo.entries![indexPath.row] as! String
+
+            cell.titleLabel.text = bookingEntry
             cell.valueLabel.hidden = true
             cell.titleMutiplier.constant = -16
             cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
-            
-            if((sectionDictionary.allKeys as! [String])[0] == "Address Details"){
-                cell.titleLabel.textColor = UIColor.getThemeColor()
-                
-                if(UserSession.sharedInstance.loggedInUser == nil){
-                    cell.titleLabel.text = "Please login to fetch your address"
-                }
-                else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
-                    cell.titleLabel.text = "Please edit your profile to update your address"
-                }
-                else
-                {
-                    cell.titleLabel.text = UserSession.sharedInstance.loggedInUser?.address
-                }
-            }
-            else
-            {
-                cell.titleLabel.textColor = UIColor.getOrderConfirmationTitleColor()
-            }
+
         }
 
+//        let sectionDictionary = self.poojaInfo[indexPath.section]
+//        if let dictionary = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSDictionary {
+//            cell.valueLabel.hidden = false
+//            cell.valueLabel.text = dictionary[dictionary.allKeys[indexPath.row] as! String] as? String
+//            cell.titleLabel.text = dictionary.allKeys[indexPath.row] as? String
+//            cell.titleMutiplier.constant = -8
+//        }
+//        else if let array = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSArray {
+//            cell.titleLabel.text = array[indexPath.row] as? String
+//            cell.valueLabel.hidden = true
+//            cell.titleMutiplier.constant = -16
+//            cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
+//            
+//            if((sectionDictionary.allKeys as! [String])[0] == "Address Details") {
+//                cell.titleLabel.textColor = UIColor.getThemeColor()
+//                
+//                if(UserSession.sharedInstance.loggedInUser == nil){
+//                    cell.titleLabel.text = "Please login to fetch your address"
+//                }
+//                else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
+//                    cell.titleLabel.text = "Please edit your profile to update your address"
+//                }
+//                else
+//                {
+//                    cell.titleLabel.text = UserSession.sharedInstance.loggedInUser?.address
+//                }
+//            }
+//            else
+//            {
+//                cell.titleLabel.textColor = UIColor.getOrderConfirmationTitleColor()
+//            }
+//        }
+
+        return cell
+
+    }
+
+    private func getTnCCell() -> TermsnConditionsCell {
+        let cell : TermsnConditionsCell = tableView.dequeueReusableCellWithIdentifier("TermsnConditionsCell") as! TermsnConditionsCell
+        cell.checkmarkButton.addTarget(self, action: "acceptTerms:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.checkmarkButton.selected = self.isTermsAccepted
         return cell
     }
 }
+
 
 extension OrderConfirmationViewController : UITableViewDelegate {
 
@@ -204,7 +245,10 @@ extension OrderConfirmationViewController : UITableViewDelegate {
         if(section == self.poojaInfo.count){
             return 0
         }
-        return ceil(((UIFont.boldSystemFontOfSize(16).heightOfString(((self.poojaInfo[section] ).allKeys[0] as! String), constrainedToWidth: tableView.frame.size.width - CGFloat(16)).height) / UIFont.boldSystemFontOfSize(16).lineHeight) * UIFont.boldSystemFontOfSize(16).lineHeight) + 10
+
+        let bookingConfirmationGroup = self.poojaInfo[section]
+
+        return ceil(((UIFont.boldSystemFontOfSize(16).heightOfString((bookingConfirmationGroup.header), constrainedToWidth: tableView.frame.size.width - CGFloat(16)).height) / UIFont.boldSystemFontOfSize(16).lineHeight) * UIFont.boldSystemFontOfSize(16).lineHeight) + 10
     }
 }
 

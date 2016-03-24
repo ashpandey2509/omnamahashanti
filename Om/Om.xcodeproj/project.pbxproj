@@ -52,6 +52,8 @@
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
 		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
 		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
+		5F57D4631CA069B400EE92F3 /* BookingConfirmationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */; };
+		5F57D4651CA06A6200EE92F3 /* BookingConfirmationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */; };
 		5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E76591C95577000C2C29E /* ToastView.swift */; };
 		5F5E765E1C95692000C2C29E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E765D1C95692000C2C29E /* ActivityIndicator.swift */; };
 		5F7A841E1C9537AD0090E2E5 /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
@@ -148,6 +150,8 @@
 		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
+		5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationEntry.swift; sourceTree = "<group>"; };
+		5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationGroup.swift; sourceTree = "<group>"; };
 		5F5E76591C95577000C2C29E /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5F5E765D1C95692000C2C29E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		5F9888111C8356DC00DEF0F4 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -583,6 +587,8 @@
 				15081C5B1C8231B0006A7F88 /* Vendor.swift */,
 				5F98884F1C88A82300DEF0F4 /* UserProfile.swift */,
 				15CDB8101C96C5DE0063E363 /* Booking.swift */,
+				5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */,
+				5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -789,6 +795,7 @@
 				15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */,
 				5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */,
 				15081C5C1C8231B0006A7F88 /* Product.swift in Sources */,
+				5F57D4651CA06A6200EE92F3 /* BookingConfirmationGroup.swift in Sources */,
 				15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */,
 				15081C0E1C80C171006A7F88 /* ColorUtil.swift in Sources */,
 				15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */,
@@ -797,6 +804,7 @@
 				15081C501C82256B006A7F88 /* StringUtil.swift in Sources */,
 				15081C101C80C184006A7F88 /* FontUtil.swift in Sources */,
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
+				5F57D4631CA069B400EE92F3 /* BookingConfirmationEntry.swift in Sources */,
 				5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */,
 				15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */,
 				15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */,

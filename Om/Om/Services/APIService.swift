@@ -72,11 +72,18 @@ class APIService {
     }
     
     
-    func book(user_id : String, vendor_id: String,product_id : String, book_date : Double, city : String, slot : String, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
+    func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings"
         debugPrint(url)
-        let params = ["user_id": user_id, "vendor_id": vendor_id,"product_id": product_id, "book_date": book_date, "city" : city, "slot" : slot, "address" : address]
-        Alamofire.request(Alamofire.Method.POST, url, parameters: params as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: nil)
+        let params : [String : String] = ["user_id": booking.user_id!,
+            "vendor_id": booking.vendor!.id!,
+            "product_id": booking.product!.id,
+            "book_date": String(booking.book_date_NSDate?.dateMilliSecs),
+            "city" : "mumbai",
+            "slot" :  booking.slot!,
+            "address" : address]
+
+        Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
             .validate()
             .responseJSON { (response) -> Void in
                 callback(response)
