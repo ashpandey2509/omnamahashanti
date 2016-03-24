@@ -42,8 +42,12 @@ class OrderConfirmationViewController: UIViewController {
         self.tableView.registerNib(UINib(nibName: "TermsnConditionsCell", bundle: nil), forCellReuseIdentifier: "TermsnConditionsCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationContentCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationContentCell")
-        self.tableView.estimatedRowHeight = 21.0
+        self.tableView.estimatedRowHeight = 22.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
+
+        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedSectionHeaderHeight = 26;
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,11 +78,6 @@ class OrderConfirmationViewController: UIViewController {
             self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Normal)
             self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Selected)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func orderConfirmationButtonClicked(sender: AnyObject) {
@@ -233,19 +232,3 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         return cell
     }
 }
-
-
-extension OrderConfirmationViewController : UITableViewDelegate {
-
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(section == self.poojaInfo.count){
-            return 0
-        }
-
-        let bookingConfirmationGroup = self.poojaInfo[section]
-
-        return ceil(((UIFont.boldSystemFontOfSize(16).heightOfString((bookingConfirmationGroup.header), constrainedToWidth: tableView.frame.size.width - CGFloat(16)).height) / UIFont.boldSystemFontOfSize(16).lineHeight) * UIFont.boldSystemFontOfSize(16).lineHeight) + 10
-    }
-}
-
-

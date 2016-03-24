@@ -631,26 +631,26 @@ steps!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="178" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="30n-Ob-eGZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="592" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoojaTableViewCell" rowHeight="150" id="o0H-JW-2ug" customClass="PoojaTableViewCell" customModule="Om" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="92" width="592" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0H-JW-2ug" id="vnU-Wj-Uf3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="592" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhateras Pooja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-8W-p7p">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dhateras Pooja" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-8W-p7p">
                                                     <rect key="frame" x="21" y="20" width="558" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Nii-hl-xTz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-RO-eVJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-RO-eVJ">
                                                     <rect key="frame" x="21" y="51" width="558" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="71" id="ZDK-RX-hJ7"/>
@@ -660,7 +660,7 @@ steps!</string>
                                                     <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 3100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-AV-0Lb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rs. 3100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-AV-0Lb">
                                                     <rect key="frame" x="479" y="118" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="MCZ-TD-Q59"/>
@@ -698,7 +698,7 @@ steps!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="30n-Ob-eGZ" secondAttribute="trailing" id="FvG-qF-YKw"/>
+                            <constraint firstAttribute="trailing" secondItem="30n-Ob-eGZ" secondAttribute="trailing" constant="8" id="FvG-qF-YKw"/>
                             <constraint firstItem="30n-Ob-eGZ" firstAttribute="top" secondItem="vpW-D4-L9f" secondAttribute="topMargin" id="Yle-Wy-ifE"/>
                             <constraint firstItem="trd-EW-dWe" firstAttribute="top" secondItem="30n-Ob-eGZ" secondAttribute="bottom" id="fEd-sy-DOr"/>
                             <constraint firstItem="30n-Ob-eGZ" firstAttribute="leading" secondItem="vpW-D4-L9f" secondAttribute="leading" id="iWc-7q-GeQ"/>
@@ -1294,7 +1294,7 @@ steps!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-Fz-Oh2">
-                                <rect key="frame" x="8" y="20" width="584" height="514"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="514"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1317,11 +1317,11 @@ steps!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="484-ZE-8cg"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="MIM-aI-KTv"/>
-                            <constraint firstAttribute="trailing" secondItem="EIf-Fz-Oh2" secondAttribute="trailing" constant="8" id="MiA-Ik-MFP"/>
+                            <constraint firstAttribute="trailing" secondItem="EIf-Fz-Oh2" secondAttribute="trailing" id="MiA-Ik-MFP"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="SsP-XN-sXg"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="top" secondItem="MJE-Kd-tER" secondAttribute="bottom" id="X4u-Gn-T2C"/>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="top" secondItem="EIf-Fz-Oh2" secondAttribute="bottom" constant="8" id="fW5-X6-Hwb"/>
@@ -1329,7 +1329,7 @@ steps!</string>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" constant="8" id="qGo-Gc-c9L"/>
                             <constraint firstItem="U9n-gM-Y31" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="vEh-m0-sMl"/>
                             <constraint firstAttribute="trailing" secondItem="U9n-gM-Y31" secondAttribute="trailing" constant="8" id="w9w-bL-Had"/>
-                            <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" constant="8" id="xqa-N3-hOk"/>
+                            <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" id="xqa-N3-hOk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
