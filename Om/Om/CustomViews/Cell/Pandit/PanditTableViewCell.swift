@@ -22,6 +22,8 @@ class PanditTableViewCell: UITableViewCell {
 
         self.borderView.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.borderView.layer.borderWidth = 0.5
+
+        vendorLanguages.sizeToFit()
         
     }
 

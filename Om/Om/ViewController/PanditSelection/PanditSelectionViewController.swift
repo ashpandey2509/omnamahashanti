@@ -88,8 +88,13 @@ extension PanditSelectionViewController : UITableViewDataSource {
         cell.vendorImage.image = nil
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.vendorName.text = "\(vendor.first_name!) \(vendor.last_name!)"
-        cell.vendorExperience.text = vendor.experience == nil ? "8 years" : vendor.experience!
-        cell.vendorLanguages.text = vendor.languages == nil ? "Hindi, Marathi" : vendor.languages!
+
+        let experience = vendor.experience == nil ? "8 years" : vendor.experience!
+        cell.vendorExperience.text = "Experience: \(experience)"
+
+        let languages = vendor.languages == nil ? "Hindi" : vendor.languages!
+        cell.vendorLanguages.text = "Languages: \(languages)"
+
         if let _ = vendor.image {
             cell.vendorImage.hnk_setImageFromURL(NSURL(string: vendor.image!)!)
         } else {
