@@ -13,6 +13,7 @@ class OrderConfirmationViewController: UIViewController {
     @IBOutlet weak var confirmButton: UIButton!
     var poojaInfo = [BookingConfirmationGroup]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tncButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +68,12 @@ class OrderConfirmationViewController: UIViewController {
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    @IBAction func tncAccepted(sender: AnyObject) {
+        tncButton.selected = !tncButton.selected
+        isTermsAccepted = tncButton.selected
+    }
+
+
     func updateConfirmButtonState(){
         if(UserSession.sharedInstance.loggedInUser == nil){
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)

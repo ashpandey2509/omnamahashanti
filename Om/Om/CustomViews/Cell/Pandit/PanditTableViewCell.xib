@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cl3-Bs-T3S">
-                        <rect key="frame" x="5" y="5" width="310" height="103"/>
+                        <rect key="frame" x="8" y="8" width="304" height="93.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-ps-npX">
                                 <rect key="frame" x="8" y="16" width="50" height="50"/>
@@ -26,7 +26,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-Ft-SuO">
-                                <rect key="frame" x="238" y="31" width="64" height="40"/>
+                                <rect key="frame" x="232" y="26.5" width="64" height="40"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.26274509800000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Bvx-Ob-6HD"/>
@@ -38,16 +38,16 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pt. Brahmdev Pandey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7z-hg-lgm">
-                                <rect key="frame" x="66" y="16" width="164" height="21"/>
+                                <rect key="frame" x="66" y="16" width="158" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="IVx-sq-9Sn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience : 8 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKe-On-yfH">
-                                <rect key="frame" x="66" y="37" width="164" height="21"/>
+                                <rect key="frame" x="66" y="37" width="158" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gtU-xU-4eS"/>
                                 </constraints>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages: Hindi, and a few more which will go to 2 lines" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-hM-nns">
-                                <rect key="frame" x="66" y="53" width="164" height="34"/>
+                                <rect key="frame" x="66" y="53" width="158" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Xqb-Kt-pOd"/>
                                 </constraints>
@@ -84,10 +84,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="Nc9-ax-df7"/>
-                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="cyM-8V-vks"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="cl3-Bs-T3S" secondAttribute="trailing" constant="-3" id="dFF-OO-3qI"/>
-                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="6.5" id="sgg-bt-V4N"/>
+                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Nc9-ax-df7"/>
+                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="cyM-8V-vks"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cl3-Bs-T3S" secondAttribute="trailing" id="dFF-OO-3qI"/>
+                    <constraint firstItem="cl3-Bs-T3S" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="sgg-bt-V4N"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

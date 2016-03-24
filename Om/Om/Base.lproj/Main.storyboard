@@ -1319,24 +1319,27 @@ steps!</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I agree to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-vh-D05">
-                                        <rect key="frame" x="84" y="17" width="72" height="21"/>
+                                        <rect key="frame" x="66" y="17" width="72" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rg-lu-miv">
-                                        <rect key="frame" x="27" y="13" width="32" height="32"/>
+                                        <rect key="frame" x="27" y="14" width="26" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Button" image="unchecked"/>
                                         <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="tncAccepted:" destination="aex-H9-WfT" eventType="touchUpInside" id="XGj-ca-eD2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJE-O8-SET">
-                                        <rect key="frame" x="154" y="13" width="135" height="30"/>
+                                        <rect key="frame" x="134" y="13" width="135" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Terms &amp; Conditions"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="HuV-aF-7Ro"/>
                                     <constraint firstAttribute="trailing" secondItem="U9n-gM-Y31" secondAttribute="trailing" constant="8" id="Saa-0W-Y7j"/>
@@ -1366,6 +1369,7 @@ steps!</string>
                     <connections>
                         <outlet property="confirmButton" destination="U9n-gM-Y31" id="3Tq-6O-a8k"/>
                         <outlet property="tableView" destination="EIf-Fz-Oh2" id="EVC-0w-fCZ"/>
+                        <outlet property="tncButton" destination="9rg-lu-miv" id="4jY-s6-L46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIn-Pb-jYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
