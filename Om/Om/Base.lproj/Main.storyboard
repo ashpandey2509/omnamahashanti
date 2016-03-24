@@ -434,9 +434,9 @@ data</string>
                                 <rect key="frame" x="2" y="126" width="596" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-3e-GFC">
-                                        <rect key="frame" x="8" y="18" width="580" height="64"/>
+                                        <rect key="frame" x="8" y="16" width="580" height="56"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="TMg-sY-hSN"/>
+                                            <constraint firstAttribute="height" constant="56" id="TMg-sY-hSN"/>
                                         </constraints>
                                         <string key="text">Book your Pooja in three easy 
 steps!</string>
@@ -445,7 +445,7 @@ steps!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZv-UX-8jK">
-                                        <rect key="frame" x="187" y="93" width="227" height="45"/>
+                                        <rect key="frame" x="187" y="83" width="227" height="45"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.2627450980392157" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="227" id="IIe-9Y-1Xe"/>
@@ -465,7 +465,7 @@ steps!</string>
                                     <constraint firstItem="yr1-3e-GFC" firstAttribute="leading" secondItem="o4b-zj-UiS" secondAttribute="leading" constant="8" id="BEu-Hy-uYU"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="centerX" secondItem="o4b-zj-UiS" secondAttribute="centerX" constant="2.5" id="QYj-Vc-VgJ"/>
                                     <constraint firstItem="uZv-UX-8jK" firstAttribute="top" secondItem="yr1-3e-GFC" secondAttribute="bottom" constant="11" id="YdI-Lc-EbR"/>
-                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="top" secondItem="o4b-zj-UiS" secondAttribute="top" constant="18" id="dXr-C2-wyI"/>
+                                    <constraint firstItem="yr1-3e-GFC" firstAttribute="top" secondItem="o4b-zj-UiS" secondAttribute="top" constant="16" id="dXr-C2-wyI"/>
                                     <constraint firstAttribute="trailing" secondItem="yr1-3e-GFC" secondAttribute="trailing" constant="8" id="g0t-68-CeZ"/>
                                     <constraint firstAttribute="height" constant="145" id="lfb-B0-I0W"/>
                                 </constraints>
@@ -756,7 +756,7 @@ steps!</string>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-dc-EHv">
-                                <rect key="frame" x="36" y="457" width="528" height="35"/>
+                                <rect key="frame" x="36" y="428" width="528" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="5rD-ze-o2L"/>
                                 </constraints>
@@ -777,7 +777,7 @@ steps!</string>
                             <constraint firstItem="ByA-xR-dQY" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" constant="-20" id="TDA-KX-PAU"/>
                             <constraint firstAttribute="trailing" secondItem="WxP-dc-EHv" secondAttribute="trailing" constant="36" id="W9B-nJ-0gY"/>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" id="YPR-da-KyJ"/>
-                            <constraint firstItem="WxP-dc-EHv" firstAttribute="top" secondItem="ByA-xR-dQY" secondAttribute="bottom" constant="45" id="dM0-W7-er0"/>
+                            <constraint firstItem="WxP-dc-EHv" firstAttribute="top" secondItem="ByA-xR-dQY" secondAttribute="bottom" constant="16" id="dM0-W7-er0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ByA-xR-dQY" secondAttribute="trailing" constant="-20" id="dUV-AQ-JuS"/>
                             <constraint firstItem="WxP-dc-EHv" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leading" constant="36" id="fa3-od-jTe"/>
                             <constraint firstItem="ByA-xR-dQY" firstAttribute="top" secondItem="WHN-uM-b02" secondAttribute="bottom" constant="16" id="tVN-Iw-lfn"/>
