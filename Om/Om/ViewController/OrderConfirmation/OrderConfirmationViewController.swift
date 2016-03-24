@@ -16,7 +16,7 @@ class OrderConfirmationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    let newBooking = UserSession.sharedInstance.newBooking!
+        let newBooking = UserSession.sharedInstance.newBooking!
 
         let bookingDetails = BookingConfirmationGroup(header: "Pooja Details", type: BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE)
         bookingDetails.entries?.append(BookingConfirmationEntry(title: "Pooja Name", value: (newBooking.product?.name)!))
@@ -29,9 +29,9 @@ class OrderConfirmationViewController: UIViewController {
 
         let addressDetails = BookingConfirmationGroup(header: "Address Details", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
 
-    poojaInfo.append(bookingDetails)
-    poojaInfo.append(amountDetails)
-    poojaInfo.append(addressDetails)
+        poojaInfo.append(bookingDetails)
+        poojaInfo.append(amountDetails)
+        poojaInfo.append(addressDetails)
 
         self.tableView.registerNib(UINib(nibName: "TermsnConditionsCell", bundle: nil), forCellReuseIdentifier: "TermsnConditionsCell")
         self.tableView.registerNib(UINib(nibName: "BookingConfirmationHeaderCell", bundle: nil), forCellReuseIdentifier: "BookingConfirmationHeaderCell")
@@ -61,13 +61,10 @@ class OrderConfirmationViewController: UIViewController {
         if(UserSession.sharedInstance.loggedInUser == nil){
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Selected)
-        }
-        else if(UserSession.sharedInstance.loggedInUser?.address == nil){
+        } else if(UserSession.sharedInstance.loggedInUser?.address == nil){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
-        }
-        else
-        {
+        } else {
             self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Normal)
             self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Selected)
         }
@@ -81,22 +78,16 @@ class OrderConfirmationViewController: UIViewController {
     @IBAction func orderConfirmationButtonClicked(sender: AnyObject) {
         if(UserSession.sharedInstance.loggedInUser == nil){
             self.navigateToLogin()
-        }
-        else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
+        } else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
             self.navigateToProfile()
-        }
-        else
-        {
+        } else {
             if(!self.isTermsAccepted){
                 KSToastView.ks_showToast("Please agree to the terms and conditions.")
-            }
-            else
-            {
+            } else {
                 let activityIndicator = ActivityIndicator(parent: self.view)
                 self.view.addSubview(activityIndicator)
                 activityIndicator.showIndicator()
                 APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
-                    
                 })
             }
         }
