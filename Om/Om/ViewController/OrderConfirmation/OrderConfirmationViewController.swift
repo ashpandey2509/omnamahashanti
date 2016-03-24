@@ -75,8 +75,8 @@ class OrderConfirmationViewController: UIViewController {
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
         } else {
-            self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Normal)
-            self.confirmButton.setTitle("CONFIRM BUTTON", forState: UIControlState.Selected)
+            self.confirmButton.setTitle("CONFIRM BOOKING", forState: UIControlState.Normal)
+            self.confirmButton.setTitle("CONFIRM BOOKING", forState: UIControlState.Selected)
         }
     }
     
@@ -93,7 +93,7 @@ class OrderConfirmationViewController: UIViewController {
                 self.view.addSubview(activityIndicator)
                 activityIndicator.showIndicator()
                 APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
-                })
+            })
             }
         }
     }
