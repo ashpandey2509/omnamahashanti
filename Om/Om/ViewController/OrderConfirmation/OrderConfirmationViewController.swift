@@ -9,6 +9,9 @@
 import UIKit
 import KSToastView
 class OrderConfirmationViewController: UIViewController {
+
+    private let KEY_ADDRESS_DETAIL = "Address Details"
+
     var isTermsAccepted = false
     @IBOutlet weak var confirmButton: UIButton!
     var poojaInfo = [BookingConfirmationGroup]()
@@ -28,7 +31,8 @@ class OrderConfirmationViewController: UIViewController {
         let amountDetails = BookingConfirmationGroup(header: "Amount Details", type: BookingConfirmationGroup.GROUP_TYPE_KEY_VALUE)
         amountDetails.entries?.append(BookingConfirmationEntry(title: (newBooking.product?.name)!, value: String("₹ \((newBooking.product?.cost)!)")))
 
-        let addressDetails = BookingConfirmationGroup(header: "Address Details", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
+        let addressDetails = BookingConfirmationGroup(header: KEY_ADDRESS_DETAIL, type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
+        addressDetails.entries?.append("User Address")
 
         let productIngredientsGroup = BookingConfirmationGroup(header: "Saamagri (included in the pooja cost and delivered to your place)", type: BookingConfirmationGroup.GROUP_TYPE_STRING_ARRAY)
         for ingredient in (newBooking.product?.items)! {
@@ -54,6 +58,7 @@ class OrderConfirmationViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.title = "Booking Confirmation"
         updateConfirmButtonState()
+        self.tableView.reloadData()
     }
 
     func navigateToProfile(){
@@ -100,6 +105,14 @@ class OrderConfirmationViewController: UIViewController {
                 self.view.addSubview(activityIndicator)
                 activityIndicator.showIndicator()
                 APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
+
+                    if response.result.isSuccess {
+                        ToastView.ShowToast("Booking Confirmed")
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    } else {
+                        ToastView.ShowToast("Booking Error. Try again after some time.")
+                    }
+                    activityIndicator.hideIndicator()
             })
             }
         }
@@ -187,43 +200,27 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             cell.valueLabel.hidden = true
             cell.titleMutiplier.constant = -16
             cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
-
         }
 
-//        let sectionDictionary = self.poojaInfo[indexPath.section]
-//        if let dictionary = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSDictionary {
-//            cell.valueLabel.hidden = false
-//            cell.valueLabel.text = dictionary[dictionary.allKeys[indexPath.row] as! String] as? String
-//            cell.titleLabel.text = dictionary.allKeys[indexPath.row] as? String
-//            cell.titleMutiplier.constant = -8
-//        }
-//        else if let array = sectionDictionary[(sectionDictionary.allKeys as! [String])[0]] as? NSArray {
-//            cell.titleLabel.text = array[indexPath.row] as? String
-//            cell.valueLabel.hidden = true
-//            cell.titleMutiplier.constant = -16
-//            cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
-//            
-//            if((sectionDictionary.allKeys as! [String])[0] == "Address Details") {
-//                cell.titleLabel.textColor = UIColor.getThemeColor()
-//                
-//                if(UserSession.sharedInstance.loggedInUser == nil){
-//                    cell.titleLabel.text = "Please login to fetch your address"
-//                }
-//                else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
-//                    cell.titleLabel.text = "Please edit your profile to update your address"
-//                }
-//                else
-//                {
-//                    cell.titleLabel.text = UserSession.sharedInstance.loggedInUser?.address
-//                }
-//            }
-//            else
-//            {
-//                cell.titleLabel.textColor = UIColor.getOrderConfirmationTitleColor()
-//            }
-//        }
+        if bookingConfirmationGroupInfo.header == KEY_ADDRESS_DETAIL {
+            setupAddressCell(cell)
+        }
 
         return cell
 
+    }
+
+    func setupAddressCell(cell : BookingConfirmationContentCell) {
+        cell.titleLabel.textColor = UIColor.getThemeColor()
+
+        if (UserSession.sharedInstance.loggedInUser == nil) {
+            cell.titleLabel.text = "Please login to fetch your address"
+        }
+        else if (UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == "") {
+            cell.titleLabel.text = "Please edit your profile to update your address"
+        }
+        else {
+            cell.titleLabel.text = UserSession.sharedInstance.loggedInUser?.address
+        }
     }
 }

@@ -75,14 +75,15 @@ class APIService {
     func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings"
         debugPrint(url)
-        let params : [String : String] = ["user_id": booking.user_id!,
+        let params : [String : String] = ["user_id": (UserSession.sharedInstance.loggedInUser?.id)!,
             "vendor_id": booking.vendor!.id!,
             "product_id": booking.product!.id,
-            "book_date": String(booking.book_date_NSDate?.dateMilliSecs),
-            "city" : "mumbai",
+            "book_date": String((booking.book_date_NSDate?.dateMilliSecs)!),
+            "location" : "mumbai",
             "slot" :  booking.slot!,
             "address" : address]
-
+        debugPrint(params)
+        
         Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
             .validate()
             .responseJSON { (response) -> Void in
