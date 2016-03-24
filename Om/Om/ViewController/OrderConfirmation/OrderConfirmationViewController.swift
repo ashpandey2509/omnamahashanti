@@ -118,7 +118,7 @@ class OrderConfirmationViewController: UIViewController {
 extension OrderConfirmationViewController : UITableViewDataSource {
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.poojaInfo.count + 1
+        return self.poojaInfo.count
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -157,11 +157,6 @@ extension OrderConfirmationViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        // Returns Terms n Condition cell as the last cell of the tableview.
-        if(indexPath.section == self.poojaInfo.count) {
-            return getTnCCell()
-        }
 
         let bookingConfirmationGroupInfo = self.poojaInfo[indexPath.section]
 
@@ -223,12 +218,5 @@ extension OrderConfirmationViewController : UITableViewDataSource {
 
         return cell
 
-    }
-
-    private func getTnCCell() -> TermsnConditionsCell {
-        let cell : TermsnConditionsCell = tableView.dequeueReusableCellWithIdentifier("TermsnConditionsCell") as! TermsnConditionsCell
-        cell.checkmarkButton.addTarget(self, action: "acceptTerms:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell.checkmarkButton.selected = self.isTermsAccepted
-        return cell
     }
 }

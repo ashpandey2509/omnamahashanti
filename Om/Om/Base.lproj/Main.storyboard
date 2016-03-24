@@ -823,7 +823,7 @@ steps!</string>
                                     <outlet property="delegate" destination="cEV-Gc-hIl" id="i17-iz-FQJ"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-9w-rBJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-9w-rBJ">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -833,7 +833,7 @@ steps!</string>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94667376889999999" green="0.94667376889999999" blue="0.94667376889999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CzI-nA-i7E" firstAttribute="top" secondItem="m0C-zc-hyf" secondAttribute="topMargin" id="4n6-yI-FF6"/>
                             <constraint firstItem="CzI-nA-i7E" firstAttribute="leading" secondItem="m0C-zc-hyf" secondAttribute="leadingMargin" constant="-20" id="8aj-CQ-OGq"/>
@@ -1293,50 +1293,71 @@ steps!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-Fz-Oh2">
-                                <rect key="frame" x="0.0" y="20" width="600" height="514"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-Fz-Oh2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="470"/>
+                                <color key="backgroundColor" red="0.94075520830000003" green="0.94075520830000003" blue="0.94075520830000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aex-H9-WfT" id="sI1-gu-4Vb"/>
                                     <outlet property="delegate" destination="aex-H9-WfT" id="rEb-dn-lKL"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-gM-Y31">
-                                <rect key="frame" x="20" y="542" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.25490196079999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdq-nJ-bLM">
+                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-gM-Y31">
+                                        <rect key="frame" x="8" y="54" width="584" height="48"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.25490196079999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="vIp-np-5ZH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="CONFIRM BOOKING">
+                                            <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderConfirmationButtonClicked:" destination="aex-H9-WfT" eventType="touchUpInside" id="x5B-pi-DMN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I agree to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-vh-D05">
+                                        <rect key="frame" x="8" y="13" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms &amp; Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woR-NT-TgV">
+                                        <rect key="frame" x="85" y="13" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZR8-Vm-Pin">
+                                        <rect key="frame" x="234" y="8" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vIp-np-5ZH"/>
+                                    <constraint firstAttribute="height" constant="110" id="HuV-aF-7Ro"/>
+                                    <constraint firstAttribute="trailing" secondItem="U9n-gM-Y31" secondAttribute="trailing" constant="8" id="Saa-0W-Y7j"/>
+                                    <constraint firstAttribute="bottom" secondItem="U9n-gM-Y31" secondAttribute="bottom" constant="8" id="p7J-2F-opi"/>
+                                    <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="tdq-nJ-bLM" secondAttribute="leading" constant="8" id="wNK-Li-K6a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="CONFIRM BOOKING">
-                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderConfirmationButtonClicked:" destination="aex-H9-WfT" eventType="touchUpInside" id="x5B-pi-DMN"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="484-ZE-8cg"/>
+                            <constraint firstAttribute="trailing" secondItem="tdq-nJ-bLM" secondAttribute="trailing" id="H6X-Qn-Hmn"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leadingMargin" id="MIM-aI-KTv"/>
                             <constraint firstAttribute="trailing" secondItem="EIf-Fz-Oh2" secondAttribute="trailing" id="MiA-Ik-MFP"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="SsP-XN-sXg"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="top" secondItem="MJE-Kd-tER" secondAttribute="bottom" id="X4u-Gn-T2C"/>
-                            <constraint firstItem="U9n-gM-Y31" firstAttribute="top" secondItem="EIf-Fz-Oh2" secondAttribute="bottom" constant="8" id="fW5-X6-Hwb"/>
-                            <constraint firstItem="sJv-xI-h4N" firstAttribute="top" secondItem="U9n-gM-Y31" secondAttribute="bottom" constant="8" id="hhe-Uv-k9f"/>
-                            <constraint firstItem="U9n-gM-Y31" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" constant="8" id="qGo-Gc-c9L"/>
-                            <constraint firstItem="U9n-gM-Y31" firstAttribute="trailing" secondItem="t33-WE-pBA" secondAttribute="trailingMargin" id="vEh-m0-sMl"/>
-                            <constraint firstAttribute="trailing" secondItem="U9n-gM-Y31" secondAttribute="trailing" constant="8" id="w9w-bL-Had"/>
+                            <constraint firstItem="tdq-nJ-bLM" firstAttribute="top" secondItem="EIf-Fz-Oh2" secondAttribute="bottom" id="flW-fa-0uh"/>
+                            <constraint firstItem="sJv-xI-h4N" firstAttribute="top" secondItem="tdq-nJ-bLM" secondAttribute="bottom" id="iTW-f8-AkK"/>
+                            <constraint firstItem="tdq-nJ-bLM" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" id="ieO-3T-Gxs"/>
                             <constraint firstItem="EIf-Fz-Oh2" firstAttribute="leading" secondItem="t33-WE-pBA" secondAttribute="leading" id="xqa-N3-hOk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MIM-aI-KTv"/>
                                 <exclude reference="SsP-XN-sXg"/>
-                                <exclude reference="484-ZE-8cg"/>
-                                <exclude reference="vEh-m0-sMl"/>
                             </mask>
                         </variation>
                     </view>
