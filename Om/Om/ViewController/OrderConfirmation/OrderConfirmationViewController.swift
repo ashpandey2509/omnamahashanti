@@ -207,7 +207,6 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         }
 
         return cell
-
     }
 
     func setupAddressCell(cell : BookingConfirmationContentCell) {
