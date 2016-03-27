@@ -71,7 +71,7 @@ class LandingViewController: UIViewController {
 
         if UserSession.sharedInstance.isLoggedInUser() {
             let loggedInUser = UserSession.sharedInstance.loggedInUser!
-            APIService.sharedInstance.bookingHistory(loggedInUser, callback: { (response) -> Void in
+            APIService.sharedInstance.bookingHistoryforOpenTickets(loggedInUser, callback: { (response) -> Void in
 
                 debugPrint("DEBUG: ", response.result.value)
                 debugPrint("DEBUG ERROR: ", response.result.error)
