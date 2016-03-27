@@ -9,6 +9,7 @@
 import UIKit
 
 class BookingHistoryViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
 
     var bookingHistory = [Booking]()
     @IBOutlet weak var bookingHistoryTableView: UITableView!
@@ -17,7 +18,9 @@ class BookingHistoryViewController: UIViewController {
         super.viewDidLoad()
         self.bookingHistoryTableView.registerNib(UINib(nibName: "BookingHistoryCell", bundle: nil), forCellReuseIdentifier: "BookingHistoryCell")
         refreshBookingHistory()
-        
+        self.tableView.tableFooterView = UIView()
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
 
     }
 
@@ -64,6 +67,7 @@ extension BookingHistoryViewController: UITableViewDataSource {
         cell.panditLabel.text = booking.vendor?.first_name
         cell.poojaLabel.text = booking.product?.name
         cell.placeLabel.text = booking.address
+        cell.cancelButton.hidden = true
         return cell
     }
 }
@@ -71,6 +75,6 @@ extension BookingHistoryViewController: UITableViewDataSource {
 extension BookingHistoryViewController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 110.0
+        return 120.0
     }
 }
