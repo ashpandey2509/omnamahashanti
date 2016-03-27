@@ -94,7 +94,10 @@ class LandingViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
+    
+    func cancelBookingButtonClicked(button : UIButton){
+        
+    }
 
 }
 
@@ -113,6 +116,8 @@ extension LandingViewController : UITableViewDataSource {
         cell.panditLabel.text = booking.vendor?.first_name
         cell.poojaLabel.text = booking.product?.name
         cell.placeLabel.text = booking.address
+        cell.cancelButton.tag = indexPath.row
+        cell.cancelButton.addTarget(self, action: "cancelBookingButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
 }
@@ -121,7 +126,7 @@ extension LandingViewController : UITableViewDataSource {
 extension LandingViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 110.0
+        return 120.0
     }
 }
 

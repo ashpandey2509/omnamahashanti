@@ -11,6 +11,8 @@ import UIKit
 class BookingHistoryCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
 
+    @IBOutlet weak var cancelButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var panditLabel: UILabel!
     @IBOutlet weak var poojaLabel: UILabel!
