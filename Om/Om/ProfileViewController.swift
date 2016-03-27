@@ -35,12 +35,12 @@ class ProfileViewController: ViewController {
     }
     
     override func viewDidLoad() {
-        self.firstNameTextField.text = UserSession.sharedInstance.loggedInUser?.first_name
-        self.lastNameTextField.text = UserSession.sharedInstance.loggedInUser?.last_name
-        self.emailTextField.text = UserSession.sharedInstance.loggedInUser?.email
-        self.casteTextField.text = UserSession.sharedInstance.loggedInUser?.caste
-        self.addressTextField.text = UserSession.sharedInstance.loggedInUser?.address
-        self.languageTextField.text = UserSession.sharedInstance.loggedInUser?.preferred_language
+        self.firstNameTextField.text = UserSession.sharedInstance.getUserData()?.first_name
+        self.lastNameTextField.text = UserSession.sharedInstance.getUserData()?.last_name
+        self.emailTextField.text = UserSession.sharedInstance.getUserData()?.email
+        self.casteTextField.text = UserSession.sharedInstance.getUserData()?.caste
+        self.addressTextField.text = UserSession.sharedInstance.getUserData()?.address
+        self.languageTextField.text = UserSession.sharedInstance.getUserData()?.preferred_language
 
     }
     
@@ -177,7 +177,7 @@ extension ProfileViewController  : UITextFieldDelegate{
 
     @IBAction func editProfile(sender: AnyObject) {
 
-        let userProfile = UserSession.sharedInstance.loggedInUser
+        let userProfile = UserSession.sharedInstance.getUserData()
         userProfile?.first_name = firstNameTextField.text
         userProfile?.last_name = lastNameTextField.text
         userProfile?.email = emailTextField.text

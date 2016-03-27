@@ -75,7 +75,7 @@ class APIService {
     func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings"
         debugPrint(url)
-        let params : [String : String] = ["user_id": (UserSession.sharedInstance.loggedInUser?.id)!,
+        let params : [String : String] = ["user_id": (UserSession.sharedInstance.getUserData()?.id)!,
             "vendor_id": booking.vendor!.id!,
             "product_id": booking.product!.id,
             "book_date": String((booking.book_date_NSDate?.dateMilliSecs)!),

@@ -55,7 +55,7 @@ class DrawerViewController: UIViewController {
     }
 
     func updateDrawerForLoggedInUser() {
-        if let user = UserSession.sharedInstance.loggedInUser {
+        if let user = UserSession.sharedInstance.getUserData() {
             drawerHeaderUserName.text = user.first_name! + " " + user.last_name!
         }
 
@@ -93,7 +93,7 @@ class DrawerViewController: UIViewController {
     
     func logoutClicked(){
         UserSession.sharedInstance.products = nil
-        UserSession.sharedInstance.loggedInUser = nil
+        UserSession.sharedInstance.saveUserData(nil)
         UserSession.sharedInstance.newBooking?.user_id = nil
         self.updateDrawerState()
         self.mm_drawerController.closeDrawerAnimated(true, completion: nil)

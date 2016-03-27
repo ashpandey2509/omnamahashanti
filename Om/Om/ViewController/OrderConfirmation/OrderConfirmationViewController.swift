@@ -80,10 +80,10 @@ class OrderConfirmationViewController: UIViewController {
 
 
     func updateConfirmButtonState(){
-        if(UserSession.sharedInstance.loggedInUser == nil){
+        if(UserSession.sharedInstance.getUserData() == nil){
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Selected)
-        } else if(UserSession.sharedInstance.loggedInUser?.address == nil){
+        } else if(UserSession.sharedInstance.getUserData()?.address == nil){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
         } else {
@@ -93,9 +93,9 @@ class OrderConfirmationViewController: UIViewController {
     }
     
     @IBAction func orderConfirmationButtonClicked(sender: AnyObject) {
-        if(UserSession.sharedInstance.loggedInUser == nil){
+        if(UserSession.sharedInstance.getUserData() == nil){
             self.navigateToLogin()
-        } else if(UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == ""){
+        } else if(UserSession.sharedInstance.getUserData()?.address == nil || UserSession.sharedInstance.getUserData()!.address == ""){
             self.navigateToProfile()
         } else {
             if(!self.isTermsAccepted){
@@ -104,7 +104,7 @@ class OrderConfirmationViewController: UIViewController {
                 let activityIndicator = ActivityIndicator(parent: self.view)
                 self.view.addSubview(activityIndicator)
                 activityIndicator.showIndicator()
-                APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.loggedInUser!.address!, callback: { (response) -> Void in
+                APIService.sharedInstance.book(UserSession.sharedInstance.newBooking!, address: UserSession.sharedInstance.getUserData()!.address!, callback: { (response) -> Void in
 
                     if response.result.isSuccess {
                         ToastView.ShowToast("Booking Confirmed")
@@ -150,11 +150,11 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             let headerCell  = tableView.dequeueReusableCellWithIdentifier("BookingConfirmationHeaderCell") as! BookingConfirmationHeaderCell
 
             headerCell.titleLabel.text = ((self.poojaInfo[section]).header)
-            if(headerCell.titleLabel.text != "Address Details" || UserSession.sharedInstance.loggedInUser == nil){
+            if(headerCell.titleLabel.text != "Address Details" || UserSession.sharedInstance.getUserData() == nil){
                 headerCell.editWidthConstraint.constant = 0
                 headerCell.titleLabel.updateConstraints()
             }
-            else if(UserSession.sharedInstance.loggedInUser != nil)
+            else if(UserSession.sharedInstance.getUserData() != nil)
             {
                 headerCell.editWidthConstraint.constant = 50
                 headerCell.titleLabel.updateConstraints()
@@ -214,14 +214,14 @@ extension OrderConfirmationViewController : UITableViewDataSource {
     func setupAddressCell(cell : BookingConfirmationContentCell) {
         cell.titleLabel.textColor = UIColor.getThemeColor()
 
-        if (UserSession.sharedInstance.loggedInUser == nil) {
+        if (UserSession.sharedInstance.getUserData() == nil) {
             cell.titleLabel.text = "Please login to fetch your address"
         }
-        else if (UserSession.sharedInstance.loggedInUser?.address == nil || UserSession.sharedInstance.loggedInUser?.address == "") {
+        else if (UserSession.sharedInstance.getUserData()?.address == nil || UserSession.sharedInstance.getUserData()?.address == "") {
             cell.titleLabel.text = "Please edit your profile to update your address"
         }
         else {
-            cell.titleLabel.text = UserSession.sharedInstance.loggedInUser?.address
+            cell.titleLabel.text = UserSession.sharedInstance.getUserData()?.address
         }
     }
 }
