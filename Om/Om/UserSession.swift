@@ -36,8 +36,4 @@ public class UserSession {
     public func isLoggedInUser() -> Bool {
         return !(self.loggedInUser == nil)
     }
-
-    public func clearNewBooking() {
-        newBooking = nil
-    }
 }

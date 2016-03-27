@@ -9,7 +9,6 @@
 import UIKit
 import KSToastView
 
-
 class LoginViewController: UIViewController {
     @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -44,6 +43,8 @@ class LoginViewController: UIViewController {
                     let userProfileDict = json as? NSDictionary
                     let userProfile = UserProfile(dataDict: userProfileDict!)
                     UserSession.sharedInstance.loggedInUser = userProfile
+
+                    NotificationManager.sharedInstance.notifyLoginChange()
 
                     ToastView.ShowToast("Welcome \(userProfile.first_name!)")
                 }

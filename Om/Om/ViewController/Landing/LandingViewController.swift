@@ -19,11 +19,20 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
         self.customizeView()
         self.tableView.tableFooterView = UIView()
+
+        self.tableView.registerNib(UINib(nibName: "BookingHistoryCell", bundle: nil), forCellReuseIdentifier: "BookingHistoryCell")
+
         // Do any additional setup after loading the view.
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onLoginChangeNotify", name: NotificationManager.sharedInstance.loginChangeNotificationKey, object: nil)
     }
 
     override func viewWillAppear(animated: Bool) {
         self.title = "Om"
+        refreshBookingHistory()
+    }
+
+    func onLoginChangeNotify() {
         refreshBookingHistory()
     }
 
@@ -43,22 +52,6 @@ class LandingViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
 
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func leftBarButtonClicked(button : UIButton){
         self.mm_drawerController.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
@@ -90,12 +83,19 @@ class LandingViewController: UIViewController {
                         for booking in bookingHistoryJson {
                             self.bookingHistoryList.append(Booking(dataDict: booking as! NSDictionary))
                         }
-                        self.tableView.reloadData()
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            self.tableView.reloadData()
+                        })
                     }
                 }
             })
+        } else {
+            self.bookingHistoryList.removeAll()
+            self.tableView.reloadData()
         }
     }
+
+
 }
 
 extension LandingViewController : UITableViewDataSource {
