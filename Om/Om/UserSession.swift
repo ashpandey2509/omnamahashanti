@@ -36,4 +36,5 @@ public class UserSession {
     public func isLoggedInUser() -> Bool {
         return !(self.loggedInUser == nil)
     }
+
 }

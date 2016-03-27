@@ -195,6 +195,7 @@ extension ProfileViewController  : UITextFieldDelegate{
 
             if (response.result.isSuccess) {
                 debugPrint(response.result.value)
+                ToastView.ShowToast("User profile update is successful")
             } else {
                 debugPrint(response.result.error)
                 ToastView.ShowToast("Error updating user profile. Try again later.")
