@@ -68,6 +68,8 @@ extension BookingHistoryViewController: UITableViewDataSource {
         cell.poojaLabel.text = booking.product?.name
         cell.placeLabel.text = booking.address
         cell.cancelButton.hidden = true
+        cell.dateLabel.text = booking.dateString!
+        cell.dayLabel.text = booking.dayString!
         return cell
     }
 }

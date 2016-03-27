@@ -24,7 +24,8 @@ class Booking{
     var created_date : String?
     var status : String?
     var book_date_display : String?
-
+    var dateString : String?
+    var dayString : String?
     init() {
         // empty constructor
     }
@@ -34,7 +35,18 @@ class Booking{
         user_id = dataDict["user_id"] as? String
         slot = dataDict["slot"] as? String
         location = dataDict["location"] as? String
-        book_date = dataDict["book_date"] as? String
+        
+        if let bookDate = dataDict["book_date"] as? Double{
+            let miliDate = NSDate.dateFromMilliseconds(bookDate)
+            self.dateString = miliDate.getBoookingMonth
+
+            self.dayString = miliDate.dateNameString
+
+            book_date = "\(bookDate)"
+        }
+        
+        
+        
         address = dataDict["address"] as? String
         __v = dataDict["__v"] as? Int
         active = dataDict["active"] as? Bool

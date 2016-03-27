@@ -118,6 +118,8 @@ extension LandingViewController : UITableViewDataSource {
         cell.placeLabel.text = booking.address
         cell.cancelButton.tag = indexPath.row
         cell.cancelButton.addTarget(self, action: "cancelBookingButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.dateLabel.text = booking.dateString!
+        cell.dayLabel.text = booking.dayString!
         return cell
     }
 }

@@ -50,6 +50,13 @@ extension OrderHistoryViewController : UITableViewDataSource {
         cell.dateLabel.text = booking.getDisplayDate()
 //        cell.dayLabel.text = booking.updated_date.
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.panditLabel.text = booking.vendor?.first_name
+        cell.poojaLabel.text = booking.product?.name
+        cell.placeLabel.text = booking.address
+        cell.cancelButton.tag = indexPath.row
+        cell.cancelButton.addTarget(self, action: "cancelBookingButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.dateLabel.text = booking.dateString!
+        cell.dayLabel.text = booking.dayString!
         return cell
     }
 }

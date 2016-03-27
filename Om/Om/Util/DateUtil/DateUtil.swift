@@ -15,6 +15,13 @@ extension NSDate {
         return dateFormatter.stringFromDate(self)
     }
     
+    var getBoookingMonth: String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MMM"
+        return dateFormatter.stringFromDate(self)
+    }
+    
+    
     var dateString: String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd"
@@ -34,4 +41,11 @@ extension NSDate {
     var dateMilliSecs: Int64 {
         return Int64(self.timeIntervalSince1970*1000)
     }
+    
+    class func dateFromMilliseconds(ms: NSNumber) -> NSDate {
+        return NSDate(timeIntervalSince1970:Double(ms) / 1000.0)
+    }
+    
+    
+    
 }
