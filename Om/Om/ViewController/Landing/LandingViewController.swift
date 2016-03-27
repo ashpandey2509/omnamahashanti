@@ -116,6 +116,7 @@ extension LandingViewController : UITableViewDataSource {
         cell.panditLabel.text = booking.vendor?.first_name
         cell.poojaLabel.text = booking.product?.name
         cell.placeLabel.text = booking.address
+        cell.timeLabel.text = booking.slot?.capitalizedString
         cell.cancelButton.tag = indexPath.row
         cell.cancelButton.addTarget(self, action: "cancelBookingButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell

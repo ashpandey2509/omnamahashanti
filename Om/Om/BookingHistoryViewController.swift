@@ -64,6 +64,7 @@ extension BookingHistoryViewController: UITableViewDataSource {
         cell.panditLabel.text = booking.vendor?.first_name
         cell.poojaLabel.text = booking.product?.name
         cell.placeLabel.text = booking.address
+        cell.timeLabel.text = booking.slot?.capitalizedString
         return cell
     }
 }
