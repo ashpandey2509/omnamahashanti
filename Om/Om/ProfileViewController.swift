@@ -190,6 +190,7 @@ extension ProfileViewController  : UITextFieldDelegate{
         activityIndicator.showIndicator()
 
         APIService.sharedInstance.editProfile(userProfile!) { (response) -> Void in
+            self.view.endEditing(true)
             activityIndicator.hideIndicator()
 
             if (response.result.isSuccess) {
