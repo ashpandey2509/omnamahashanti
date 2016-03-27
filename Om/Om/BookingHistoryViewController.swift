@@ -70,6 +70,8 @@ extension BookingHistoryViewController: UITableViewDataSource {
         cell.cancelButton.hidden = true
         cell.dateLabel.text = booking.dateString!
         cell.dayLabel.text = booking.dayString!
+        cell.timeLabel.text = booking.slot?.capitalizedString
+
         return cell
     }
 }
