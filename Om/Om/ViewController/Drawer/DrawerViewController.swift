@@ -57,7 +57,12 @@ class DrawerViewController: UIViewController {
 
     func updateDrawerForLoggedInUser() {
         if let user = UserSession.sharedInstance.getUserData() {
-            drawerHeaderUserName.text = user.first_name! + " " + user.last_name!
+
+            if let firstName = user.first_name, lastName = user.last_name {
+                drawerHeaderUserName.text = "\(firstName) \(lastName)"
+            } else {
+                drawerHeaderUserName.text = user.email!
+            }
         }
 
         currentDrawerArray = postSigninArray

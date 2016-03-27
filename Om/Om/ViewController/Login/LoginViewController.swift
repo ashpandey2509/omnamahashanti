@@ -46,7 +46,11 @@ class LoginViewController: UIViewController {
 
                     NotificationManager.sharedInstance.notifyLoginChange()
 
-                    ToastView.ShowToast("Welcome \(userProfile.first_name!)")
+                    if let firstName = userProfile.first_name {
+                        ToastView.ShowToast("Welcome \(firstName)")
+                    } else {
+                        ToastView.ShowToast("Welcome \(userProfile.email)")
+                    }
                 }
             } else {
                 ToastView.ShowToast("Invalid Credentials. Please try again.")

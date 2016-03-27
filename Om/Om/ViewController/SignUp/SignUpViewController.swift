@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
             ToastView.ShowToast("Please enter a valid password")
         }
         else if(self.confirmPasswordTextField.text! != self.passwordTextField.text!){
-            ToastView.ShowToast("Passowrd and confirm password fields do not match")
+            ToastView.ShowToast("Password and confirm password fields do not match")
         }
         else{
             //add signup code here
@@ -140,4 +140,27 @@ extension SignUpViewController  : UITextFieldDelegate{
         self.mobileView.backgroundColor = UIColor.blackColor()
         self.confirmPasswordView.backgroundColor = UIColor.blackColor()
     }
+
+    @IBAction func userSignup(sender: AnyObject) {
+
+        let userDetails = UserProfile()
+        userDetails.email = self.emailTextField.text
+        userDetails.password = self.passwordTextField.text!
+        userDetails.mobile = self.mobileTextField.text
+
+        APIService.sharedInstance.signup(userDetails) { (newUser, error) -> Void in
+            if (error == nil) {
+                debugPrint(newUser)
+                UserSession.sharedInstance.saveUserData(newUser)
+                ToastView.ShowToast("Signup Successful")
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            } else {
+                debugPrint(error)
+                ToastView.ShowToast("Error on Signup. Please try again.")
+            }
+        }
+
+    }
+
+
 }

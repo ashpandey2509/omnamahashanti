@@ -194,6 +194,7 @@ extension ProfileViewController  : UITextFieldDelegate{
             activityIndicator.hideIndicator()
 
             if (response.result.isSuccess) {
+                UserSession.sharedInstance.saveUserData(userProfile)
                 debugPrint(response.result.value)
                 ToastView.ShowToast("User profile update is successful")
             } else {

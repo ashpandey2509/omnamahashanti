@@ -20,7 +20,11 @@ class UserProfile : NSObject {
     var sub_caste: String?
     var preferred_language: String?
     var gcm: String?
+    var password = ""
 
+    override init() {
+        // empt init
+    }
 
     init(dataDict: NSDictionary) {
         id = dataDict["_id"] as? String

@@ -70,6 +70,29 @@ class APIService {
             callback(response)
         }
     }
+
+    func signup(user: UserProfile, callback: (newUser: UserProfile, NSError?) -> Void) {
+        let url = baseURL + "users"
+        debugPrint(url)
+
+        let params : [String : String] = ["email": user.email!,
+            "mobile": user.mobile!,
+            "country_code": "91",
+            "password": user.password
+        ]
+
+        Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
+
+            if response.result.isSuccess {
+                if let JSON = response.result.value {
+                    let newUser = UserProfile(dataDict: JSON as! NSDictionary)
+                    callback(newUser: newUser, response.result.error)
+                } else {
+                    callback(newUser: UserProfile(), response.result.error)
+                }
+            }
+        }
+    }
     
     
     func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {

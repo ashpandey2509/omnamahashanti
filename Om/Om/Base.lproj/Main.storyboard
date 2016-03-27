@@ -1152,6 +1152,7 @@ steps!</string>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonClicked:" destination="CRu-dK-NPL" eventType="touchUpInside" id="xCP-Fc-gqB"/>
+                                    <action selector="userSignup:" destination="CRu-dK-NPL" eventType="touchUpInside" id="fSU-nM-8XM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-ig-Pu6">

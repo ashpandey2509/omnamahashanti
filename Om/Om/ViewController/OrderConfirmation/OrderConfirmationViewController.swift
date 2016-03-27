@@ -83,7 +83,7 @@ class OrderConfirmationViewController: UIViewController {
         if(UserSession.sharedInstance.getUserData() == nil){
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Selected)
-        } else if(UserSession.sharedInstance.getUserData()?.address == nil){
+        } else if(((UserSession.sharedInstance.getUserData()?.address ?? "").isEmpty) != nil){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
         } else {
