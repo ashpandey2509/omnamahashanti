@@ -162,6 +162,7 @@ extension OrderConfirmationViewController : UITableViewDataSource {
                 headerCell.valueLabel.text = "edit"
                 
                 let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+                headerCell.valueLabel.userInteractionEnabled = true
                 headerCell.valueLabel.addGestureRecognizer(tap)
             }
             return headerCell

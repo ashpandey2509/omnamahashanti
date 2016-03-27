@@ -41,7 +41,9 @@ class ProfileViewController: ViewController {
         self.casteTextField.text = UserSession.sharedInstance.loggedInUser?.caste
         self.addressTextField.text = UserSession.sharedInstance.loggedInUser?.address
         self.languageTextField.text = UserSession.sharedInstance.loggedInUser?.preferred_language
+
     }
+    
     
 }
 
@@ -198,5 +200,6 @@ extension ProfileViewController  : UITextFieldDelegate{
             }
         }
     }
+
 
 }
