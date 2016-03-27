@@ -199,6 +199,7 @@ extension OrderConfirmationViewController : UITableViewDataSource {
             cell.titleLabel.text = bookingEntry
             cell.valueLabel.hidden = true
             cell.titleMutiplier.constant = -16
+            cell.titleLabel.textColor = UIColor.getSamagriColor()
             cell.titleMutiplier = MyConstraint.changeMultiplier(cell.titleMutiplier, multiplier: 1)
         }
 

@@ -43,4 +43,8 @@ extension UIColor{
     class func getTimeSlotBackgroundColor() -> UIColor{
         return UIColor(hexString: "#fff19368")
     }
+    
+    class func getSamagriColor() -> UIColor{
+        return UIColor(hexString: "#777777")
+    }
 }
