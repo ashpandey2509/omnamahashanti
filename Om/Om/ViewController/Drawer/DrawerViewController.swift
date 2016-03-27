@@ -21,7 +21,8 @@ class DrawerViewController: UIViewController {
         ["icon" : "ic_action_privacy" , "title" : "Privacy Policy", "centerIdentifier" : "PrivacyPolicyViewController"],
         ["icon" : "ic_action_contact_us" , "title" : "Contact Us", "action" : "sendEmail"]]
 
-    let postSigninArray = [["icon" : "ic_action_login" , "title" : "Logout", "action" : "logoutClicked"],
+    let postSigninArray = [["icon" : "ic_action_login" , "title" : "Booking History", "centerIdentifier" : "BookingHistoryViewController"],
+        ["icon" : "ic_action_login" , "title" : "Logout", "action" : "logoutClicked"],
         ["icon" : "ic_action_login" , "title" : "Edit Profile", "centerIdentifier" : "ProfileViewController"],
         ["icon" : "ic_action_rate_app" , "title" : "Rate App", "action" : "rateApp"],
         ["icon" : "ic_action_terms" , "title" : "Terms & Conditions", "centerIdentifier" : "TermsnConditionsViewController"],

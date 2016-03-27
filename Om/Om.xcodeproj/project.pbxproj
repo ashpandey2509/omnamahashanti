@@ -58,6 +58,7 @@
 		5F5E765E1C95692000C2C29E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E765D1C95692000C2C29E /* ActivityIndicator.swift */; };
 		5F7A841E1C9537AD0090E2E5 /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
 		5F7A841F1C9537AD0090E2E5 /* Pods_Om.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F87FD241CA84924006C9612 /* BookingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87FD231CA84924006C9612 /* BookingHistoryViewController.swift */; };
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
 		5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */; };
 		5F9888501C88A82300DEF0F4 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98884F1C88A82300DEF0F4 /* UserProfile.swift */; };
@@ -155,6 +156,7 @@
 		5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationGroup.swift; sourceTree = "<group>"; };
 		5F5E76591C95577000C2C29E /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5F5E765D1C95692000C2C29E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5F87FD231CA84924006C9612 /* BookingHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewController.swift; sourceTree = "<group>"; };
 		5F9888111C8356DC00DEF0F4 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F98884F1C88A82300DEF0F4 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		15081C011C80B9FD006A7F88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5F87FD221CA84904006C9612 /* BookingHistory */,
 				15D312D81C8B5CB100EDB389 /* OrderConfirmation */,
 				15D312D51C8B5C7600EDB389 /* OrderHistory */,
 				15081C631C82AA36006A7F88 /* PrivacyPolicy */,
@@ -596,6 +599,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		5F87FD221CA84904006C9612 /* BookingHistory */ = {
+			isa = PBXGroup;
+			children = (
+				5F87FD231CA84924006C9612 /* BookingHistoryViewController.swift */,
+			);
+			name = BookingHistory;
+			sourceTree = "<group>";
+		};
 		7246FA8FB015565C4F000DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,6 +820,7 @@
 				15081C4C1C8210C2006A7F88 /* PanditTableViewCell.swift in Sources */,
 				5F57D4631CA069B400EE92F3 /* BookingConfirmationEntry.swift in Sources */,
 				5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */,
+				5F87FD241CA84924006C9612 /* BookingHistoryViewController.swift in Sources */,
 				15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */,
 				15081C5F1C8231C0006A7F88 /* APIService.swift in Sources */,
 				5FC4ABC91CA83E6200D57E51 /* NotificationManager.swift in Sources */,

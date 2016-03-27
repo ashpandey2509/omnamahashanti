@@ -99,7 +99,7 @@ class APIService {
         }
     }
 
-    func bookingHistoryforClosedTickets(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
+    func bookingHistory(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings?user_id=\(user.id!)"
         debugPrint(url)
         Alamofire.request(Alamofire.Method.GET, url, parameters: nil, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
