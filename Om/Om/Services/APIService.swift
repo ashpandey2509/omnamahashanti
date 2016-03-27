@@ -96,7 +96,7 @@ class APIService {
     
     
     func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
-        let url = baseURL + "bookings"
+        let url = baseURL + "bookings/"
         debugPrint(url)
         let params : [String : String] = ["user_id": (UserSession.sharedInstance.getUserData()?.id)!,
             "vendor_id": booking.vendor!.id!,
@@ -111,6 +111,14 @@ class APIService {
             .validate()
             .responseJSON { (response) -> Void in
                 callback(response)
+        }
+    }
+
+    func cancelBooking(booking: Booking, callback: (Response<AnyObject, NSError>) -> Void) {
+        let url = baseURL + "bookings/\(booking._id)"
+        debugPrint(url)
+        Alamofire.request(Alamofire.Method.PUT, url, parameters: nil, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
+            callback(response)
         }
     }
 

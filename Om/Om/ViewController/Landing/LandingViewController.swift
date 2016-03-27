@@ -96,7 +96,7 @@ class LandingViewController: UIViewController {
     }
     
     func cancelBookingButtonClicked(button : UIButton){
-        
+        // HOW to find actual booking which neds to be cancelled from row click on tableview?
     }
 
 }
