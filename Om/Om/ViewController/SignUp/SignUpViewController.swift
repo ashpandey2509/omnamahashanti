@@ -40,6 +40,24 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func signUpButtonClicked(button : UIButton){
+        if(!(self.emailTextField.text!.isValidEmail() && self.emailTextField.text!.characters.count > 0)){
+            ToastView.ShowToast("Please enter a valid email ID")
+        }
+        else if(self.mobileTextField.text!.characters.count != 10){
+            ToastView.ShowToast("Please enter a valid phone number")
+        }
+        else if(self.passwordTextField.text!.characters.count == 0 || self.confirmPasswordTextField.text!.characters.count == 0){
+            ToastView.ShowToast("Please enter a valid password")
+        }
+        else if(self.confirmPasswordTextField.text! != self.passwordTextField.text!){
+            ToastView.ShowToast("Passowrd and confirm password fields do not match")
+        }
+        else{
+            //add signup code here
+        }
+    }
+    
 }
 
 extension SignUpViewController  : UITextFieldDelegate{
