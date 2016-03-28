@@ -97,6 +97,15 @@ class LandingViewController: UIViewController {
     
     func cancelBookingButtonClicked(button : UIButton){
         // HOW to find actual booking which neds to be cancelled from row click on tableview?
+        let bookingToBeCancelled = bookingHistoryList[button.tag]
+        APIService.sharedInstance.cancelBooking(bookingToBeCancelled._id!) { (response) -> Void in
+            if response.result.isSuccess {
+                ToastView.ShowToast("Booking cancellation is successful")
+                self.refreshBookingHistory()
+            } else {
+                ToastView.ShowToast("Error cancelling request, please try again")
+            }
+        }
     }
 
 }

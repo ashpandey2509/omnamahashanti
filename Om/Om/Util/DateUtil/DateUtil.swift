@@ -35,7 +35,7 @@ extension NSDate {
     }
     var dateNameString: String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEE"
+        dateFormatter.dateFormat = "EEEE"
         return dateFormatter.stringFromDate(self)
     }
     var dateMilliSecs: Int64 {

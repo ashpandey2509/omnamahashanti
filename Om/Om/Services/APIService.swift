@@ -114,10 +114,13 @@ class APIService {
         }
     }
 
-    func cancelBooking(booking: Booking, callback: (Response<AnyObject, NSError>) -> Void) {
-        let url = baseURL + "bookings/\(booking._id)"
+    func cancelBooking(bookingId: String, callback: (Response<AnyObject, NSError>) -> Void) {
+        let url = baseURL + "bookings/\(bookingId)"
         debugPrint(url)
-        Alamofire.request(Alamofire.Method.PUT, url, parameters: nil, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
+        let params = ["status": "cancelled"]
+        debugPrint(params)
+
+        Alamofire.request(Alamofire.Method.PUT, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
             callback(response)
         }
     }
