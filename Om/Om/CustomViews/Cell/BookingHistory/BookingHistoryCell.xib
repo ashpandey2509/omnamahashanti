@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="5" y="5" width="304" height="111.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geu-G0-VL6">
-                                <rect key="frame" x="88" y="0.0" width="1" height="111.5"/>
+                                <rect key="frame" x="88" y="4" width="1" height="103.5"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="uQV-xS-veB"/>
@@ -79,16 +79,22 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-4A-mWj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-4A-mWj">
                                 <rect key="frame" x="219" y="66" width="90" height="38"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.26274509800000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="7vv-tr-Vny"/>
-                                    <constraint firstAttribute="height" constant="38" id="Hup-1D-kUu"/>
+                                    <constraint firstAttribute="height" priority="900" constant="38" id="Hup-1D-kUu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <state key="normal" title="CANCEL">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CANCEL">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                             </button>
                         </subviews>
@@ -96,6 +102,7 @@
                         <constraints>
                             <constraint firstItem="21U-qg-g5Q" firstAttribute="leading" secondItem="geu-G0-VL6" secondAttribute="trailing" constant="13" id="0BW-jq-6Qv"/>
                             <constraint firstAttribute="trailing" secondItem="Wbc-QB-FEZ" secondAttribute="trailing" constant="1" id="0qc-cJ-K0T"/>
+                            <constraint firstItem="21U-qg-g5Q" firstAttribute="top" secondItem="cGy-QK-WeG" secondAttribute="bottom" constant="-3" id="1Oc-Ud-c47"/>
                             <constraint firstItem="geu-G0-VL6" firstAttribute="centerX" secondItem="3I2-hR-8qj" secondAttribute="centerX" constant="-63.5" id="2Cp-Mx-MgD"/>
                             <constraint firstItem="8wk-4A-mWj" firstAttribute="top" secondItem="Wbc-QB-FEZ" secondAttribute="bottom" constant="2" id="7sW-DM-z75"/>
                             <constraint firstItem="Jdn-S8-UWQ" firstAttribute="leading" secondItem="3I2-hR-8qj" secondAttribute="leading" constant="2" id="A8B-No-KIe"/>
@@ -105,10 +112,10 @@
                             <constraint firstItem="cGy-QK-WeG" firstAttribute="top" secondItem="3I2-hR-8qj" secondAttribute="top" constant="6" id="Mqh-uP-lSQ"/>
                             <constraint firstItem="HM6-yi-wMy" firstAttribute="leading" secondItem="3I2-hR-8qj" secondAttribute="leading" constant="8" id="O6a-Pc-dOM"/>
                             <constraint firstItem="21U-qg-g5Q" firstAttribute="centerY" secondItem="3I2-hR-8qj" secondAttribute="centerY" constant="-21.25" id="TOL-at-b9D"/>
-                            <constraint firstAttribute="bottom" secondItem="geu-G0-VL6" secondAttribute="bottom" id="UTj-dI-VEd"/>
+                            <constraint firstAttribute="bottom" secondItem="geu-G0-VL6" secondAttribute="bottom" constant="4" id="UTj-dI-VEd"/>
                             <constraint firstAttribute="bottom" secondItem="8wk-4A-mWj" secondAttribute="bottom" constant="7.5" id="Vhm-RB-bR6"/>
                             <constraint firstItem="Jdn-S8-UWQ" firstAttribute="top" secondItem="HM6-yi-wMy" secondAttribute="bottom" constant="-2" id="WXw-XF-Imy"/>
-                            <constraint firstItem="geu-G0-VL6" firstAttribute="top" secondItem="3I2-hR-8qj" secondAttribute="top" id="WpI-zr-Pnb"/>
+                            <constraint firstItem="geu-G0-VL6" firstAttribute="top" secondItem="3I2-hR-8qj" secondAttribute="top" constant="4" id="WpI-zr-Pnb"/>
                             <constraint firstItem="fWE-fs-jGg" firstAttribute="top" secondItem="Jdn-S8-UWQ" secondAttribute="bottom" constant="-2" id="X0l-JQ-PuI"/>
                             <constraint firstAttribute="trailing" secondItem="8wk-4A-mWj" secondAttribute="trailing" constant="-5" id="dZa-DW-h8g"/>
                             <constraint firstItem="cGy-QK-WeG" firstAttribute="leading" secondItem="geu-G0-VL6" secondAttribute="trailing" constant="13" id="hHz-wh-on0"/>
@@ -117,6 +124,7 @@
                             <constraint firstItem="geu-G0-VL6" firstAttribute="leading" secondItem="Jdn-S8-UWQ" secondAttribute="trailing" constant="6" id="uvO-9Q-aWN"/>
                             <constraint firstItem="Wbc-QB-FEZ" firstAttribute="top" secondItem="21U-qg-g5Q" secondAttribute="bottom" constant="-2" id="vFt-Yt-8Nf"/>
                             <constraint firstItem="geu-G0-VL6" firstAttribute="leading" secondItem="HM6-yi-wMy" secondAttribute="trailing" constant="13" id="weH-t7-xFK"/>
+                            <constraint firstItem="Wbc-QB-FEZ" firstAttribute="top" secondItem="21U-qg-g5Q" secondAttribute="bottom" constant="-2" id="xMp-hR-3Wl"/>
                             <constraint firstAttribute="trailing" secondItem="cGy-QK-WeG" secondAttribute="trailing" constant="1" id="ybR-kg-Dfo"/>
                         </constraints>
                     </view>

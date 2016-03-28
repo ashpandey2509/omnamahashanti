@@ -83,7 +83,7 @@ class OrderConfirmationViewController: UIViewController {
         if(UserSession.sharedInstance.getUserData() == nil){
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Normal)
             self.confirmButton.setTitle("PLEASE LOGIN", forState: UIControlState.Selected)
-        } else if(((UserSession.sharedInstance.getUserData()?.address ?? "").isEmpty) != nil){
+        } else if(((UserSession.sharedInstance.getUserData()?.address ?? "").isEmpty)){
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Normal)
             self.confirmButton.setTitle("UPDATE ADDRESS", forState: UIControlState.Selected)
         } else {
@@ -111,6 +111,7 @@ class OrderConfirmationViewController: UIViewController {
                         self.navigationController?.popToRootViewControllerAnimated(true)
                     } else {
                         ToastView.ShowToast("Booking Error. Try again after some time.")
+                        debugPrint("ERROR: ", response.result.error)
                     }
                     activityIndicator.hideIndicator()
             })
