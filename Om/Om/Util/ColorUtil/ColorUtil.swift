@@ -47,4 +47,24 @@ extension UIColor{
     class func getSamagriColor() -> UIColor{
         return UIColor(hexString: "#777777")
     }
+    
+    class func getDateNormalColor() -> UIColor{
+        return UIColor(hexString: "#7F7F7F")
+    }
+    
+    class func getCalendarMonthDayNormalColor() -> UIColor{
+        return UIColor(hexString: "#7F7F7F")
+    }
+    
+    class func getCalendarDateNormalColor() -> UIColor{
+        return UIColor(hexString: "#000000")
+    }
+    
+    class func getCalendarMonthDaySelectedColor() -> UIColor{
+        return UIColor(hexString: "#000000")
+    }
+    
+    class func getCalendarDateSelectedlColor() -> UIColor{
+        return UIColor(hexString: "#000000")
+    }
 }

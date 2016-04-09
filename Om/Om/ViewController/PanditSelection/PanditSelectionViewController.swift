@@ -10,7 +10,7 @@ import UIKit
 import Haneke
 
 class PanditSelectionViewController: UIViewController {
-
+    
     var vendors = [Vendor]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -32,7 +32,7 @@ class PanditSelectionViewController: UIViewController {
         getVendorForSelectedDate(selectedDate!)
         self.tableView.reloadData()
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         self.title = "Select Panditji"
     }
@@ -42,21 +42,21 @@ class PanditSelectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     func bookButtonClicked(button : UIButton){
         self.title = ""
         let orderVC = self.storyboard?.instantiateViewControllerWithIdentifier("OrderConfirmationViewController") as! OrderConfirmationViewController
         UserSession.sharedInstance.newBooking?.vendor = vendors[button.tag]
         self.navigationController?.pushViewController(orderVC, animated: true)
     }
-
+    
     func getVendorForSelectedDate(selectedDate: NSDate) {
         let activityIndicator = ActivityIndicator(parent: self.view)
         self.view.addSubview(activityIndicator)
         activityIndicator.showIndicator()
-
+        
         resetVendorTable()
-
+        
         let selectedDateMilli = selectedDate.timeIntervalSince1970*1000
         APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
             self.vendors = vendors
@@ -65,12 +65,12 @@ class PanditSelectionViewController: UIViewController {
             activityIndicator.hideIndicator()
         }
     }
-
+    
     func resetVendorTable() {
         self.vendors = [Vendor]()
         self.tableView.reloadData()
     }
-
+    
 }
 
 extension PanditSelectionViewController : UITableViewDataSource {
@@ -88,13 +88,13 @@ extension PanditSelectionViewController : UITableViewDataSource {
         cell.vendorImage.image = nil
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.vendorName.text = "\(vendor.first_name!) \(vendor.last_name!)"
-
+        
         let experience = vendor.experience == nil ? "8 years" : vendor.experience!
         cell.vendorExperience.text = "Experience: \(experience)"
-
+        
         let languages = vendor.languages == nil ? "Hindi" : vendor.languages!
         cell.vendorLanguages.text = "Languages: \(languages)"
-
+        
         if let _ = vendor.image {
             cell.vendorImage.hnk_setImageFromURL(NSURL(string: vendor.image!)!)
         } else {
@@ -125,12 +125,21 @@ extension PanditSelectionViewController : UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell : DateCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("DateCollectionViewCell", forIndexPath: indexPath) as! DateCollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
-
-        if let _ = self.selectedIndex{
-            if(indexPath.row == selectedIndex!){
-                cell.backgroundColor = UIColor.getThemeColor()
-            }
+        
+        if(self.selectedIndex != nil  && indexPath.row == selectedIndex!){
+            cell.backgroundColor = UIColor.getThemeColor()
+            cell.dateLabel.textColor = UIColor.getCalendarDateSelectedlColor()
+            cell.monthLabel.textColor = UIColor.getCalendarMonthDaySelectedColor()
+            cell.dayLabel.textColor = UIColor.getCalendarMonthDaySelectedColor()
         }
+        else
+        {
+            cell.backgroundColor = UIColor.clearColor() 
+            cell.dateLabel.textColor = UIColor.getCalendarDateNormalColor()
+            cell.monthLabel.textColor = UIColor.getCalendarMonthDayNormalColor()
+            cell.dayLabel.textColor = UIColor.getCalendarMonthDayNormalColor()
+        }
+        
         cell.updateCellUI(indexPath.row)
         return cell
     }
@@ -171,7 +180,7 @@ extension PanditSelectionViewController : UICollectionViewDelegateFlowLayout
         
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
-
+    
 }
 
 

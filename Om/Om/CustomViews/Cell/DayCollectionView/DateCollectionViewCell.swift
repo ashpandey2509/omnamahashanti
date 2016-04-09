@@ -29,7 +29,7 @@ class DateCollectionViewCell: UICollectionViewCell {
         let components = calendar.components([.Day , .Month , .Year], fromDate: tomorrow!)
         
         let day = components.day
-        self.dayLabel.text = tomorrow!.dateNameString.uppercaseString
+        self.dayLabel.text = (tomorrow!.dateNameString.uppercaseString as NSString).substringToIndex(3)
         self.monthLabel.text = tomorrow!.month.uppercaseString
         self.dateLabel.text = "\(String(format: "%02d", day))"
     }
