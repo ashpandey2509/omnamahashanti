@@ -9,6 +9,8 @@
 import Foundation
 
 class ProfileViewController: ViewController {
+    @IBOutlet weak var viewTopSpace: NSLayoutConstraint!
+    @IBOutlet weak var editButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var firstNameHeight: NSLayoutConstraint!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -41,6 +43,9 @@ class ProfileViewController: ViewController {
         self.casteTextField.text = UserSession.sharedInstance.getUserData()?.caste
         self.addressTextField.text = UserSession.sharedInstance.getUserData()?.address
         self.languageTextField.text = UserSession.sharedInstance.getUserData()?.preferred_language
+        self.viewTopSpace.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 20 : 0
+        self.editButtonHeight.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 50 : 40
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
     }
     
@@ -52,6 +57,7 @@ extension ProfileViewController  : UITextFieldDelegate{
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
+        if(DeviceType.IS_IPHONE_6_OR_MORE){
         if(textField == self.firstNameTextField){
             if(newString.characters.count > 0)
             {
@@ -111,6 +117,7 @@ extension ProfileViewController  : UITextFieldDelegate{
                 self.languageHeight.constant = 0.0
             }
             self.languageTextField.updateConstraintsIfNeeded()
+        }
         }
         return true
     }

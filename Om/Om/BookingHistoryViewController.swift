@@ -10,6 +10,7 @@ import UIKit
 
 class BookingHistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noBookingLabel: UILabel!
 
     var bookingHistory = [Booking]()
     @IBOutlet weak var bookingHistoryTableView: UITableView!
@@ -46,6 +47,15 @@ class BookingHistoryViewController: UIViewController {
                             self.bookingHistoryTableView.reloadData()
                         })
                     }
+                }
+                
+                if(self.bookingHistory.count == 0){
+                    self.noBookingLabel.hidden = false
+                    self.bookingHistoryTableView.hidden = true
+                }
+                else{
+                    self.noBookingLabel.hidden = true
+                    self.bookingHistoryTableView.hidden = false
                 }
             })
         } else {

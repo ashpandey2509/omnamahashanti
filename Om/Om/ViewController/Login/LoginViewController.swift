@@ -10,6 +10,13 @@ import UIKit
 import KSToastView
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var loginButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var createAccountTopSpace: NSLayoutConstraint!
+    
+    @IBOutlet weak var profileBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var mobileLabel: UILabel!
@@ -21,6 +28,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        self.profileBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 92 : 20
+        self.profileTopConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 78 : 15
+        self.loginButtonBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 43 : 15
+        self.createAccountTopSpace.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 43 : 15
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,7 +61,7 @@ class LoginViewController: UIViewController {
                     if let firstName = userProfile.first_name {
                         ToastView.ShowToast("Welcome \(firstName)")
                     } else {
-                        ToastView.ShowToast("Welcome \(userProfile.email)")
+                        ToastView.ShowToast("Welcome \(userProfile.email!)")
                     }
                 }
             } else {

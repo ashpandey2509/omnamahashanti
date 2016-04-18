@@ -71,7 +71,7 @@ class APIService {
         }
     }
 
-    func signup(user: UserProfile, callback: (newUser: UserProfile, NSError?) -> Void) {
+    func signup(user: UserProfile, callback: (newUser: UserProfile?, NSError?) -> Void) {
         let url = baseURL + "users"
         debugPrint(url)
 
@@ -81,7 +81,7 @@ class APIService {
             "password": user.password
         ]
 
-        Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
+        Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.JSON, headers: nil).validate().responseJSON { (response) -> Void in
 
             if response.result.isSuccess {
                 if let JSON = response.result.value {
@@ -91,6 +91,14 @@ class APIService {
                     callback(newUser: UserProfile(), response.result.error)
                 }
             }
+            else {
+                print(NSString(data:response.data!, encoding:NSUTF8StringEncoding) as! String)
+                
+
+//                callback(newUser: nil, NSError("somedomain", 123, [])
+
+            }
+
         }
     }
     

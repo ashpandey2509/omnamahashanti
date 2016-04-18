@@ -10,7 +10,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var emailView: UIView!
-    
+    @IBOutlet weak var createAccountContentTopSpace: NSLayoutConstraint!
+
     @IBOutlet weak var createProfileButton: UIButton!
     @IBOutlet weak var confirmPasswordView: UIView!
     @IBOutlet weak var mobileView: UIView!
@@ -26,6 +27,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.createAccountContentTopSpace.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 54 : 20
 
         // Do any additional setup after loading the view.
     }
@@ -40,24 +42,7 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func signUpButtonClicked(button : UIButton){
-        if(!(self.emailTextField.text!.isValidEmail() && self.emailTextField.text!.characters.count > 0)){
-            ToastView.ShowToast("Please enter a valid email ID")
-        }
-        else if(self.mobileTextField.text!.characters.count != 10){
-            ToastView.ShowToast("Please enter a valid phone number")
-        }
-        else if(self.passwordTextField.text!.characters.count == 0 || self.confirmPasswordTextField.text!.characters.count == 0){
-            ToastView.ShowToast("Please enter a valid password")
-        }
-        else if(self.confirmPasswordTextField.text! != self.passwordTextField.text!){
-            ToastView.ShowToast("Password and confirm password fields do not match")
-        }
-        else{
-            //add signup code here
-        }
-    }
-    
+
 }
 
 extension SignUpViewController  : UITextFieldDelegate{
@@ -142,21 +127,34 @@ extension SignUpViewController  : UITextFieldDelegate{
     }
 
     @IBAction func userSignup(sender: AnyObject) {
-
-        let userDetails = UserProfile()
-        userDetails.email = self.emailTextField.text
-        userDetails.password = self.passwordTextField.text!
-        userDetails.mobile = self.mobileTextField.text
-
-        APIService.sharedInstance.signup(userDetails) { (newUser, error) -> Void in
-            if (error == nil) {
-                debugPrint(newUser)
-                UserSession.sharedInstance.saveUserData(newUser)
-                ToastView.ShowToast("Signup Successful")
-                self.navigationController?.popToRootViewControllerAnimated(true)
-            } else {
-                debugPrint(error)
-                ToastView.ShowToast("Error on Signup. Please try again.")
+        if(!(self.emailTextField.text!.isValidEmail() && self.emailTextField.text!.characters.count > 0)){
+            ToastView.ShowToast("Please enter a valid email ID")
+        }
+        else if(self.mobileTextField.text!.characters.count != 10){
+            ToastView.ShowToast("Please enter a valid phone number")
+        }
+        else if(self.passwordTextField.text!.characters.count == 0 || self.confirmPasswordTextField.text!.characters.count == 0){
+            ToastView.ShowToast("Please enter a valid password")
+        }
+        else if(self.confirmPasswordTextField.text! != self.passwordTextField.text!){
+            ToastView.ShowToast("Password and confirm password fields do not match")
+        }
+        else{
+            let userDetails = UserProfile()
+            userDetails.email = self.emailTextField.text
+            userDetails.password = self.passwordTextField.text!
+            userDetails.mobile = self.mobileTextField.text
+            
+            APIService.sharedInstance.signup(userDetails) { (newUser, error) -> Void in
+                if (error == nil && newUser != nil) {
+                    debugPrint(newUser)
+                    UserSession.sharedInstance.saveUserData(newUser)
+                    ToastView.ShowToast("Signup Successful")
+                    self.navigationController?.popToRootViewControllerAnimated(true)
+                } else if(error != nil){
+                    print(error)
+//                    ToastView.ShowToast(error)
+                }
             }
         }
 

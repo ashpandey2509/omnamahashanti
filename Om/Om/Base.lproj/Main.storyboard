@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -390,6 +390,7 @@ data</string>
                         <outlet property="casteHeight" destination="YTc-mV-EKO" id="Jay-DV-gF9"/>
                         <outlet property="casteTextField" destination="ZiJ-tz-pJb" id="aIF-ej-WJ0"/>
                         <outlet property="casteView" destination="RaU-pp-N4S" id="Uf0-ke-6WH"/>
+                        <outlet property="editButtonHeight" destination="Qtc-gZ-sZ8" id="Yld-nV-k62"/>
                         <outlet property="editProfileButton" destination="9Ty-Kt-ZF9" id="Hu3-34-a2O"/>
                         <outlet property="emailHeight" destination="DSi-2x-OhQ" id="sUX-OE-YFL"/>
                         <outlet property="emailTextField" destination="Am7-TK-bWI" id="6SL-Re-LBd"/>
@@ -403,6 +404,7 @@ data</string>
                         <outlet property="lastNameHeight" destination="fQa-k1-xc2" id="OMq-eS-oKg"/>
                         <outlet property="lastNameTextField" destination="WKO-xN-RL9" id="EUQ-PS-dGV"/>
                         <outlet property="lastNameView" destination="gak-rd-3ig" id="NnM-ms-6lf"/>
+                        <outlet property="viewTopSpace" destination="k5d-QV-m1h" id="0hK-mT-u0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvM-bG-4mR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -642,17 +644,30 @@ steps!</string>
                                     <outlet property="delegate" destination="kuB-7t-J7Y" id="qfi-td-JI0"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Booking Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF6-S4-gFh">
+                                <rect key="frame" x="0.0" y="278" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QLs-yG-fCY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oF6-S4-gFh" firstAttribute="centerY" secondItem="6yz-ze-WZK" secondAttribute="centerY" id="3oC-Uo-kb8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oF6-S4-gFh" secondAttribute="trailing" constant="-20" id="6Jq-gD-6MQ"/>
                             <constraint firstItem="hEX-9Z-J22" firstAttribute="top" secondItem="6yz-ze-WZK" secondAttribute="top" id="Lfc-I8-SWu"/>
                             <constraint firstItem="p9K-MP-jAS" firstAttribute="top" secondItem="hEX-9Z-J22" secondAttribute="bottom" id="QBU-8B-hh9"/>
                             <constraint firstAttribute="trailing" secondItem="hEX-9Z-J22" secondAttribute="trailing" id="Xfe-T7-OLN"/>
+                            <constraint firstItem="oF6-S4-gFh" firstAttribute="leading" secondItem="6yz-ze-WZK" secondAttribute="leadingMargin" constant="-20" id="jSL-dZ-Doq"/>
                             <constraint firstItem="hEX-9Z-J22" firstAttribute="leading" secondItem="6yz-ze-WZK" secondAttribute="leading" id="lUq-Jw-47E"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bookingHistoryTableView" destination="hEX-9Z-J22" id="P5v-oJ-ac7"/>
+                        <outlet property="noBookingLabel" destination="oF6-S4-gFh" id="SjO-Sl-vEB"/>
                         <outlet property="tableView" destination="hEX-9Z-J22" id="sFm-Wk-1qQ"/>
                     </connections>
                 </viewController>
@@ -818,11 +833,12 @@ steps!</string>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="top" secondItem="eGG-78-49c" secondAttribute="bottom" id="OtM-Cf-KvD"/>
                             <constraint firstItem="ByA-xR-dQY" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" constant="-20" id="TDA-KX-PAU"/>
                             <constraint firstAttribute="trailing" secondItem="WxP-dc-EHv" secondAttribute="trailing" constant="36" id="W9B-nJ-0gY"/>
+                            <constraint firstItem="79h-qM-Nqq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WxP-dc-EHv" secondAttribute="bottom" constant="20" id="X1M-BS-6y5"/>
                             <constraint firstItem="WHN-uM-b02" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leadingMargin" id="YPR-da-KyJ"/>
                             <constraint firstItem="WxP-dc-EHv" firstAttribute="top" secondItem="ByA-xR-dQY" secondAttribute="bottom" constant="16" id="dM0-W7-er0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ByA-xR-dQY" secondAttribute="trailing" constant="-20" id="dUV-AQ-JuS"/>
                             <constraint firstItem="WxP-dc-EHv" firstAttribute="leading" secondItem="pNa-WU-QYR" secondAttribute="leading" constant="36" id="fa3-od-jTe"/>
-                            <constraint firstItem="ByA-xR-dQY" firstAttribute="top" secondItem="WHN-uM-b02" secondAttribute="bottom" constant="16" id="tVN-Iw-lfn"/>
+                            <constraint firstItem="ByA-xR-dQY" firstAttribute="top" secondItem="WHN-uM-b02" secondAttribute="bottom" priority="750" constant="16" id="tVN-Iw-lfn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1029,19 +1045,21 @@ steps!</string>
                             <constraint firstItem="J4w-d8-N80" firstAttribute="top" secondItem="k3C-HJ-kwv" secondAttribute="bottom" constant="43" id="hse-rR-du3"/>
                             <constraint firstItem="J4w-d8-N80" firstAttribute="leading" secondItem="HHd-fo-wQu" secondAttribute="leadingMargin" constant="9" id="kG8-xL-kUM"/>
                             <constraint firstItem="yWL-P8-61G" firstAttribute="leading" secondItem="HHd-fo-wQu" secondAttribute="leadingMargin" constant="50" id="oXK-5h-Zbh"/>
+                            <constraint firstItem="oOz-fU-TTR" firstAttribute="top" secondItem="yWL-P8-61G" secondAttribute="bottom" constant="92" id="oaq-Sw-fA3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cxs-NC-2JT" secondAttribute="trailing" constant="60" id="qPz-gC-dH7"/>
                             <constraint firstItem="YFJ-Io-Nax" firstAttribute="leading" secondItem="HHd-fo-wQu" secondAttribute="leadingMargin" constant="50" id="qiR-ER-zzX"/>
                             <constraint firstItem="ut9-K3-pBz" firstAttribute="top" secondItem="VbS-hF-3j0" secondAttribute="bottom" constant="18" id="s3C-uE-dG4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J4w-d8-N80" secondAttribute="trailing" constant="7" id="shR-lz-1iJ"/>
                             <constraint firstItem="YFJ-Io-Nax" firstAttribute="top" secondItem="RXv-sq-mXy" secondAttribute="bottom" constant="-1" id="u09-d8-6ah"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k3C-HJ-kwv" secondAttribute="trailing" constant="50" id="vLh-ql-jCK"/>
-                            <constraint firstItem="k3C-HJ-kwv" firstAttribute="top" secondItem="ut9-K3-pBz" secondAttribute="bottom" constant="43" id="wPT-OE-Dpj"/>
                             <constraint firstItem="Cxs-NC-2JT" firstAttribute="top" secondItem="vFe-ZV-exn" secondAttribute="bottom" constant="78" id="xFM-nZ-Cqk"/>
                             <constraint firstItem="G9E-aR-zV9" firstAttribute="leading" secondItem="HHd-fo-wQu" secondAttribute="leadingMargin" constant="60" id="xkq-Ra-4xO"/>
                             <constraint firstItem="77g-9Q-46t" firstAttribute="leading" secondItem="HHd-fo-wQu" secondAttribute="leadingMargin" constant="50" id="ygb-To-CUz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="createAccountTopSpace" destination="LOy-ek-gei" id="NOF-dt-K7d"/>
+                        <outlet property="loginButtonBottomConstraint" destination="hse-rR-du3" id="5rS-iT-mVF"/>
                         <outlet property="mobileHeightConstraint" destination="zpC-kQ-QcM" id="hqp-PB-IwI"/>
                         <outlet property="mobileHighLightView" destination="YFJ-Io-Nax" id="RxC-gx-Yeo"/>
                         <outlet property="mobileLabel" destination="Cxs-NC-2JT" id="KSk-5t-tYx"/>
@@ -1050,6 +1068,8 @@ steps!</string>
                         <outlet property="passwordHighLightView" destination="77g-9Q-46t" id="Ih6-RB-LcK"/>
                         <outlet property="passwordLabel" destination="VbS-hF-3j0" id="ppj-aj-VPF"/>
                         <outlet property="passwordtextField" destination="ut9-K3-pBz" id="SHm-9h-1Qt"/>
+                        <outlet property="profileBottomConstraint" destination="oaq-Sw-fA3" id="A3Y-NT-Ddt"/>
+                        <outlet property="profileTopConstraint" destination="xFM-nZ-Cqk" id="njp-zM-vcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLu-5b-3nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1151,7 +1171,6 @@ steps!</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpButtonClicked:" destination="CRu-dK-NPL" eventType="touchUpInside" id="xCP-Fc-gqB"/>
                                     <action selector="userSignup:" destination="CRu-dK-NPL" eventType="touchUpInside" id="fSU-nM-8XM"/>
                                 </connections>
                             </button>
@@ -1239,6 +1258,7 @@ steps!</string>
                         <outlet property="confirmPasswordHeightConstraint" destination="FDl-Od-wIY" id="UZW-PX-KdS"/>
                         <outlet property="confirmPasswordTextField" destination="gj1-Hq-dNh" id="mzU-Qi-XcL"/>
                         <outlet property="confirmPasswordView" destination="36I-X1-AWS" id="xuG-SS-Gil"/>
+                        <outlet property="createAccountContentTopSpace" destination="woC-oS-4vS" id="G0S-Nt-rKL"/>
                         <outlet property="createProfileButton" destination="44p-Pz-Epz" id="Mst-G9-NLa"/>
                         <outlet property="emailHeightConstraint" destination="P77-cR-bwk" id="MJ4-4h-Ptn"/>
                         <outlet property="emailTextField" destination="Ndy-Vq-vDi" id="sJQ-fG-IZw"/>
