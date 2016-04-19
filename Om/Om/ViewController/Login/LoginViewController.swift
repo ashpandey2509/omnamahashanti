@@ -29,9 +29,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        self.profileBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 92 : 20
+        self.profileBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 92 : 50
         self.profileTopConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 78 : 15
-        self.loginButtonBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 43 : 15
+        self.loginButtonBottomConstraint.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 43 : 25
         self.createAccountTopSpace.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 43 : 15
     }
     
@@ -83,31 +83,36 @@ class LoginViewController: UIViewController {
         self.title = ""
     }
 
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension LoginViewController  : UITextFieldDelegate{
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
-        if(textField == self.mobileTextField){
-            if(newString.characters.count > 0)
-            {
-                self.mobileHeightConstraint.constant = 18.0
+        if(DeviceType.IS_IPHONE_6_OR_MORE){
+            if(textField == self.mobileTextField){
+                if(newString.characters.count > 0)
+                {
+                    self.mobileHeightConstraint.constant = 18.0
+                }
+                else{
+                    self.mobileHeightConstraint.constant = 0.0
+                }
+                self.mobileTextField.updateConstraintsIfNeeded()
             }
-            else{
-                self.mobileHeightConstraint.constant = 0.0
+            else if(textField == self.passwordtextField ){
+                if(newString.characters.count > 0)
+                {
+                    self.passwordHeightConstraint.constant = 18.0
+                }
+                else{
+                    self.passwordHeightConstraint.constant = 0.0
+                }
+                self.passwordtextField.updateConstraintsIfNeeded()
             }
-            self.mobileTextField.updateConstraintsIfNeeded()
-        }
-        else if(textField == self.passwordtextField ){
-            if(newString.characters.count > 0)
-            {
-                self.passwordHeightConstraint.constant = 18.0
-            }
-            else{
-                self.passwordHeightConstraint.constant = 0.0
-            }
-            self.passwordtextField.updateConstraintsIfNeeded()
         }
         return true
     }

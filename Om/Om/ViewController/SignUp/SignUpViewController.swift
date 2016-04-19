@@ -9,6 +9,9 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    var navigationHeight : CGFloat = 64
+    var keyboardOffset : CGFloat = 0
+    var currentlyEditedTextField : UITextField?
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var createAccountContentTopSpace: NSLayoutConstraint!
 
@@ -27,9 +30,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var mobileHeightConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.createAccountContentTopSpace.constant =  DeviceType.IS_IPHONE_6_OR_MORE ? 54 : 20
-
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -42,13 +44,35 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
 
+    func findActiveResponder(view:UIView)->UIView?{
+        if view.isFirstResponder() {
+            return view
+        } else {
+            for sub in view.subviews {
+                if let subView = sub as? UIView,
+                    found = findActiveResponder(subView){
+                    return found
+                }
+            }
+        }
+        return nil
+    }
+    
+    func getEditingOffsetForTextField(textField : UITextField) -> CGFloat{
+        return -textField.frame.origin.y + self.navigationHeight + self.keyboardOffset
+    }
 }
 
 extension SignUpViewController  : UITextFieldDelegate{
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let newString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        
+        if(DeviceType.IS_IPHONE_6_OR_MORE){
+
         if(textField == self.emailTextField){
             if(newString.characters.count > 0)
             {
@@ -89,8 +113,24 @@ extension SignUpViewController  : UITextFieldDelegate{
             }
             self.mobileTextField.updateConstraintsIfNeeded()
         }
+        }
         return true
     }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.keyboardOffset = self.emailTextField.frame.origin.y
+        self.currentlyEditedTextField = textField
+        self.view.frame.origin.y = self.getEditingOffsetForTextField(textField)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        if(self.findActiveResponder(self.view) == nil ||  self.currentlyEditedTextField == textField){
+            self.view.frame.origin.y = self.navigationHeight
+        }
+        return true
+    }
+    
     
     func textFieldDidBeginEditing(textField: UITextField) {
         if(textField == self.emailTextField){

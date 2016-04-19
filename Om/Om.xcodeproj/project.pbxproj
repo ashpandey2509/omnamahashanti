@@ -38,6 +38,7 @@
 		15081C681C82AE91006A7F88 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C671C82AE91006A7F88 /* SignUpViewController.swift */; };
 		15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C691C82F206006A7F88 /* TermsnConditionsViewController.swift */; };
 		15081C6C1C82F229006A7F88 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */; };
+		1517F4F81CC4AE8900BCF8E1 /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1517F4F71CC4AE8900BCF8E1 /* Pods_Om.framework */; };
 		15256F9A1C9544DD00AF7197 /* BookingConfirmationHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256F981C9544DD00AF7197 /* BookingConfirmationHeaderCell.swift */; };
 		15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */; };
 		15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */; };
@@ -56,8 +57,6 @@
 		5F57D4651CA06A6200EE92F3 /* BookingConfirmationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */; };
 		5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E76591C95577000C2C29E /* ToastView.swift */; };
 		5F5E765E1C95692000C2C29E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E765D1C95692000C2C29E /* ActivityIndicator.swift */; };
-		5F7A841E1C9537AD0090E2E5 /* Pods_Om.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; };
-		5F7A841F1C9537AD0090E2E5 /* Pods_Om.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F87FD241CA84924006C9612 /* BookingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87FD231CA84924006C9612 /* BookingHistoryViewController.swift */; };
 		5F9888121C8356DC00DEF0F4 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888111C8356DC00DEF0F4 /* UserSession.swift */; };
 		5F9888141C856C5D00DEF0F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9888131C856C5D00DEF0F4 /* ProfileViewController.swift */; };
@@ -81,20 +80,6 @@
 			remoteInfo = Om;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		5F7A84201C9537AD0090E2E5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				5F7A841F1C9537AD0090E2E5 /* Pods_Om.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		15081BCC1C80B9A1006A7F88 /* Om.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Om.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +122,7 @@
 		15081C671C82AE91006A7F88 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewController/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
 		15081C691C82F206006A7F88 /* TermsnConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsnConditionsViewController.swift; path = ViewController/TermsnConditions/TermsnConditionsViewController.swift; sourceTree = "<group>"; };
 		15081C6B1C82F229006A7F88 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacyPolicyViewController.swift; path = ViewController/PrivacyPolicy/PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		1517F4F71CC4AE8900BCF8E1 /* Pods_Om.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Om.framework; path = "Pods/../build/Release-iphoneos/Pods_Om.framework"; sourceTree = "<group>"; };
 		15256F981C9544DD00AF7197 /* BookingConfirmationHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingConfirmationHeaderCell.swift; path = CustomViews/Cell/BookingConfirmation/Header/BookingConfirmationHeaderCell.swift; sourceTree = "<group>"; };
 		15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationHeaderCell.xib; path = CustomViews/Cell/BookingConfirmation/Header/BookingConfirmationHeaderCell.xib; sourceTree = "<group>"; };
 		15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingConfirmationContentCell.swift; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.swift; sourceTree = "<group>"; };
@@ -170,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F7A841E1C9537AD0090E2E5 /* Pods_Om.framework in Frameworks */,
+				1517F4F81CC4AE8900BCF8E1 /* Pods_Om.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +596,7 @@
 		7246FA8FB015565C4F000DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1517F4F71CC4AE8900BCF8E1 /* Pods_Om.framework */,
 				95FAB8DFB5EE329436F01FCD /* Pods_Om.framework */,
 			);
 			name = Frameworks;
@@ -628,7 +615,6 @@
 				15081BCA1C80B9A1006A7F88 /* Resources */,
 				EB72F65E95CFE68A4AD2514C /* Embed Pods Frameworks */,
 				32EE65AD0FA806F42D802C3D /* Copy Pods Resources */,
-				5F7A84201C9537AD0090E2E5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -997,7 +983,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shyamsunder . (BNEB5T5BWF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
+				);
 				INFOPLIST_FILE = Om/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1016,7 +1006,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shyamsunder . (F7D4F3P4W7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
+				);
 				INFOPLIST_FILE = Om/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
