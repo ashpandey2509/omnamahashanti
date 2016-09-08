@@ -9,6 +9,7 @@
 import Foundation
 
 class Booking{
+    var locationDetails : Location?
     var product : Product?
     var vendor : Vendor?
     var _id : String?

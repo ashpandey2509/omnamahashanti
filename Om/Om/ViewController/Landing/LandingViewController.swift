@@ -9,7 +9,7 @@
 import UIKit
 import MMDrawerController
 class LandingViewController: UIViewController {
-    
+    @IBOutlet weak var currentlyAvailableLabel: UILabel!
     @IBOutlet weak var bookPoojaView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
@@ -37,6 +37,7 @@ class LandingViewController: UIViewController {
     }
 
     func customizeView(){
+        self.currentlyAvailableLabel.text = "Currently in Mumbai, Pune and Hyderabad only"
         self.bookPoojaView.layer.borderColor = UIColor.getBookPoojaBorderColor().CGColor
         self.bookPoojaView.layer.borderWidth = 0.5
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]

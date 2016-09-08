@@ -58,7 +58,7 @@ class PanditSelectionViewController: UIViewController {
         resetVendorTable()
         
         let selectedDateMilli = selectedDate.timeIntervalSince1970*1000
-        APIService.sharedInstance.getVendorAvailability("mumbai", bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
+        APIService.sharedInstance.getVendorAvailability(UserSession.sharedInstance.newBooking!.locationDetails!.locationName!, bookDate: Int64(selectedDateMilli)) { (vendors, error) -> Void in
             self.vendors = vendors
             self.tableView.reloadData()
             self.tableView.contentOffset = CGPointMake(0, 0)

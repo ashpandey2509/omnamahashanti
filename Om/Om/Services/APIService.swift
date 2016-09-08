@@ -19,7 +19,7 @@ class APIService {
         print("Initializing API Services class")
     }
 
-    func getProducts(callback: ([Product], NSError?) -> Void) {
+    func getProducts(callback: ([Product], [Location], NSError?) -> Void) {
 
         debugPrint("DEBUG: ", "api service call for products")
 
@@ -30,15 +30,21 @@ class APIService {
             print(response.result.error)
 
             var productList = [Product]()
+            var locationList = [Location]()
 
             if let JSON = response.result.value {
                 let productListJson = JSON["list"] as? NSArray
                 for item in productListJson! {
                     productList.append(Product(dataDict: item as! NSDictionary))
                 }
+                
+                let locationJson = JSON["locations"] as? NSArray
+                for item in locationJson! {
+                    locationList.append(Location(dictionary: item as! NSDictionary))
+                }
             }
 
-            callback(productList, response.result.error)
+            callback(productList,locationList, response.result.error)
         }
     }
 
@@ -110,7 +116,7 @@ class APIService {
             "vendor_id": booking.vendor!.id!,
             "product_id": booking.product!.id,
             "book_date": String((booking.book_date_NSDate?.dateMilliSecs)!),
-            "location" : "mumbai",
+            "location" : UserSession.sharedInstance.newBooking!.locationDetails!.locationName!,
             "slot" :  booking.slot!,
             "address" : address]
         debugPrint(params)

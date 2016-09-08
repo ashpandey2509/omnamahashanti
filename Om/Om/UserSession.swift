@@ -11,7 +11,6 @@ import Foundation
 public class UserSession {
 
     static let sharedInstance = UserSession()
-    var products : [Product]?
     var newBooking : Booking?
 
     init() {
@@ -20,17 +19,10 @@ public class UserSession {
     }
 
     
-    public func getProducts(callback: ([Product], NSError?) -> Void ) {
-
-        if let _ = products {
-            debugPrint("DEBUG: ", "using cached products")
-            callback(products!, nil)
-        } else {
-            APIService.sharedInstance.getProducts({ (products, error) -> Void in
-                self.products = products
-                callback(products, error)
-            })
-        }
+    public func getProducts(callback: ([Product], [Location], NSError?) -> Void ) {
+        APIService.sharedInstance.getProducts({ (products,locations, error) -> Void in
+            callback(products,locations, error)
+        })
     }
 
     public func isLoggedInUser() -> Bool {

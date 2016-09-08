@@ -98,7 +98,6 @@ class DrawerViewController: UIViewController {
     }
     
     func logoutClicked(){
-        UserSession.sharedInstance.products = nil
         UserSession.sharedInstance.saveUserData(nil)
         UserSession.sharedInstance.newBooking?.user_id = nil
         self.updateDrawerState()

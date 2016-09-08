@@ -212,6 +212,7 @@ extension OrderConfirmationViewController : UITableViewDataSource {
         return cell
     }
 
+    
     func setupAddressCell(cell : BookingConfirmationContentCell) {
         cell.titleLabel.textColor = UIColor.getThemeColor()
 

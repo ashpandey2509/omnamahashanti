@@ -11,6 +11,7 @@ import UIKit
 class PoojaViewController: UIViewController {
 
     var products = [Product]()
+    var locations = [Location]()
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -38,8 +39,9 @@ class PoojaViewController: UIViewController {
         let activityIndicator = ActivityIndicator(parent: self.view)
         self.view.addSubview(activityIndicator)
         activityIndicator.showIndicator()
-        UserSession.sharedInstance.getProducts { (products, error) -> Void in
+        UserSession.sharedInstance.getProducts { (products,locations, error) -> Void in
             self.products = products
+            self.locations = locations
             self.tableView.reloadData()
             activityIndicator.hideIndicator()
         }
@@ -75,10 +77,13 @@ extension PoojaViewController : UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.title = ""
+
         let dateSelectionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateSelectionViewController") as! DateSelectionViewController
         let selectedProduct = products[indexPath.row]
         UserSession.sharedInstance.newBooking?.product = selectedProduct
         dateSelectionViewController.product = selectedProduct
+        dateSelectionViewController.locations = self.locations
         self.navigationController?.pushViewController(dateSelectionViewController, animated: true)
     }
 }
