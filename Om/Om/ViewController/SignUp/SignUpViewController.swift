@@ -187,12 +187,12 @@ extension SignUpViewController  : UITextFieldDelegate{
             
             APIService.sharedInstance.signup(userDetails) { (newUser, error) -> Void in
                 if (error == nil && newUser != nil) {
-                    debugPrint(newUser)
+                //   debugPrint(newUser)
                     UserSession.sharedInstance.saveUserData(newUser)
                     ToastView.ShowToast("Signup Successful")
                     self.navigationController?.popToRootViewControllerAnimated(true)
                 } else if(error != nil){
-                    print(error)
+                   // print(error)
 //                    ToastView.ShowToast(error)
                 }
             }

@@ -16,18 +16,17 @@ class APIService {
     static let sharedInstance = APIService()
 
     init() {
-        print("Initializing API Services class")
+       // print("Initializing API Services class")
     }
 
     func getProducts(callback: ([Product], [Location], NSError?) -> Void) {
 
-        debugPrint("DEBUG: ", "api service call for products")
+       // debugPrint("DEBUG: ", "api service call for products")
 
         let url = baseURL + "products"
         Alamofire.request(Alamofire.Method.GET, url).responseJSON { (response) -> Void in
 
             //print(response.result.value)
-            print(response.result.error)
 
             var productList = [Product]()
             var locationList = [Location]()
@@ -50,7 +49,7 @@ class APIService {
 
     func getVendorAvailability(location: String, bookDate: Int64, callback: ([Vendor], NSError?) -> Void) {
         let url = baseURL + "vendors?" + "location=" + location + "&book_date=" + String(bookDate)
-        debugPrint(url)
+       // debugPrint(url)
         Alamofire.request(Alamofire.Method.GET, url).responseJSON { (response) -> Void in
 
             var list = [Vendor]()
@@ -68,7 +67,6 @@ class APIService {
 
     func validateUser(mobile: String, password: String, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "users/auth"
-        debugPrint(url)
         let params = ["mobile": mobile, "password": password ]
         Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
             .validate()
@@ -79,7 +77,7 @@ class APIService {
 
     func signup(user: UserProfile, callback: (newUser: UserProfile?, NSError?) -> Void) {
         let url = baseURL + "users"
-        debugPrint(url)
+       // debugPrint(url)
 
         let params : [String : String] = ["email": user.email!,
             "mobile": user.mobile!,
@@ -98,7 +96,7 @@ class APIService {
                 }
             }
             else {
-                print(NSString(data:response.data!, encoding:NSUTF8StringEncoding) as! String)
+                //print(NSString(data:response.data!, encoding:NSUTF8StringEncoding) as! String)
                 
 
 //                callback(newUser: nil, NSError("somedomain", 123, [])
@@ -111,7 +109,7 @@ class APIService {
     
     func book(booking : Booking, address : String,  callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings"
-        debugPrint(url)
+       // debugPrint(url)
         let params : [String : String] = ["user_id": (UserSession.sharedInstance.getUserData()?.id)!,
             "vendor_id": booking.vendor!.id!,
             "product_id": booking.product!.id,
@@ -119,7 +117,7 @@ class APIService {
             "location" : UserSession.sharedInstance.newBooking!.locationDetails!.locationName!,
             "slot" :  booking.slot!,
             "address" : address]
-        debugPrint(params)
+        //debugPrint(params)
 
         Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
             .validate()
@@ -130,9 +128,9 @@ class APIService {
 
     func cancelBooking(bookingId: String, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings/\(bookingId)"
-        debugPrint(url)
+        //debugPrint(url)
         let params = ["status": "cancelled"]
-        debugPrint(params)
+        //debugPrint(params)
 
         Alamofire.request(Alamofire.Method.PUT, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
             callback(response)
@@ -141,7 +139,7 @@ class APIService {
 
     func bookingHistoryforOpenTickets(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings?user_id=\(user.id!)&status=open"
-        debugPrint(url)
+        //debugPrint(url)
         Alamofire.request(Alamofire.Method.GET, url, parameters: nil, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
             callback(response)
         }
@@ -149,7 +147,7 @@ class APIService {
 
     func bookingHistory(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "bookings?user_id=\(user.id!)"
-        debugPrint(url)
+       // debugPrint(url)
         Alamofire.request(Alamofire.Method.GET, url, parameters: nil, encoding: ParameterEncoding.URL, headers: nil).validate().responseJSON { (response) -> Void in
             callback(response)
         }
@@ -157,7 +155,7 @@ class APIService {
 
     func editProfile(user: UserProfile, callback: (Response<AnyObject, NSError>) -> Void) {
         let url = baseURL + "users/\(user.id!)"
-        debugPrint(url)
+       // debugPrint(url)
         var params = [String: String]()
         params["first_name"] = user.first_name ?? ""
         params["last_name"] = user.last_name ?? ""

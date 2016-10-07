@@ -100,22 +100,10 @@ class DateSelectionViewController: UIViewController {
                 alertController.addAction(action)
             }
             
-            let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            let attributedText = NSMutableAttributedString(string: "OK")
-            
-            let range = NSRange(location: 0, length: attributedText.length)
-            attributedText.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(18), range: range)
-            attributedText.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 77.0/255.0, green: 77.0/255.0, blue: 77.0/255.0, alpha: 1), range: range)
-            alertController.addAction(action)
-            
-            
             presentViewController(alertController, animated: true, completion: {
                 alertController.view.tintColor = UIColor(red: 77.0/255.0, green: 77.0/255.0, blue: 77.0/255.0, alpha: 1)
             })
-            
-            
-            guard let label = action.valueForKey("__representer")?.valueForKey("label") as? UILabel else { return }
-            label.attributedText = attributedText
+
         }
     }
 

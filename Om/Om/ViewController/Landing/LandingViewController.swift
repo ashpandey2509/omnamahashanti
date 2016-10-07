@@ -74,8 +74,8 @@ class LandingViewController: UIViewController {
             let loggedInUser = UserSession.sharedInstance.getUserData()!
             APIService.sharedInstance.bookingHistoryforOpenTickets(loggedInUser, callback: { (response) -> Void in
 
-                debugPrint("DEBUG: ", response.result.value)
-                debugPrint("DEBUG ERROR: ", response.result.error)
+               // debugPrint("DEBUG: ", response.result.value)
+                //debugPrint("DEBUG ERROR: ", response.result.error)
 
                 if response.result.isSuccess {
                     if let JSON = response.result.value {

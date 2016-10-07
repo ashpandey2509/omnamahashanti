@@ -111,7 +111,7 @@ class OrderConfirmationViewController: UIViewController {
                         self.navigationController?.popToRootViewControllerAnimated(true)
                     } else {
                         ToastView.ShowToast("Booking Error. Try again after some time.")
-                        debugPrint("ERROR: ", response.result.error)
+                      //  debugPrint("ERROR: ", response.result.error)
                     }
                     activityIndicator.hideIndicator()
             })

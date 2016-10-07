@@ -43,6 +43,7 @@
 		15256F9B1C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */; };
 		15256FA61C95485800AF7197 /* BookingConfirmationContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */; };
 		15256FA71C95485800AF7197 /* BookingConfirmationContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */; };
+		15329F0E1D809DB1007F984E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15329F0D1D809DB1007F984E /* Location.swift */; };
 		15B10B911C95C41F00E93902 /* TermsnConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10B8F1C95C41F00E93902 /* TermsnConditionsCell.swift */; };
 		15B10B921C95C41F00E93902 /* TermsnConditionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */; };
 		15B55F7B1C95676A004BDB84 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */; };
@@ -53,6 +54,8 @@
 		15D312D71C8B5C9000EDB389 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */; };
 		15D312DA1C8B5CC700EDB389 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */; };
 		15D312DE1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */; };
+		15DFDD3F1D904AC700745707 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DFDD3D1D904AC700745707 /* AccountKit.framework */; };
+		15DFDD401D904AC700745707 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15DFDD3E1D904AC700745707 /* AccountKitStrings.bundle */; };
 		5F57D4631CA069B400EE92F3 /* BookingConfirmationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */; };
 		5F57D4651CA06A6200EE92F3 /* BookingConfirmationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */; };
 		5F5E765A1C95577000C2C29E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E76591C95577000C2C29E /* ToastView.swift */; };
@@ -127,6 +130,7 @@
 		15256F991C9544DD00AF7197 /* BookingConfirmationHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationHeaderCell.xib; path = CustomViews/Cell/BookingConfirmation/Header/BookingConfirmationHeaderCell.xib; sourceTree = "<group>"; };
 		15256FA41C95485800AF7197 /* BookingConfirmationContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingConfirmationContentCell.swift; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.swift; sourceTree = "<group>"; };
 		15256FA51C95485800AF7197 /* BookingConfirmationContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookingConfirmationContentCell.xib; path = CustomViews/Cell/BookingConfirmation/Content/BookingConfirmationContentCell.xib; sourceTree = "<group>"; };
+		15329F0D1D809DB1007F984E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Services/Model/Location.swift; sourceTree = "<group>"; };
 		15B10B8F1C95C41F00E93902 /* TermsnConditionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsnConditionsCell.swift; path = CustomViews/Cell/BookingConfirmation/TermsnConditions/TermsnConditionsCell.swift; sourceTree = "<group>"; };
 		15B10B901C95C41F00E93902 /* TermsnConditionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TermsnConditionsCell.xib; path = CustomViews/Cell/BookingConfirmation/TermsnConditions/TermsnConditionsCell.xib; sourceTree = "<group>"; };
 		15B55F7A1C95676A004BDB84 /* ConstraintUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintUtil.swift; path = Util/Constraint/ConstraintUtil.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		15D312D61C8B5C9000EDB389 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderHistoryViewController.swift; path = ViewController/OrderHistory/OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		15D312D91C8B5CC700EDB389 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = ViewController/OrderConfirmation/OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		15D312DC1C8B5F4F00EDB389 /* PoojaConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoojaConfirmationTableViewCell.swift; path = CustomViews/Cell/PoojaConfirmation/PoojaConfirmationTableViewCell.swift; sourceTree = "<group>"; };
+		15DFDD3D1D904AC700745707 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		15DFDD3E1D904AC700745707 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		5786A92ADB3EFC1ACDE1298F /* Pods-Om.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Om.release.xcconfig"; path = "Pods/Target Support Files/Pods-Om/Pods-Om.release.xcconfig"; sourceTree = "<group>"; };
 		5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationEntry.swift; sourceTree = "<group>"; };
 		5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationGroup.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1517F4F81CC4AE8900BCF8E1 /* Pods_Om.framework in Frameworks */,
+				15DFDD3F1D904AC700745707 /* AccountKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +219,8 @@
 				15081C071C80BA54006A7F88 /* Om-Bridging-Header.h */,
 				15081BD61C80B9A1006A7F88 /* Assets.xcassets */,
 				15081BD81C80B9A1006A7F88 /* LaunchScreen.storyboard */,
+				15DFDD3D1D904AC700745707 /* AccountKit.framework */,
+				15DFDD3E1D904AC700745707 /* AccountKitStrings.bundle */,
 				15081BDB1C80B9A1006A7F88 /* Info.plist */,
 				15081C541C822AA8006A7F88 /* Constant.h */,
 			);
@@ -581,6 +590,7 @@
 				15CDB8101C96C5DE0063E363 /* Booking.swift */,
 				5F57D4621CA069B400EE92F3 /* BookingConfirmationEntry.swift */,
 				5F57D4641CA06A6200EE92F3 /* BookingConfirmationGroup.swift */,
+				15329F0D1D809DB1007F984E /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -717,6 +727,7 @@
 				15081BDA1C80B9A1006A7F88 /* LaunchScreen.storyboard in Resources */,
 				15B10B921C95C41F00E93902 /* TermsnConditionsCell.xib in Resources */,
 				15081BD71C80B9A1006A7F88 /* Assets.xcassets in Resources */,
+				15DFDD401D904AC700745707 /* AccountKitStrings.bundle in Resources */,
 				15256FA71C95485800AF7197 /* BookingConfirmationContentCell.xib in Resources */,
 				15081BD51C80B9A1006A7F88 /* Main.storyboard in Resources */,
 			);
@@ -825,6 +836,7 @@
 				15081C221C80E083006A7F88 /* DrawerTableViewCell.swift in Sources */,
 				15081C6A1C82F206006A7F88 /* TermsnConditionsViewController.swift in Sources */,
 				15081C2A1C80E2DE006A7F88 /* DateSelectionViewController.swift in Sources */,
+				15329F0E1D809DB1007F984E /* Location.swift in Sources */,
 				15081C161C80C6F6006A7F88 /* LandingViewController.swift in Sources */,
 				15CDB8111C96C5DE0063E363 /* Booking.swift in Sources */,
 				15B55F801C956C78004BDB84 /* ViewUtil.swift in Sources */,
@@ -987,6 +999,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Om",
 				);
 				INFOPLIST_FILE = Om/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1010,6 +1023,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Om",
 				);
 				INFOPLIST_FILE = Om/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
