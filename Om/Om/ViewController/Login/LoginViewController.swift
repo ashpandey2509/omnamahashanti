@@ -37,39 +37,12 @@ class LoginViewController: UIViewController {
         self.title = "User Login"
     }
 
-//    @IBAction func loginButtonClicked(sender: AnyObject) {
-//        // validate user
-//        let activityIndicator = ActivityIndicator(parent: self.view)
-//        self.view.addSubview(activityIndicator)
-//        activityIndicator.showIndicator()
-//        APIService.sharedInstance.validateUser(self.mobileTextField.text!, password: self.passwordtextField.text!) { (response) -> Void in
-//            activityIndicator.hideIndicator()
-//
-//            if (response.result.isSuccess) {
-//                self.navigationController?.popViewControllerAnimated(true)
-//               // debugPrint("logged in user", response.result.value)
-//
-//                if let json = response.result.value {
-//                    let userProfileDict = json as? NSDictionary
-//                    let userProfile = UserProfile(dataDict: userProfileDict!)
-//                    UserSession.sharedInstance.saveUserData(userProfile)
-//
-//                    NotificationManager.sharedInstance.notifyLoginChange()
-//
-//                    if let firstName = userProfile.first_name {
-//                        ToastView.ShowToast("Welcome \(firstName)")
-//                    } else {
-//                        ToastView.ShowToast("Welcome \(userProfile.email!)")
-//                    }
-//                }
-//            } else {
-//                ToastView.ShowToast("Invalid Credentials. Please try again.")
-//            }
-//        }
-//    }
-    
+
     @IBAction func loginButtonClicked(sender: AnyObject) {
         if let accountKitPhoneLoginVC = ACCOUNT_KIT.viewControllerForPhoneLoginWithPhoneNumber(nil, state: nil) as? AKFViewController{
+            let theme = AKFTheme(primaryColor: UIColor.init(hexString: "#E94334"), primaryTextColor: UIColor.whiteColor(), secondaryColor: UIColor.init(hexString: "#EFEFEF"), secondaryTextColor: UIColor.init(hexString: "#44566B"), statusBarStyle: UIStatusBarStyle.LightContent)
+            accountKitPhoneLoginVC.theme = theme
+            accountKitPhoneLoginVC.whitelistedCountryCodes = ["IN"]
             accountKitPhoneLoginVC.enableSendToFacebook = true
             accountKitPhoneLoginVC.delegate = self
             presentViewController(accountKitPhoneLoginVC as! UIViewController, animated: true, completion: nil)
@@ -140,9 +113,7 @@ extension LoginViewController  : UITextFieldDelegate{
     }
 }
 
-//-------------------------------------------------------------------------
-//MARK:- AKFViewControllerDelegate
-//-------------------------------------------------------------------------
+
 extension LoginViewController:AKFViewControllerDelegate{
     
     //Delegate 1
@@ -154,16 +125,24 @@ extension LoginViewController:AKFViewControllerDelegate{
     func viewController(viewController: UIViewController!, didCompleteLoginWithAccessToken accessToken: AKFAccessToken!, state: String!) {
         ACCOUNT_KIT.requestAccount({ (account:AKFAccount?, error:NSError?) in
             if let phoneNumber = account?.phoneNumber?.stringRepresentation(){
-                print(phoneNumber)
+                APIService.sharedInstance.getUserDetails(phoneNumber, callback: { (userProfile, error) in
+                    if(userProfile != nil){
+                        UserSession.sharedInstance.saveUserData(userProfile)
+                         self.navigationController?.popToRootViewControllerAnimated(true)
+                           NotificationManager.sharedInstance.notifyLoginChange()
+                    }
+                    else if(error != nil){
+                        
+                    }
+                    else{
+                        let signUpVC = self.storyboard?.instantiateViewControllerWithIdentifier("SignUpViewController") as! SignUpViewController
+                        signUpVC.phoneNumber = phoneNumber.stringByReplacingOccurrencesOfString("+91", withString: "")
+                        self.navigationController?.pushViewController(signUpVC, animated: true)
+                        
+                    }
+                })
             }
-            
-            if let emailAddress = account?.emailAddress{
-                print(emailAddress)
-            }
-            
-            if let accountID = account?.accountID{
-                print(accountID)
-            }
+
             
         })
     }

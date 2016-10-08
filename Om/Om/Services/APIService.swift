@@ -74,15 +74,42 @@ class APIService {
             callback(response)
         }
     }
+    
+    
+    func getUserDetails(mobile: String, callback: (newUser: UserProfile?, NSError?) -> Void) {
+        let url = baseURL + "users?mobile=" + mobile.stringByReplacingOccurrencesOfString("+91", withString: "")
+        Alamofire.request(Alamofire.Method.GET, url, parameters: nil, encoding: ParameterEncoding.JSON, headers: nil).validate().responseJSON { (response) -> Void in
+            
+            if response.result.isSuccess {
+                if let JSON = response.result.value {
+                    let list = ((JSON as! NSDictionary)["list"] as! NSArray)
+                    if(list.count > 0){
+                    let newUser = UserProfile(dataDict: list[0] as! NSDictionary)
+                        callback(newUser: newUser, response.result.error)
+                    }
+                    else{
+                        callback(newUser: nil, nil)
+                    }
+                } else {
+                    callback(newUser: UserProfile(), response.result.error)
+                }
+            }
+            else {
 
-    func signup(user: UserProfile, callback: (newUser: UserProfile?, NSError?) -> Void) {
+            }
+            
+        }
+    }
+
+
+    func signup(user: UserProfile, callback: (newUser: UserProfile?, errorString :String?) -> Void) {
         let url = baseURL + "users"
        // debugPrint(url)
 
         let params : [String : String] = ["email": user.email!,
             "mobile": user.mobile!,
             "country_code": "91",
-            "password": user.password
+            "password": "secret"
         ]
 
         Alamofire.request(Alamofire.Method.POST, url, parameters: params, encoding: ParameterEncoding.JSON, headers: nil).validate().responseJSON { (response) -> Void in
@@ -90,19 +117,16 @@ class APIService {
             if response.result.isSuccess {
                 if let JSON = response.result.value {
                     let newUser = UserProfile(dataDict: JSON as! NSDictionary)
-                    callback(newUser: newUser, response.result.error)
+                    callback(newUser: newUser, errorString: response.result.error?.description)
                 } else {
-                    callback(newUser: UserProfile(), response.result.error)
+                    callback(newUser: UserProfile(), errorString: response.result.error!.description)
                 }
             }
-            else {
-                //print(NSString(data:response.data!, encoding:NSUTF8StringEncoding) as! String)
-                
-
-//                callback(newUser: nil, NSError("somedomain", 123, [])
-
+            else{
+                if(response.result.error!.code == -6003){
+                    callback(newUser: nil, errorString: "User already exists")
+                }
             }
-
         }
     }
     
